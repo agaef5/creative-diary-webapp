@@ -1,0 +1,18 @@
+.titleStylesBD {
+  width: 61rem;
+  font-size: 2rem;
+  color: var(--textInput2);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-style: none;
+}
+
+.inputSpaceBD {
+  width: 90rem;
+  height: 68.9rem;
+  background-color: var(--lightElem);
+}
