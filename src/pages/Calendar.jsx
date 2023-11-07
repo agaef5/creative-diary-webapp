@@ -4,7 +4,6 @@ import { SideBar } from "./components/SideBar";
 import Calendar from "react-calendar";
 import { UserAuth } from '../authentication/context/AuthContext';
 import 'react-calendar/dist/Calendar.css';
-import { currentDayAndDate } from './Dashboard';
 
 export default function CalendarPage() {
     const {user} = UserAuth();
@@ -24,6 +23,22 @@ export default function CalendarPage() {
         setInputType(value);
     }
 
+    const currentDayAndDate = () => {
+        const today = new Date();
+        const options = { weekday: 'long' };
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(today);
+        const year = today.getFullYear();
+        const formattedDate =
+          new Intl.DateTimeFormat('en-US', options).format(today) +
+          ', ' +
+          day +
+          ' ' +
+          month +
+          ' ' +
+          year;
+        return formattedDate;
+    };
 
     return (
         <div>
