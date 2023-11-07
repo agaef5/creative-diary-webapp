@@ -11,6 +11,19 @@
   background-color: var(--lightElem);
 }
 
+.promptStylesBD {
+  width: 55rem;
+  font-size: 2rem;
+  color: var(--text);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  border-style: none;
+  background-color: var(--lightElem);
+}
+
 .inputSpaceBD {
   width: 61rem;
   height: 40.3rem;
@@ -42,7 +55,7 @@
   border-style: none;
   width: 55rem;
   padding-left: 2rem;
-  height: 30rem;
+  height: 25rem;
   background-color: var(--lightElem);
   line-height: 1;
 }

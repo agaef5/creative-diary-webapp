@@ -301,11 +301,12 @@ export function DailyChallenge() {
 
   return (
     <>
-      <div>
+      <div className="inputSpaceBD">
         <div>
-          <h2>{prompt}</h2>
-          <p>{currentDate()}</p>
+          <h2 className="promptStylesBD">{prompt}</h2>
+          <p className="dateStleBD">{currentDate()}</p>
           <input
+            className="inputStyleBD"
             type="text"
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
@@ -373,48 +374,51 @@ export function CreativityBooster() {
 
   return (
     <div>
-      {showPrompt === false && (
-        <div>
-          <div onClick={showCreativityBooster}>
-            <img></img>
-            <p>img1</p>
-          </div>
-
-          <div onClick={showCreativityBooster}>
-            <img></img>
-            <p>img2</p>
-          </div>
-
-          <div onClick={showCreativityBooster}>
-            <img></img>
-            <p>Bimg3</p>
-          </div>
-        </div>
-      )}
-
-      {showPrompt === true && (
-        <div>
+      <div>
+        {showPrompt === false && (
           <div>
-            <h2>{prompt}</h2>
-            <p>{currentDate()}</p>
-            <input
-              type="text"
-              value={userInput}
-              onChange={(e) => setUserInput(e.target.value)}
-              placeholder="Show your creation here..."
+            <div onClick={showCreativityBooster}>
+              <img></img>
+              <p>img1</p>
+            </div>
+
+            <div onClick={showCreativityBooster}>
+              <img></img>
+              <p>img2</p>
+            </div>
+
+            <div onClick={showCreativityBooster}>
+              <img></img>
+              <p>Bimg3</p>
+            </div>
+          </div>
+        )}
+
+        {showPrompt === true && (
+          <div className="inputSpaceBD">
+            <div>
+              <h2 className="promptStylesBD">{prompt}</h2>
+              <p className="dateStleBD">{currentDate()}</p>
+              <input
+                className="inputStyleBD"
+                type="text"
+                value={userInput}
+                onChange={(e) => setUserInput(e.target.value)}
+                placeholder="Show your creation here..."
+              />
+            </div>
+            <button onClick={() => setOpenSave(true)}>Save</button>
+            <SaveEntry
+              open={openSave}
+              inputType="CreativityBooster"
+              title={prompt}
+              userInput={userInput}
+              BoosterPromptID={generatedID}
+              onClose={() => setOpenSave(false)}
             />
           </div>
-          <button onClick={() => setOpenSave(true)}>Save</button>
-          <SaveEntry
-            open={openSave}
-            inputType="CreativityBooster"
-            title={prompt}
-            userInput={userInput}
-            BoosterPromptID={generatedID}
-            onClose={() => setOpenSave(false)}
-          />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
