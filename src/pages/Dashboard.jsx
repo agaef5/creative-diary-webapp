@@ -6,6 +6,7 @@ import { EntryGroup } from "./components/EntryGroup";
 import { currentDate } from "./components/EntryTypes";
 import { useState } from "react";
 import "../styles/dropdown.css";
+import "../styles/entry.css";
 
 export default function Dashboard() {
   const currentDayAndDate = () => {
@@ -47,7 +48,9 @@ export default function Dashboard() {
             value={selectedOption}
             onChange={changeDisplay}
           >
-            <option value="BrainDump">Brain Dump</option>
+            <option value="BrainDump">
+              <span className="BrainDumpDot"></span>Brain Dump
+            </option>
             <option value="DailyChallenge">Daily Challenge</option>
             <option value="CreativityBooster">Creativity Booster</option>
           </select>

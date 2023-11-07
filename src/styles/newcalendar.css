@@ -1,17 +1,16 @@
 .react-calendar {
-    width: 51.875rem;
+    width: 40rem;
     max-width: 100%;
     background: none;
     border-style: none;
     border-radius: 0.125rem;
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
     font-family: 'SF Pro Display', sans-serif;
     line-height: 1.125em;
     padding-top: 1rem;
   }
   
   .react-calendar--doubleView {
-    width: 51.875rem;
+    width: 50rem;
   }
   
   .react-calendar--doubleView .react-calendar__viewContainer {
@@ -20,8 +19,10 @@
   }
   
   .react-calendar__viewContainer {
-    background: var(--accCol);
+    background: var(--lightElem);
     padding: 1rem;
+    border-radius: 0.125rem;
+    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
   }
   .react-calendar--doubleView .react-calendar__viewContainer > * {
     width: 50%;
@@ -50,7 +51,7 @@
   .react-calendar__navigation {
     display: flex;
     height: 40px;
-    margin-bottom: 1em;
+    margin-bottom: 2rem;
     box-shadow: none;
   }
   
@@ -64,9 +65,8 @@
     background-color: #f0f0f0;
   }
   
-  .react-calendar__navigation button:enabled:hover,
   .react-calendar__navigation button:enabled:focus {
-    background-color: #e6e6e6;
+    box-shadow: inset 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
   }
   
   .react-calendar__month-view__weekdays {
@@ -121,34 +121,34 @@
   
   .react-calendar__tile:enabled:hover,
   .react-calendar__tile:enabled:focus {
-    background-color: #e6e6e6;
+    background-color: #7BBB9695;
   }
   
   .react-calendar__tile--now {
-    background: #7BBB9650;
+    background: #7BBB9620;
   }
   
   .react-calendar__tile--now:enabled:hover,
   .react-calendar__tile--now:enabled:focus {
-    background: #ffffa9;
+    background: #7BBB9695;
   }
   
   .react-calendar__tile--hasActive {
-    background: #76baff;
+    background: #7BBB9695;
   }
   
   .react-calendar__tile--hasActive:enabled:hover,
   .react-calendar__tile--hasActive:enabled:focus {
-    background: #a9d4ff;
+    background: #7BBB9695;
   }
   
   .react-calendar__tile--active {
-    background: #7BBB96;
+    background: #7BBB9695;
   }
   
   .react-calendar__tile--active:enabled:hover,
   .react-calendar__tile--active:enabled:focus {
-    background: #1087ff;
+    background: #7BBB9695;
   }
   
   .react-calendar--selectRange .react-calendar__tile--hover {
@@ -157,36 +157,47 @@
   
   
   /* "yearly" arrows */
-  button.react-calendar__navigation__arrow .react-calendar__navigation__prev2-button {
+  button.react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
     display: none;
   }
   
-  button.react-calendar__navigation__arrow .react-calendar__navigation__next2-button {
+  button.react-calendar__navigation__arrow.react-calendar__navigation__prev2-button {
     display: none;
   }
   
-  button.react-calendar__navigation__arrow .react-calendar__navigation__prev-button {
+  button.react-calendar__navigation__arrow.react-calendar__navigation__prev-button {
     border-style: none;
     border-radius: 0.125rem;
     box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
-    font-size: 30px;
+    font-size: 24px;
   }
   
-  span.react-calendar__navigation__label__labelText .react-calendar__navigation__label__labelText--from {
+  span.react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from {
     color: var(--text);
     font-weight: 700;
     font-size: 2rem;
   }
   
-  button.react-calendar__navigation__arrow .react-calendar__navigation__next-button {
+  button.react-calendar__navigation__arrow.react-calendar__navigation__next-button {
     border-style: none;
     border-radius: 0.125rem;
     box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
-    font-size: 30px;
+    font-size: 24px;
   }
   
-  button.react-calendar__tile .react-calendar__month-view__days__day .react-calendar__month-view__days__day--neighboringMonth {
+  button.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--neighboringMonth {
     height: 90px;
     color: var(--textInputLight);
   }
   
+  button.react-calendar__tile.react-calendar__month-view__days__day {
+    height: 90px;
+  }
+
+  button.react-calendar__tile.react-calendar__month-view__days__day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+  }

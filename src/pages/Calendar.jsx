@@ -3,8 +3,7 @@ import { EntryGroup, GetEntries } from "./components/EntryGroup";
 import { SideBar } from "./components/SideBar";
 import Calendar from "react-calendar";
 import { UserAuth } from '../authentication/context/AuthContext';
-import 'react-calendar/dist/Calendar.css';
-import '../styles/calendar.css';
+import '../styles/newcalendar.css';
 
 export default function CalendarPage() {
     const {user} = UserAuth();
@@ -50,7 +49,7 @@ export default function CalendarPage() {
             <button onClick={() => handleClick("CreativityBooster")} >Creativity Booster</button>
 
             
-            <div id='CalendarPageContainer' style={{display: 'flex'}}>
+            <div style={{display: 'flex', justifyContent: 'flex-start', gap:'4rem', marginTop: '1rem'}}>
             <div>
                 <Calendar style= {{ width: '51.875rem'}}
                       value={chosenDate}
