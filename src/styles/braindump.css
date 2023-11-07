@@ -1,5 +1,5 @@
 .titleStylesBD {
-  width: 61rem;
+  width: 55rem;
   font-size: 2rem;
   color: var(--textInput2);
   font-style: normal;
@@ -7,12 +7,47 @@
   line-height: normal;
   padding-left: 2rem;
   padding-top: 1rem;
-  padding-bottom: 1rem;
   border-style: none;
+  background-color: var(--lightElem);
 }
 
 .inputSpaceBD {
-  width: 90rem;
-  height: 68.9rem;
+  width: 61rem;
+  height: 40.3rem;
   background-color: var(--lightElem);
+  border-radius: 10px;
+  /* light paper shadow */
+  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
+    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+}
+
+.dateStleBD {
+  color: var(--textInput2);
+  /* SF Pro Regular */
+  font-family: SF Pro Display;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 2rem;
+  padding-top: 0rem;
+}
+
+.inputStyleBD {
+  color: var(--textInput);
+  font-family: SF Pro Display;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  border-style: none;
+  width: 55rem;
+  padding-left: 2rem;
+  height: 30rem;
+  background-color: var(--lightElem);
+  line-height: 1;
+}
+
+.inputStyleBD::placeholder {
+  line-height: 1; /* Set line-height for the placeholder */
+  vertical-align: top; /* Align placeholder text at the top */
 }
