@@ -23,6 +23,22 @@ export default function CalendarPage() {
         setInputType(value);
     }
 
+    const currentDayAndDate = () => {
+        const today = new Date();
+        const options = { weekday: 'long' };
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(today);
+        const year = today.getFullYear();
+        const formattedDate =
+          new Intl.DateTimeFormat('en-US', options).format(today) +
+          ', ' +
+          day +
+          ' ' +
+          month +
+          ' ' +
+          year;
+        return formattedDate;
+    };
 
     return (
         <div>
@@ -34,9 +50,9 @@ export default function CalendarPage() {
             <button onClick={() => handleClick("CreativityBooster")} >Creativity Booster</button>
 
             
-            <div  style={{ display: 'flex', justifyContent: 'center', margin: '2rem' }}>
+            <div  style={{ display: 'flex', justifyContent: 'center', gap: '4rem', marginTop: '1rem' }}>
             <div>
-                <Calendar
+                <Calendar 
                       value={chosenDate}
                       onChange={setChosenDate}
                       tileContent={({ date }) =>
@@ -47,7 +63,8 @@ export default function CalendarPage() {
                   />
                 
             </div>
-            <EntryGroup date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>
+            <p>{currentDayAndDate()}</p>
+            <EntryGroup isColumn={true} date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>
             </div>
         </div>
     );

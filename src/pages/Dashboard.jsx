@@ -8,23 +8,23 @@ import { useState } from "react";
 
 
 export default function Dashboard(){
-    
     const currentDayAndDate = () => {
-        var today = new Date();
-        var options = { weekday: 'long' };
-        var day = String(today.getDate()).padStart(2, '0');
-        var month = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-        var year = today.getFullYear();
-        var formattedDate =
-          new Intl.DateTimeFormat('en-GB', options).format(today) +
-          ', ' +
-          day +
-          '/' +
-          month +
-          '/' +
-          year;
-        return formattedDate;
-      }; 
+    var today = new Date();
+    var options = { weekday: 'long' };
+    var day = String(today.getDate()).padStart(2, '0');
+    var month = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var year = today.getFullYear();
+    var formattedDate =
+      new Intl.DateTimeFormat('en-GB', options).format(today) +
+      ', ' +
+      day +
+      '/' +
+      month +
+      '/' +
+      year;
+    return formattedDate;
+     }; 
+
 
     // call function that will take user data from database
     const { user } = UserAuth();

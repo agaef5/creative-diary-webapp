@@ -108,4 +108,9 @@
   grid-template-columns: 75% 25%;
 }
 
+.entryGroupColumn{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
 

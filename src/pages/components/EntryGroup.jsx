@@ -131,7 +131,8 @@ export function EntryGroup(props){
   const { user } = UserAuth();
   const entries = GetEntries(user.uid);
 
-  const { pinned, keywords, date, inputType, tags, projects, sortOrder } = props; // Destructure the props
+  const { pinned, keywords, date, inputType, tags, projects, sortOrder, isColumn } = props; // Destructure the props
+
 
   useEffect(() => {
     let filtered = entries;
@@ -154,8 +155,10 @@ export function EntryGroup(props){
     // Add a condition to display only the last three entries if the prop lastThree is true
     const renderedEntries = props.lastThree ? filteredEntries.slice(-3) : filteredEntries;// State for storing the filtered entries
 
+    const entryGroupClassName = `entryGroup${isColumn ? 'Column' : ''}`;
+
   return (
-    <div className="entryGroup">
+    <div className={entryGroupClassName}>
       {renderedEntries.length > 0 ? (
         renderedEntries.map((entry) => <EntryCard key={entry.id} entry={entry} />)
       ) : (
