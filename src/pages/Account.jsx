@@ -42,10 +42,10 @@ export default function Account(){
                     <h2>{userName.username}</h2>
                     <p>{user.email}</p>
 
-                    <p>Creative Fields</p>
+                    <p id='CreativeFieldsTitle'>Creative Fields</p>
 
                     <div>
-                        <h3>Manage Your account</h3>
+                        <h3>Manage Your Account</h3>
 
                         <button id='settings' onClick={() => handleAccountSection("settings")}><p>Settings</p>
                         <div><svg id='arrow' width="13" height="21" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
