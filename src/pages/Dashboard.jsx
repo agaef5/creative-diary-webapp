@@ -6,7 +6,9 @@ import { EntryGroup } from "./components/EntryGroup";
 import { currentDate } from "./components/EntryTypes";
 import { useState } from "react";
 
-export const currentDayAndDate = () => {
+
+export default function Dashboard(){
+    const currentDayAndDate = () => {
     var today = new Date();
     var options = { weekday: 'long' };
     var day = String(today.getDate()).padStart(2, '0');
@@ -21,10 +23,7 @@ export const currentDayAndDate = () => {
       '/' +
       year;
     return formattedDate;
-  }; 
-
-export default function Dashboard(){
-    
+     }; 
 
 
     // call function that will take user data from database

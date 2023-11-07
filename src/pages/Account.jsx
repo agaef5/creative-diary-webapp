@@ -6,6 +6,7 @@ import { auth, database } from "../../firebase-config";
 import { GetUser } from "./components/functions/functions";
 import { useState, useEffect} from "react";
 import { onValue, ref, update } from "firebase/database";
+import "../styles/account.css";
 
 export default function Account(){
     const navigate = useNavigate();
