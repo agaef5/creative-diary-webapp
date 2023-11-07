@@ -3,8 +3,7 @@ import { EntryGroup, GetEntries } from "./components/EntryGroup";
 import { SideBar } from "./components/SideBar";
 import Calendar from "react-calendar";
 import { UserAuth } from '../authentication/context/AuthContext';
-import 'react-calendar/dist/Calendar.css';
-import '../styles/calendar.css';
+import '../styles/newcalendar.css';
 
 export default function CalendarPage() {
     const {user} = UserAuth();
@@ -24,14 +23,13 @@ export default function CalendarPage() {
         setInputType(value);
     }
 
-    const currentDayAndDate = () => {
-        const today = new Date();
+    const currentDayAndDate = (date) => {
         const options = { weekday: 'long' };
-        const day = String(today.getDate()).padStart(2, '0');
-        const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(today);
-        const year = today.getFullYear();
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(date);
+        const year = date.getFullYear();
         const formattedDate =
-          new Intl.DateTimeFormat('en-US', options).format(today) +
+          new Intl.DateTimeFormat('en-US', options).format(date) +
           ', ' +
           day +
           ' ' +
@@ -51,7 +49,7 @@ export default function CalendarPage() {
             <button onClick={() => handleClick("CreativityBooster")} >Creativity Booster</button>
 
             
-            <div id='CalendarPageContainer' style={{display: 'flex'}}>
+            <div style={{display: 'flex', justifyContent: 'flex-start', gap:'4rem', marginTop: '1rem'}}>
             <div>
                 <Calendar style= {{ width: '51.875rem'}}
                       value={chosenDate}
@@ -65,7 +63,7 @@ export default function CalendarPage() {
                 
             </div>
             <div>
-            <p style={{ fontWeight: '500', fontSize: '1.5rem', marginBottom: '2rem', marginTop: 0}}>{currentDayAndDate()}</p>
+            <p style={{ fontWeight: '500', fontSize: '1.5rem', marginBottom: '2rem', marginTop: 0}}>{currentDayAndDate(chosenDate)}</p>
             <EntryGroup isColumn={true} date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>
             </div>
             </div>

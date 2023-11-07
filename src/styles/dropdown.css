@@ -20,5 +20,11 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("./images/chevron.down.svg") no-repeat right center;
+  background: var(--lightElem) url("./images/chevron.down.svg") no-repeat right
+    center;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
 }
+/*.BrainDumpDot {
+  background: url("./images/Ellipse\ 10.svg");
+}*/
