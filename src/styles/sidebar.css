@@ -1,7 +1,7 @@
 .sidebar {
   width: 0;
   height: 100vh;
-  background-color: #f2f2f2;
+  background-color: var(--lightElem);
   position: fixed;
   top: 0;
   left: 0;
@@ -10,10 +10,10 @@
 }
 
 .sidebar.open {
-  width: 250px;
+  width: 20rem;
 }
 
-.sidebar button {
+.closeBtn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -23,16 +23,56 @@
   width: 50px;
   height: 46px;
   flex-shrink: 0;
-  filter: drop-shadow(6px 6px 16px rgba(209, 205, 199, 0.5))
-    drop-shadow(-6px -6px 16px rgba(255, 255, 255, 0.5));
+  color: var(--text);
   background-color: var(--lightElem);
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
 }
-/*.closeBtn {
-  width: 40px;
-  height: 40.045px;
-  flex-shrink: 0;
-  filter: drop-shadow(6px 6px 16px rgba(209, 205, 199, 0.5))
-    drop-shadow(-6px -6px 16px rgba(255, 255, 255, 0.5));
+.closeBtn {
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: var(--lightElem);
+  color: var(--text);
 }
-*/
+.pageClick {
+  display: flex;
+  flex-direction: row;
+  color: var(--light-theme-text, #1b1c25);
+  text-align: center;
+  font-family: SF Pro Display;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  align-items: center;
+}
+.navContainer {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 5.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.houseIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--lightElem);
+  color: var(--text);
+}
+
+.accountDown {
+}
+
+.sideBarLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 95vh;
+  padding-left: 2rem;
+}
