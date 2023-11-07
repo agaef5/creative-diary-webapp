@@ -55,23 +55,22 @@ export function GetProjects(userId) {
     };
     
     return (
-        <div>
-            {projects.map((project) => (
-                <button className="projectButton"
-                    key={project.id}
-                    onClick={() => handleProjectSelect(project.id)}
-                    style={{
-                        backgroundColor: internalSelectedProjects.includes(project.id) ? 'green' : 'gray',
-                        color: 'white',
-                        margin: '5px',
-                        padding: '10px',
-                        border: 'none',
-                        borderRadius: '5px',
-                    }}
-                >
-                    {project.name}
-                </button>
-            ))}
+        <div className="flex-row">
+            <p>Projects:</p>
+            <div>
+                {projects.map((project) => (
+                    <button className="projectButton"
+                        key={project.id}
+                        onClick={() => handleProjectSelect(project.id)}
+                        style={{
+                            backgroundColor: internalSelectedProjects.includes(project.id) ? 'var(--accCol)' : 'var(--lightElem)',
+                            color: internalSelectedProjects.includes(project.id) ? 'var(--lightElem)' : 'var(--accCol)',
+                        }}
+                    >
+                        {project.name}
+                    </button>
+                ))}
+            </div>
         </div>
     );
     

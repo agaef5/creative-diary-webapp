@@ -45,23 +45,22 @@ export function SelectTag({ onTagSelect, selectedTags }) {
     };
 
     return (
-        <div>
-            {tags.map((tag) => (
-                <button
-                    key={tag.id}
-                    onClick={() => handleTagSelect(tag.id)}
-                    style={{
-                        backgroundColor: internalSelectedTags.includes(tag.id) ? 'green' : 'gray',
-                        color: 'white',
-                        margin: '5px',
-                        padding: '10px',
-                        border: 'none',
-                        borderRadius: '5px',
-                    }}
-                >
-                    #{tag.name}
-                </button>
-            ))}
+        <div className="flex-row">
+            <p>Tags:</p>
+            <div>
+                {tags.map((tag) => (
+                    <button className="selectTags"
+                        key={tag.id}
+                        onClick={() => handleTagSelect(tag.id)}
+                        style={{
+                            backgroundColor: internalSelectedTags.includes(tag.id) ? 'var(--lightElem)'  : 'var(--accCol)',
+                            color: internalSelectedTags.includes(tag.id) ? 'var(--accCol)' :  'var(--lightElem)',
+                        }}
+                    >
+                        #{tag.name}
+                    </button>
+                ))}
+            </div> 
         </div>
     );
 }

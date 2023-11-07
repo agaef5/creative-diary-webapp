@@ -91,11 +91,13 @@ a{
 .flex-col {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .flex-row {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 button {
