@@ -112,6 +112,8 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    overflow: auto;
+    height: 532px;
 }
 
 .overlay{
