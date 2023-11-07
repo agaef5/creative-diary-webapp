@@ -1,9 +1,30 @@
 @import url("../index.css");
 
 .AccountContainer {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem;
-    padding: 1rem;
 
+}
+
+#logout {
+display: flex;
+padding: 0.5rem 1rem;
+justify-content: center;
+align-items: center;
+border-radius: 3px;
+background: var(--accent-green, #7BBB96);
+}
+
+#settings, #sub, #security {
+display: flex;
+width: 31rem;
+height: 3rem;
+border-radius: 3px;
+background: var(--light-theme-light-elements);
+color: var(--light-theme-light-elements);
+padding: 0.875rem 1rem;
+}
+
+#arrow {
+  top: 10.24px;
+  left: 454px;
+  text-align: center;
 }
