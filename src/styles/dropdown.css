@@ -20,5 +20,6 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("./images/chevron.down.svg") no-repeat right center;
+  background: var(--lightElem) url("./images/chevron.down.svg") no-repeat right
+    center;
 }
