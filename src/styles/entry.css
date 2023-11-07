@@ -114,3 +114,22 @@
     gap: 2rem;
 }
 
+.overlay{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5); 
+    height: 100%;
+    width: 100%;
+}
+
+.entryDisplay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--lightElem);
+    width: 61rem;
+    height: 90vh;
+}
