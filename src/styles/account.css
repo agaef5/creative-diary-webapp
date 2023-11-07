@@ -1,0 +1,9 @@
+@import url("../index.css");
+
+.AccountContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem;
+
+}
