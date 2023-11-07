@@ -5,8 +5,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  padding-left: 2rem;
-  padding-top: 1rem;
   border-style: none;
   background-color: var(--lightElem);
 }
@@ -18,8 +16,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  padding-left: 2rem;
-  padding-top: 1rem;
   border-style: none;
   background-color: var(--lightElem);
 }
@@ -32,6 +28,7 @@
   /* light paper shadow */
   box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
     -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+  padding: 1rem 2rem;
 }
 
 .dateStleBD {
@@ -42,7 +39,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-left: 2rem;
   padding-top: 0rem;
 }
 
@@ -54,7 +50,6 @@
   font-weight: 400;
   border-style: none;
   width: 55rem;
-  padding-left: 2rem;
   height: 25rem;
   background-color: var(--lightElem);
   line-height: 1;
@@ -63,4 +58,38 @@
 .inputStyleBD::placeholder {
   line-height: 1; /* Set line-height for the placeholder */
   vertical-align: top; /* Align placeholder text at the top */
+}
+
+.saveBtn {
+  width: 64px;
+  height: 40px;
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 3px;
+  background: var(--accent-green, #7bbb96);
+  margin-top: 32px;
+  right: 32px;
+
+  /* light paper shadow */
+  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
+    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-family: SF Pro Display;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.flexboxing {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexboxing2 {
+  display: flex;
+  flex-direction: column;
 }

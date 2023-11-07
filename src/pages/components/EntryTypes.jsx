@@ -196,15 +196,22 @@ export function BrainDump() {
 
   return (
     <div className="inputSpaceBD">
-      <div>
-        <input
-          className="titleStylesBD"
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Untitled"
-        />
+      <div className="flex-col">
+        <div className="flex-row">
+          <input
+            className="titleStylesBD"
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="Untitled"
+          />
+          <button className="saveBtn" onClick={() => setOpenSave(true)}>
+            Save
+          </button>
+        </div>
         <p className="dateStleBD">{currentDate()}</p>
+      </div>
+      <div>
         <input
           className="inputStyleBD"
           type="text"
@@ -214,7 +221,6 @@ export function BrainDump() {
         />
       </div>
 
-      <button onClick={() => setOpenSave(true)}>Save</button>
       <SaveEntry
         open={openSave}
         inputType="BrainDump"
@@ -302,9 +308,16 @@ export function DailyChallenge() {
   return (
     <>
       <div className="inputSpaceBD">
+        <div className="flexboxing">
+          <div>
+            <h2 className="promptStylesBD">{prompt}</h2>
+            <p className="dateStleBD">{currentDate()}</p>
+          </div>
+          <button className="saveBtn" onClick={() => setOpenSave(true)}>
+            Save
+          </button>
+        </div>
         <div>
-          <h2 className="promptStylesBD">{prompt}</h2>
-          <p className="dateStleBD">{currentDate()}</p>
           <input
             className="inputStyleBD"
             type="text"
@@ -313,7 +326,7 @@ export function DailyChallenge() {
             placeholder="What is it you're thinking of..."
           />
         </div>
-        <button onClick={() => setOpenSave(true)}>Save</button>
+
         <SaveEntry
           open={openSave}
           inputType="DailyChallenge"
@@ -396,9 +409,16 @@ export function CreativityBooster() {
 
         {showPrompt === true && (
           <div className="inputSpaceBD">
+            <div className="flexboxing">
+              <div>
+                <h2 className="promptStylesBD">{prompt}</h2>
+                <p className="dateStleBD">{currentDate()}</p>
+              </div>
+              <button className="saveBtn" onClick={() => setOpenSave(true)}>
+                Save
+              </button>
+            </div>
             <div>
-              <h2 className="promptStylesBD">{prompt}</h2>
-              <p className="dateStleBD">{currentDate()}</p>
               <input
                 className="inputStyleBD"
                 type="text"
@@ -407,7 +427,6 @@ export function CreativityBooster() {
                 placeholder="Show your creation here..."
               />
             </div>
-            <button onClick={() => setOpenSave(true)}>Save</button>
             <SaveEntry
               open={openSave}
               inputType="CreativityBooster"
