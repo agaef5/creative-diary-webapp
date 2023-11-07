@@ -1,12 +1,11 @@
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
 
-                
 :root {
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: "SF Pro Display", sans-serif;
 
-  --brainDump: #3AA768;
-  --creativityBooster: #56ADBA;
-  --dailyChallenge: #EB4A4A;
+  --brainDump: #3aa768;
+  --creativityBooster: #56adba;
+  --dailyChallenge: #eb4a4a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,56 +13,54 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-  
-.light{
-    --textInputLight: #D9D9DE;
-    --textInput2: #ADACB5;
-    --textInput: #D2D2D2;
-    --textLighter: #3E4050;
-    --text: #1B1C25;
-    --background: #F4F4F4;
-    --lightElem: #FDFDFD;
 
-    color: var(--text);
-    background-color: var(--background);
-  }
+.light {
+  --textInputLight: #d9d9de;
+  --textInput2: #adacb5;
+  --textInput: #d2d2d2;
+  --textLighter: #3e4050;
+  --text: #1b1c25;
+  --background: #f4f4f4;
+  --lightElem: #fdfdfd;
 
-.dark{
-    --textInputLight: #797979;
-    --textInput2: #B4B4B4;
-    --textInput: #D2D2D2;
-  
-    --text: #F0EEEF;
-    --background: #343434;
-    --lightElem: #3F3F3F;
-  
-    color: var(--text);
-    background-color: var(--background);
-  }
+  color: var(--text);
+  background-color: var(--background);
+}
 
-  .green{
-    --accCol:#7BBB96;
-  }
-  .red{
-    --accCol: #FF5F5F;
-  }
-  .purple{
-    --accCol: #9287D7;
-  }
-  .yellow{
-    --accCol: #FDC83A;
-  }
-  .orange{
-    --accCol: #FFA552;
-  }
-  .blue{
-    --accCol: #87CDD7;
-  }
-  .pink{
-    --accCol: #F896AD;
-  }
+.dark {
+  --textInputLight: #797979;
+  --textInput2: #b4b4b4;
+  --textInput: #d2d2d2;
 
+  --text: #f0eeef;
+  --background: #343434;
+  --lightElem: #3f3f3f;
 
+  color: var(--text);
+  background-color: var(--background);
+}
+
+.green {
+  --accCol: #7bbb96;
+}
+.red {
+  --accCol: #ff5f5f;
+}
+.purple {
+  --accCol: #9287d7;
+}
+.yellow {
+  --accCol: #fdc83a;
+}
+.orange {
+  --accCol: #ffa552;
+}
+.blue {
+  --accCol: #87cdd7;
+}
+.pink {
+  --accCol: #f896ad;
+}
 
 body {
   margin: 0;
@@ -71,7 +68,7 @@ body {
   min-height: 100vh;
 }
 
-#AppContainer{
+#AppContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -91,7 +88,7 @@ body {
   flex-direction: row;
 }
 
-button{
+button {
   background-color: var(--accCol);
   color: var(--lightElem);
   cursor: pointer;
@@ -103,5 +100,6 @@ button{
 
   border-style: none;
   border-radius: 0.125rem;
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
+  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
+    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
 }

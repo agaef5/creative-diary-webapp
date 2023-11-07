@@ -17,7 +17,7 @@ border-radius: 3px;
 background: var(--light-theme-light-elements);
 color: var(--light-theme-light-elements);
 padding: 0.875rem 1rem;
-margin: 0rem 1rem ;
+margin: 1rem 0rem;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -30,4 +30,13 @@ justify-content: space-between;
   font-family: var(--font-sf-pro);
   text-align: center;
  
+}
+
+#CreativeFieldsTitle { 
+  position: relative;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
