@@ -24,14 +24,13 @@ export default function CalendarPage() {
         setInputType(value);
     }
 
-    const currentDayAndDate = () => {
-        const today = new Date();
+    const currentDayAndDate = (date) => {
         const options = { weekday: 'long' };
-        const day = String(today.getDate()).padStart(2, '0');
-        const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(today);
-        const year = today.getFullYear();
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(date);
+        const year = date.getFullYear();
         const formattedDate =
-          new Intl.DateTimeFormat('en-US', options).format(today) +
+          new Intl.DateTimeFormat('en-US', options).format(date) +
           ', ' +
           day +
           ' ' +
@@ -65,7 +64,7 @@ export default function CalendarPage() {
                 
             </div>
             <div>
-            <p style={{ fontWeight: '500', fontSize: '1.5rem', marginBottom: '2rem', marginTop: 0}}>{currentDayAndDate()}</p>
+            <p style={{ fontWeight: '500', fontSize: '1.5rem', marginBottom: '2rem', marginTop: 0}}>{currentDayAndDate(chosenDate)}</p>
             <EntryGroup isColumn={true} date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>
             </div>
             </div>
