@@ -1,0 +1,7 @@
+@import url("../index.css");
+
+#CalendarPageContainer {
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 1rem
+};

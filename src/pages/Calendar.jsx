@@ -4,6 +4,7 @@ import { SideBar } from "./components/SideBar";
 import Calendar from "react-calendar";
 import { UserAuth } from '../authentication/context/AuthContext';
 import 'react-calendar/dist/Calendar.css';
+import '../styles/calendar.css';
 
 export default function CalendarPage() {
     const {user} = UserAuth();
@@ -23,6 +24,22 @@ export default function CalendarPage() {
         setInputType(value);
     }
 
+    const currentDayAndDate = () => {
+        const today = new Date();
+        const options = { weekday: 'long' };
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(today);
+        const year = today.getFullYear();
+        const formattedDate =
+          new Intl.DateTimeFormat('en-US', options).format(today) +
+          ', ' +
+          day +
+          ' ' +
+          month +
+          ' ' +
+          year;
+        return formattedDate;
+    };
 
     return (
         <div>
@@ -34,9 +51,9 @@ export default function CalendarPage() {
             <button onClick={() => handleClick("CreativityBooster")} >Creativity Booster</button>
 
             
-            <div  style={{ display: 'flex', justifyContent: 'center', margin: '2rem' }}>
+            <div id='CalendarPageContainer' style={{display: 'flex'}}>
             <div>
-                <Calendar
+                <Calendar style= {{ width: '51.875rem'}}
                       value={chosenDate}
                       onChange={setChosenDate}
                       tileContent={({ date }) =>
@@ -47,60 +64,11 @@ export default function CalendarPage() {
                   />
                 
             </div>
+            <div>
+            <p style={{ fontWeight: '500', textAlign: 'center', marginBottom: '2rem', marginTop: 0}}>{currentDayAndDate()}</p>
             <EntryGroup isColumn={true} date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>
+            </div>
             </div>
         </div>
     );
 }
-
-
-
-// export default function CalendarPage() {
-//     const {user} = UserAuth();
-//     const entries = GetEntries(user.uid);
-//     console.log(entries);
-
-//     const [chosenDate, setChosenDate] = useState(new Date()); // State to store the chosen date
-//     const [inputType, setInputType] = useState('');
-//     const handleDateChange = (date) => {
-//       setChosenDate(date); // Update the chosen date when the date is clicked
-//     };
-
-//     const tileClassName = ({ date, view }) => {
-//       if (view === 'month' && date.getDate() === new Date().getDate()) {
-//         return 'current-day'; // Add a custom class for the current day
-//       }
-//       return '';
-//     };
-
-//     function handleClick(value){
-//       setInputType(value);
-      
-//     }
-  
-//     return (
-//       <div>
-//         <SideBar/>
-//         <h1>Calendar Page</h1>
-        
-//         <button onClick={() => handleClick("BrainDump")}>Brain Dump</button>
-//         <button onClick={() => handleClick("DailyChallenge")}>Daily Challenge</button>
-//         <button onClick={() => handleClick("CreativityBooster")} >Creativity Booster</button>
-
-
-//         <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem' }}>
-//           <Calendar
-//             onChange={handleDateChange}
-//             value={chosenDate}
-//             tileClassName={tileClassName} // Pass the tileClassName function to customize the calendar view
-//             tileStyle={{
-//               border: "2px solid red",
-//               color: "red", // Set the border color for the current day
-//             }}
-//           />
-//            <EntryGroup date={chosenDate.toLocaleDateString('en-GB')} inputType={inputType}/> {/* Pass the chosen date to the EntryGroup component */}
-//         </div>
-       
-//       </div>
-//     );
-// }

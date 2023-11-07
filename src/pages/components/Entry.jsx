@@ -4,7 +4,7 @@ import { UserAuth } from "../../authentication/context/AuthContext";
 import { GetProjects } from "./Projects";
 import { GetTags } from "./Tags";
 import { database } from "../../../firebase-config";
-import { ref, set, update } from "firebase/database";
+import { ref, update } from "firebase/database";
 import "../../styles/entry.css"
 
 
@@ -168,7 +168,6 @@ export function EntryDisplay({open, onCloseDisplay, entry, projectNames, tagName
                 {/* Render tags as buttons */}
                 {entry.tags && (
                 <div>
-                    Tags:{" "}
                     {tagNames.map((tag, index) => (
                     <button key={index} onClick={() => handleTagClick(tag)}>
                         {tag.name}
@@ -180,7 +179,6 @@ export function EntryDisplay({open, onCloseDisplay, entry, projectNames, tagName
                 {/* Render projects as buttons */}
                 {entry.projects &&(
                 <div>
-                    Projects:{" "}
                     {projectNames.map((project, index) => (
                     <button key={index} onClick={() => handleProjectClick(project)}>
                         {project.name} {/* Render the 'name' property of the project */}
