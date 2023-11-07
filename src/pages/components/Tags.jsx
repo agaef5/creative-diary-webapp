@@ -10,7 +10,7 @@ export function GetTags(userId){
       const fetchData = async () => {
       // path to find projects array in RealtimeDatabase
         const tagsRef = ref(database, `tags/${userId}`);
-        
+         
         onValue(tagsRef, (snapshot) => {
           const data = snapshot.val();
           if (data) {
