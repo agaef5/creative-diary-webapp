@@ -1,135 +1,177 @@
-@import url("../index.css");
+  @import url("../index.css");
 
-.entryGroup {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-}
+  .entryGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
 
-.entryCard {
-  width: 26rem;
-  height: 17.75rem;
-
-  border-radius: 0.3125rem;
-  border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
-  background: var(--lightElem, #fdfdfd);
-
-  display: flex;
-  flex-direction: row;
-
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
-
-  background-color: var(--lightElem);
-}
-
-.entryPinned {
-  background-color: var(--accCol);
-  display: inline-block;
-  height: 100%;
-  margin: 0;
-  width: 1rem;
-  border-radius: 0.3125rem 0 0 0.3125rem;
-}
-
-.entryCardContent {
-  min-width: 23rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 1rem;
-  margin: 1rem;
-}
-
-.BrainDumpDot {
-  background-color: var(--brainDump);
-  height: 0.75rem;
-  width: 0.75rem;
-  border-radius: 50%;
-  margin: 0 0.5rem 0 0;
-  display: inline-block;
-}
-
-.DailyChallengeDot {
-  background-color: var(--dailyChallenge);
-  height: 0.75rem;
-  width: 0.75rem;
-  border-radius: 50%;
-  margin: 0 0.5rem 0 0;
-  display: inline-block;
-}
-
-.CreativityBoosterDot {
-  background-color: var(--creativityBooster);
-  height: 0.75rem;
-  width: 0.75rem;
-  border-radius: 50%;
-  margin: 0 0.5rem 0 0;
-  display: inline-block;
-}
-
-.inputType {
-  margin: 0;
-}
-
-.entryDate {
-  color: var(--textInput2);
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.entryTitle {
-  color: var(--text);
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin: 0.5rem 0;
-  padding: 0;
-}
-
-.entryText {
-  font-size: 1.25rem;
-  font-weight: 400;
-  margin: 0.5rem 0;
-  padding: 0;
-}
-
-.tagButton {
-  color: var(--lightElem);
-}
-
-.projectButton {
-  background-color: var(--background);
-  color: var(--accCol);
-}
-
-.buttons-row {
-  display: grid;
-  grid-template-columns: 75% 25%;
-}
-
-.entryGroupColumn{
+  .entryGroupColumn{
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-}
+  }
 
-.overlay{
-    display: block;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.5); 
-    height: 100%;
-    width: 100%;
-}
+  .entryCard {
+    width: 26rem;
+    height: 17.75rem;
 
-.entryDisplay{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 0.3125rem;
+    border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
+    background: var(--lightElem, #fdfdfd);
+
+    display: grid;
+    grid-template-columns: 2% 80% 18%; 
+
+    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
+      -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+
     background-color: var(--lightElem);
-    width: 61rem;
-    height: 90vh;
-}
+  }
+
+  .entryPinned {
+    background-color: var(--accCol);
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    width: 1rem;
+    border-radius: 0.3125rem 0 0 0.3125rem;
+  }
+
+  .entryPinned {
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    width: 1rem;
+    border-radius: 0.3125rem 0 0 0.3125rem;
+  }
+
+  .entryCardContent {
+    min-width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1rem;
+    margin: 1rem;
+  }
+
+  .BrainDumpDot {
+    background-color: var(--brainDump);
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    margin: 0 0.5rem 0 0;
+    display: inline-block;
+  }
+
+  .DailyChallengeDot {
+    background-color: var(--dailyChallenge);
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    margin: 0 0.5rem 0 0;
+    display: inline-block;
+  }
+
+  .CreativityBoosterDot {
+    background-color: var(--creativityBooster);
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    margin: 0 0.5rem 0 0;
+    display: inline-block;
+  }
+
+  .inputType {
+    margin: 0;
+  }
+
+  .entryDate {
+    color: var(--textInput2);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .entryTitle {
+    color: var(--text);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    padding: 0;
+  }
+
+  .entryText {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0.5rem 0;
+    padding: 0;
+  }
+
+  .tagButton {
+    color: var(--lightElem);
+  }
+
+  .projectButton {
+    background-color: var(--background);
+    color: var(--accCol);
+  }
+
+  .buttons-row {
+    display: grid;
+    grid-template-columns: 90% 10%;
+  }
+
+  .moreContainer{
+    margin: 1rem;
+    justify-self: center;
+    align-self: end;
+    position: relative;
+  }
+
+  .moreButton{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 2.75rem;
+    height: 2.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .moreOptions{
+    position: absolute;
+    right: -50%;
+    width: 7rem; 
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightElem);
+    padding: 0.5rem 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .horizontal{
+    width: 100%;
+    border: .5px var(--textInput2) solid;
+    border-radius: 2px;
+  }
+
+  .overlay{
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.5); 
+      height: 100%;
+      width: 100%;
+  }
+
+  .entryDisplay{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--lightElem);
+      width: 61rem;
+      height: 90vh;
+  }
+

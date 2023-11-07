@@ -68,6 +68,11 @@ body {
   min-height: 100vh;
 }
 
+a{
+  color: var(--text);
+  text-decoration: none;
+}
+
 #AppContainer {
   display: flex;
   flex-direction: column;
