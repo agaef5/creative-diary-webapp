@@ -42,11 +42,10 @@ export default function CalendarPage() {
     return (
         <div>
             <SideBar/>
-            <h1>Calendar Page</h1>
         
-            <button onClick={() => handleClick("BrainDump")}>Brain Dump</button>
-            <button onClick={() => handleClick("DailyChallenge")}>Daily Challenge</button>
-            <button onClick={() => handleClick("CreativityBooster")} >Creativity Booster</button>
+            <button className='calendarChoice' onClick={() => handleClick("BrainDump")}><span className='rowDot'><div style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: 'var(--brainDump'}}></div>Brain Dump</span></button>
+            <button className='calendarChoice' onClick={() => handleClick("DailyChallenge")}><span className='rowDot'><div style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: 'var(--dailyChallenge'}}></div>Daily Challenge</span></button>
+            <button className='calendarChoice' onClick={() => handleClick("CreativityBooster")}><span className='rowDot'><div style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: 'var(--creativityBooster'}}></div>Creativity Booster</span></button>
 
             
             <div style={{display: 'flex', justifyContent: 'flex-start', gap:'4rem', marginTop: '1rem'}}>
@@ -57,7 +56,7 @@ export default function CalendarPage() {
                       tileContent={({ date }) =>
                           markedDates.find(
                               markedDate => new Date(markedDate).toDateString() === date.toDateString()
-                          ) ? <div style={{ backgroundColor: inputType === 'BrainDump' ? 'green' : (inputType === 'DailyChallenge' ? 'red' : 'blue'), width: 6, height: 6, borderRadius: '50%', marginLeft: '2rem', marginBottom: '-0.875rem', marginTop: '0.5rem'}}></div> : null
+                          ) ? <div style={{ backgroundColor: inputType === 'BrainDump' ? '#3AA768' : (inputType === 'DailyChallenge' ? '#EB4A4A' : '#56ADBA'), width: 6, height: 6, borderRadius: '50%', marginLeft: '2.75rem', marginBottom: '-0.875rem', marginTop: '0.5rem'}}></div> : null
                       }
                   />
                 

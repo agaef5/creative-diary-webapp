@@ -102,7 +102,7 @@ export function SideBar() {
             </NavLink>
             <div></div>
           </nav>
-          <div className="accountDown">
+          <div className="accountDown" style={{marginBottom: '-32px'}}>
             <NavLink to="/account">
               <div className="pageClick">
                 <button className="houseIcon">
