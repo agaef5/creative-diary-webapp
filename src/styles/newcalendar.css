@@ -1,5 +1,5 @@
 .react-calendar {
-    width: 40rem;
+    width: 50rem;
     max-width: 100%;
     background: none;
     border-style: none;
@@ -194,10 +194,30 @@
     height: 90px;
   }
 
-  button.react-calendar__tile.react-calendar__month-view__days__day {
+  abbr {
+    text-decoration: none;
+  }
+
+  .calendarChoice {
+    background-color: var(--lightElem);
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+
+  .calendarChoice:hover {
+    background-color: #7BBB9620;
+  }
+
+  .calendarChoiceActive {
+    background-color: #7BBB9620;
+    box-shadow: 4px 0px 0px #7BBB96 inset;
+  }
+
+  .rowDot {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
     align-items: center;
-    justify-content: center;
-    padding-top: 24px;
   }
