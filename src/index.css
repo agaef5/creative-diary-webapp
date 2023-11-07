@@ -22,6 +22,9 @@
   --text: #1b1c25;
   --background: #f4f4f4;
   --lightElem: #fdfdfd;
+  --shadowOne: 6px 6px 16px 0px rgba(255, 255, 255, 0.2);
+  --shadowTwo: -6px -6px 16px 0px rgba(255, 255, 255, 0.2);
+
 
   color: var(--text);
   background-color: var(--background);
@@ -35,6 +38,7 @@
   --text: #f0eeef;
   --background: #343434;
   --lightElem: #3f3f3f;
+  --shadow: rgba(0, 0, 0, 0.2);
 
   color: var(--text);
   background-color: var(--background);

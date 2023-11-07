@@ -139,6 +139,7 @@
   }
 
   .moreOptions{
+    z-index: 1;
     position: absolute;
     right: -50%;
     width: 7rem; 

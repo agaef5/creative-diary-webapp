@@ -3,6 +3,9 @@ import { database } from "../../../firebase-config";
 import { useState, useEffect } from "react";
 import { push, ref, set, onValue } from "firebase/database";
 import { useNavigate } from "react-router-dom"
+import "../../styles/project.css";
+import "../../styles/entry.css";
+
 
 export function GetProjects(userId) {
     const [projects, setProjects] = useState([]);
@@ -54,7 +57,7 @@ export function GetProjects(userId) {
     return (
         <div>
             {projects.map((project) => (
-                <button
+                <button className="projectButton"
                     key={project.id}
                     onClick={() => handleProjectSelect(project.id)}
                     style={{
@@ -102,7 +105,7 @@ export function ProjectGroup(keywords, lastThree){
     const renderedProjects = lastThree ? filteredProjects.slice(-3) : filteredProjects;
 
     return (
-      <div>
+      <div className="projectGroup">
             {renderedProjects.length > 0 ? (
                 renderedProjects.map((project) => (
                     <ProjectCard key={project.id} project={project} />
@@ -122,26 +125,21 @@ export function ProjectCard({project}){
             navigate(`/projects/${project.name}/${project.id}`);
         }
     }
-    
     return(
-        <div key={project.id} className="projectCard" onClick={() => handleProjectClick(project)}
-                style={{
-                    // Changes button style based on whether the project is selected or not.
-                    backgroundColor:'gray',
-                    color: 'white',
-                    margin: '5px',
-                    padding: '10px',
-                    border: 'none',
-                    borderRadius: '5px',
-                    cursor: "pointer",
-                }}>
-            <p>{project.timeperiod}</p>
-            <h2>{project.name}</h2>
+        <div key={project.id} className="projectCard" onClick={() => handleProjectClick(project)}>
+            <div className="firstCardBg">
+                <div className="secondCardBg">
+                    <div className="projectCardContent">
+                        <p className="projectCardTime">{project.timeperiod}</p>
+                        <h2 className="projectCardTitle">{project.name}</h2>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     )
 }
-
 
 
 export function AddProject({open, onClose}){
