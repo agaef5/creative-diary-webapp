@@ -93,6 +93,8 @@ body {
 
 button{
   background-color: var(--accCol);
+  color: var(--lightElem);
+  cursor: pointer;
 
   align-items: flex-start;
   gap: 0.5rem;
