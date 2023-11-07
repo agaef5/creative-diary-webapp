@@ -5,6 +5,7 @@ import Calendar from "react-calendar";
 import { UserAuth } from '../authentication/context/AuthContext';
 import 'react-calendar/dist/Calendar.css';
 import { currentDayAndDate } from './Dashboard';
+import '../styles/calendar.css';
 
 export default function CalendarPage() {
     const {user} = UserAuth();
@@ -35,9 +36,9 @@ export default function CalendarPage() {
             <button onClick={() => handleClick("CreativityBooster")} >Creativity Booster</button>
 
             
-            <div  style={{ display: 'flex', justifyContent: 'center', gap: '4rem', marginTop: '1rem' }}>
+            <div id='CalendarPageContainer' style={{display: 'flex'}}>
             <div>
-                <Calendar 
+                <Calendar style= {{ width: '51.875rem'}}
                       value={chosenDate}
                       onChange={setChosenDate}
                       tileContent={({ date }) =>
@@ -48,8 +49,10 @@ export default function CalendarPage() {
                   />
                 
             </div>
-            <p>{currentDayAndDate()}</p>
+            <div>
+            <p style={{ fontWeight: '500', textAlign: 'center', marginBottom: '2rem', marginTop: 0}}>{currentDayAndDate()}</p>
             <EntryGroup isColumn={true} date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>
+            </div>
             </div>
         </div>
     );
