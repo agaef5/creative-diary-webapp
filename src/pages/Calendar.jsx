@@ -11,6 +11,7 @@ export default function CalendarPage() {
     const [inputType, setInputType] = useState(null);
     const [chosenDate, setChosenDate] = useState(new Date());
     const [markedDates, setMarkedDates] = useState([]);
+    const [activeButton, setActiveButton] = useState(null);
 
     useEffect(() => {
         const dates = entries
@@ -19,8 +20,14 @@ export default function CalendarPage() {
         setMarkedDates(dates);
     }, [entries, inputType]);
 
-    function handleClick(value){
-        setInputType(value);
+    function handleClick(value) {
+        if (activeButton === value) {
+            setActiveButton(null);
+            setInputType(null);
+        } else {
+            setActiveButton(value);
+            setInputType(value);
+        }
     }
 
     const currentDayAndDate = (date) => {
@@ -43,9 +50,23 @@ export default function CalendarPage() {
         <div>
             <SideBar/>
         
-            <button className='calendarChoice' onClick={() => handleClick("BrainDump")}><span className='rowDot'><div style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: 'var(--brainDump'}}></div>Brain Dump</span></button>
-            <button className='calendarChoice' onClick={() => handleClick("DailyChallenge")}><span className='rowDot'><div style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: 'var(--dailyChallenge'}}></div>Daily Challenge</span></button>
-            <button className='calendarChoice' onClick={() => handleClick("CreativityBooster")}><span className='rowDot'><div style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: 'var(--creativityBooster'}}></div>Creativity Booster</span></button>
+            <button className={`calendarChoice ${activeButton === "BrainDump" ? 'calendarChoiceActive' : ''}`} 
+                    onClick={() => handleClick("BrainDump")}><span className='rowDot'> 
+                    <div style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: 'var(--brainDump'}}></div>
+                    Brain Dump</span>
+            </button>
+
+            <button className={`calendarChoice ${activeButton === "DailyChallenge" ? 'calendarChoiceActive' : ''}`}
+                    onClick={() => handleClick("DailyChallenge")}><span className='rowDot'>
+                    <div style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: 'var(--dailyChallenge'}}></div>
+                    Daily Challenge</span>
+            </button>
+
+            <button className={`calendarChoice ${activeButton === "CreativityBooster" ? 'calendarChoiceActive' : ''}`}
+                    onClick={() => handleClick("CreativityBooster")}><span className='rowDot'>
+                    <div style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: 'var(--creativityBooster'}}></div>
+                    Creativity Booster</span>
+            </button>
 
             
             <div style={{display: 'flex', justifyContent: 'flex-start', gap:'4rem', marginTop: '1rem'}}>

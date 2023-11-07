@@ -206,13 +206,13 @@
     margin-right: 0.5rem;
   }
 
-  .calendarChoice:hover {
-    background-color: #7BBB9620;
-  }
-
   .calendarChoiceActive {
     background-color: #7BBB9620;
     box-shadow: 4px 0px 0px #7BBB96 inset;
+  }
+
+  .calendarChoice:hover {
+    background-color: #7BBB9620;
   }
 
   .rowDot {

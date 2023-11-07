@@ -7,6 +7,7 @@ import { currentDate } from "./components/EntryTypes";
 import { useState } from "react";
 import "../styles/dropdown.css";
 import "../styles/entry.css";
+import { Streak } from "./components/Streak";
 
 export default function Dashboard() {
   const currentDayAndDate = () => {
@@ -58,14 +59,14 @@ export default function Dashboard() {
           <div className="flex-row">
             <Outlet />
             <div>
-              <div className="Streak"></div>
+              <Streak/>
               <div className="A Letter To Myself"></div>
             </div>
           </div>
         </section>
 
         <section>
-          <h2>Today's entries:</h2>
+          <h2>Today's work:</h2>
           <EntryGroup date={currentDate()} />
         </section>
       </div>
