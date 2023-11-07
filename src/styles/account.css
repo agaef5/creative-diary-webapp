@@ -1,9 +1,5 @@
 @import url("../index.css");
 
-.AccountContainer {
-
-}
-
 #logout {
 display: flex;
 padding: 0.5rem 1rem;
@@ -21,8 +17,17 @@ border-radius: 3px;
 background: var(--light-theme-light-elements);
 color: var(--light-theme-light-elements);
 padding: 0.875rem 1rem;
+margin: 0rem 1rem ;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
 }
 
 #arrow {
-  
+  top: 9.05px;
+  left: 454px;
+  font-size: 24px;
+  font-family: var(--font-sf-pro);
+  text-align: center;
+ 
 }
