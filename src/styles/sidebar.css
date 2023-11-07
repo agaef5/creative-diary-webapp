@@ -36,6 +36,8 @@
   height: 2.5rem;
   background-color: var(--lightElem);
   color: var(--text);
+  margin-right: 32px;
+  margin-top: 32px;
 }
 .pageClick {
   display: flex;
@@ -49,12 +51,12 @@
   line-height: normal;
   text-decoration: none;
   align-items: center;
+  gap: 12px;
 }
 .navContainer {
   display: flex;
   flex-direction: column;
-
-  padding-top: 5.8rem;
+  padding-top: 6.125rem;
 }
 
 a {
