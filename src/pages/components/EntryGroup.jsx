@@ -162,7 +162,7 @@ export function EntryGroup(props){
       {renderedEntries.length > 0 ? (
         renderedEntries.map((entry) => <EntryCard key={entry.id} entry={entry} />)
       ) : (
-        <p>No entries to display</p>
+        <p style={{fontSize: '20px', fontStyle: 'italic', fontWeight: 300}} >No entries to display</p>
       )}
     </div>
   );

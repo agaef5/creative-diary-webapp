@@ -65,7 +65,7 @@ export default function CalendarPage() {
                 
             </div>
             <div>
-            <p style={{ fontWeight: '500', textAlign: 'center', marginBottom: '2rem', marginTop: 0}}>{currentDayAndDate()}</p>
+            <p style={{ fontWeight: '500', fontSize: '1.5rem', marginBottom: '2rem', marginTop: 0}}>{currentDayAndDate()}</p>
             <EntryGroup isColumn={true} date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>
             </div>
             </div>
