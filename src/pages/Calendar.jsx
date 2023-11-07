@@ -4,7 +4,6 @@ import { SideBar } from "./components/SideBar";
 import Calendar from "react-calendar";
 import { UserAuth } from '../authentication/context/AuthContext';
 import 'react-calendar/dist/Calendar.css';
-import { currentDayAndDate } from './Dashboard';
 import '../styles/calendar.css';
 
 export default function CalendarPage() {
