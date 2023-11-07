@@ -70,22 +70,23 @@ export default function CalendarPage() {
 
             
             <div style={{display: 'flex', justifyContent: 'flex-start', gap:'4rem', marginTop: '1rem'}}>
-            <div>
-                <Calendar style= {{ width: '51.875rem'}}
-                      value={chosenDate}
-                      onChange={setChosenDate}
-                      tileContent={({ date }) =>
-                          markedDates.find(
-                              markedDate => new Date(markedDate).toDateString() === date.toDateString()
-                          ) ? <div style={{ backgroundColor: inputType === 'BrainDump' ? '#3AA768' : (inputType === 'DailyChallenge' ? '#EB4A4A' : '#56ADBA'), width: 6, height: 6, borderRadius: '50%', marginLeft: '2.75rem', marginBottom: '-0.875rem', marginTop: '0.5rem'}}></div> : null
-                      }
-                  />
-                
-            </div>
-            <div>
-            <p style={{ fontWeight: '500', fontSize: '1.5rem', marginBottom: '2rem', marginTop: 0}}>{currentDayAndDate(chosenDate)}</p>
-            <EntryGroup isColumn={true} date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>
-            </div>
+                <div>
+                    <Calendar style= {{ width: '51.875rem'}}
+                        value={chosenDate}
+                        onChange={setChosenDate}
+                        tileContent={({ date }) =>
+                            markedDates.find(
+                                markedDate => new Date(markedDate).toDateString() === date.toDateString()
+                            ) ? <div style={{ backgroundColor: inputType === 'BrainDump' ? '#3AA768' : (inputType === 'DailyChallenge' ? '#EB4A4A' : '#56ADBA'), width: 6, height: 6, borderRadius: '50%', marginLeft: '2.75rem', marginBottom: '-0.875rem', marginTop: '0.5rem'}}></div> : null
+                        }
+                    />
+                </div>
+                <div>
+                    <p style={{ fontWeight: '500', fontSize: '1.5rem', marginBottom: '2rem', marginTop: 0}}>{currentDayAndDate(chosenDate)}</p>
+                    <div className='entryGroupCalendar'>
+                        <EntryGroup isColumn={true} date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>
+                    </div>
+                </div>
             </div>
         </div>
     );
