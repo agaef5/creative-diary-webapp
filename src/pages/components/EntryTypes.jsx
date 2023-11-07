@@ -195,7 +195,7 @@ export function BrainDump() {
   const [openSave, setOpenSave] = useState(false);
 
   return (
-    <div>
+    <div className="inputSpaceBD">
       <div>
         <input
           className="titleStylesBD"
@@ -204,8 +204,9 @@ export function BrainDump() {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Untitled"
         />
-        <p>{currentDate()}</p>
+        <p className="dateStleBD">{currentDate()}</p>
         <input
+          className="inputStyleBD"
           type="text"
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
