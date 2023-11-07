@@ -6,7 +6,6 @@ padding: 0.5rem 1rem;
 justify-content: center;
 align-items: center;
 border-radius: 3px;
-background: var(--accent-green, #7BBB96);
 }
 
 #settings, #sub, #security {

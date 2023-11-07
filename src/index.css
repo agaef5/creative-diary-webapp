@@ -69,6 +69,11 @@ body {
   overflow-x: hidden;
 }
 
+a{
+  color: var(--text);
+  text-decoration: none;
+}
+
 #AppContainer {
   display: flex;
   flex-direction: column;

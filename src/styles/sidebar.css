@@ -21,6 +21,10 @@
   right: 10px;
 }
 
+.closeBtn:focus {
+  box-shadow: inset 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
+}
+
 .burgerMenuIcon {
   width: 50px;
   height: 46px;
@@ -31,6 +35,11 @@
   top: 2rem;
   left: 2rem;
 }
+
+.burgerMenuIcon:focus {
+  box-shadow: inset 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
+}
+
 .closeBtn {
   width: 2.5rem;
   height: 2.5rem;
@@ -68,6 +77,10 @@ a {
   height: 2.5rem;
   background-color: var(--lightElem);
   color: var(--text);
+}
+
+.houseIcon:focus {
+  box-shadow: inset 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
 }
 
 .sideBarLinks {
