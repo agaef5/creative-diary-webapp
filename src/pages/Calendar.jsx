@@ -4,6 +4,7 @@ import { SideBar } from "./components/SideBar";
 import Calendar from "react-calendar";
 import { UserAuth } from '../authentication/context/AuthContext';
 import 'react-calendar/dist/Calendar.css';
+import { currentDayAndDate } from './Dashboard';
 
 export default function CalendarPage() {
     const {user} = UserAuth();
@@ -47,6 +48,7 @@ export default function CalendarPage() {
                   />
                 
             </div>
+            <p>{currentDayAndDate()}</p>
             <EntryGroup isColumn={true} date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>
             </div>
         </div>
