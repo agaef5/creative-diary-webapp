@@ -34,7 +34,7 @@ export default function CalendarPage() {
             <button onClick={() => handleClick("CreativityBooster")} >Creativity Booster</button>
 
             
-            <div  style={{ display: 'flex', justifyContent: 'center', margin: '2rem' }}>
+            <div  style={{ display: 'flex', justifyContent: 'center', padding: '4rem', margin: '2rem' }}>
             <div>
                 <Calendar
                       value={chosenDate}
