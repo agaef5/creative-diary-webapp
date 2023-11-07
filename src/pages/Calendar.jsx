@@ -47,7 +47,7 @@ export default function CalendarPage() {
                   />
                 
             </div>
-            <EntryGroup date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>
+            <EntryGroup isColumn={true} date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>
             </div>
         </div>
     );
