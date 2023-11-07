@@ -4,14 +4,15 @@ import Library from './pages/Library'
 import Calendar from './pages/Calendar'
 import Account, { SecurityPrivacy, Settings, Subscription } from './pages/Account'
 import WelcomePage from './authentication/WelcomePage'
-import { AuthContextProvider } from './authentication/context/AuthContext'
 import { UserAuth } from './authentication/context/AuthContext'
 import { BrainDump, ChooseInputType, CreativityBooster, DailyChallenge } from './pages/components/EntryTypes'
 import { GroupPage, ProjectPage, ProjectsGroupPage, TagsPage } from './pages/GroupAndProjectPage'
 import { EntryEdit } from './pages/EntryEdit'
 import LogIn from './authentication/forms/LogIn'
 import CreateAccount from './authentication/forms/CreateAccount'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { onValue, ref } from 'firebase/database'
+import { database } from '../firebase-config'
 
 
 
@@ -26,10 +27,34 @@ function App() {
 
   const [theme, setTheme] = useState('light');
   const [accColor, setAccColor] = useState("green");
+  const { user } = UserAuth();
+  const userID = user ? user.uid : '';
+
+  useEffect(() => {
+    const themeRef = ref(database, `users/${userID}/theme`);
+
+    onValue(themeRef, (snapshot) => {
+      const theme = snapshot.val();
+      if (theme) {
+        setTheme(theme);
+      }
+    });
+  }, [userID]);
+
+  useEffect(() => {
+    const accColorRef = ref(database, `users/${userID}/color`);
+    onValue(accColorRef, (snapshot) => {
+      const color = snapshot.val();
+      if (color) {
+        setAccColor(color);
+      }
+    });
+  }, [userID]);
+  
 
   return (
     <>
-    <AuthContextProvider>
+    
         <div id="AppContainer" className={`${theme} ${accColor}`}>
         <Routes>
               <Route path="/" element={<WelcomePage/>}>
@@ -56,7 +81,7 @@ function App() {
               <Route path=":entryID" element={<ProtectedRoute><EntryEdit/></ProtectedRoute>}/>
             </Routes>
         </div>
-    </AuthContextProvider>
+    
       
     </>
   )

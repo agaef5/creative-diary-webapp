@@ -351,10 +351,14 @@ export function CreativityBooster() {
 
   useEffect(() => {
     const hasInteracted = localStorage.getItem("hasInteracted");
-    if (!hasInteracted) {
+    const today = new Date().toDateString();
+    if (hasInteracted === today) {
       setShowPrompt(true);
+    } else {
+      setShowPrompt(false);
     }
   }, []);
+
 
   useEffect(() => {
     fetchTodayPromptID("CreativityBooster", userID, setGeneratedID); // !!!!!!!!!
@@ -381,7 +385,8 @@ export function CreativityBooster() {
   }
 
   function showCreativityBooster() {
-    localStorage.setItem("hasInteracted", true);
+    const today = new Date().toDateString();
+    localStorage.setItem("hasInteracted", today);
     setShowPrompt(true);
   }
 
