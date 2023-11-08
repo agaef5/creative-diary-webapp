@@ -54,6 +54,10 @@ export function SelectTag({ onTagSelect, selectedTags }) {
                         onClick={() => handleTagSelect(tag.id)}
                         style={{
                             backgroundColor: internalSelectedTags.includes(tag.id) ? 'var(--accCol)'  : 'var(--textInputLight)',
+                            margin: '0.5rem',
+                            padding: '0.5rem 1rem',
+                            border: 'none',
+                            borderRadius: '0.125rem',
                         }}
                     >
                         #{tag.name}

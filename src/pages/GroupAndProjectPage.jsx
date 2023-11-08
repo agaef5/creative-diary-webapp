@@ -24,7 +24,7 @@ export function ProjectsGroupPage(){
         <SideBar/>
         
         <SearchBar/> 
-        <h2>library/projects</h2>
+        <h2>library/Projects</h2>
         <ProjectGroup/>
         </>
     )
