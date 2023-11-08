@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { ProjectGroup, SelectProject } from "./Projects";
 import { SelectTag } from "./Tags";
 import { EntryGroup } from "./EntryGroup";
-import { ProjectPage } from "../GroupAndProjectPage";
+import "../../styles/searchBar.css";
+
 
 export function SearchBar(props){
 
@@ -52,44 +53,50 @@ export function SearchBar(props){
       console.log(searchKeywords);
 
     return(
-        <div>
-            <input type="text"
-                    placeholder="Search The Library..."
-                    onClick={()=> (setSearch(true))}
-                    onChange={(e) => setKeywords(e.target.value)}
-                    className="searchInput"/>
+        <div className="searchBarContainer">
+            <div className="searchBar">
+                <input className="searchInput"
+                        type="text"
+                        placeholder="Search The Library..."
+                        onClick={()=> (setSearch(true))}
+                        onChange={(e) => setKeywords(e.target.value)}/>
 
-             {search && (
-                <div className="choiceField">
-                {(!project || project.length === 0) && <SelectProject onProjectSelect={setSelectedProjects}/>}
+                {search && (
+                    <div className="choiceField">
+                        {(!project || project.length === 0) && 
+                        <SelectProject onProjectSelect={setSelectedProjects}/>}
 
-                {(!tag || tag.length === 0) &&  <SelectTag onTagSelect={setSelectedTags}/>}
+                        {(!tag || tag.length === 0) &&  
+                        <SelectTag onTagSelect={setSelectedTags}/>}
 
-                {(!inputType || inputType.length === 0) && <SelectInputType onInputTypeSelect={setSelectedInputTypes}/>}
-               
-<br></br>
-                <button id='searchButton' onClick={performSearch}>Search</button>
-                </div>
-             )}       
-
-          
-            <br/>
+                        {(!inputType || inputType.length === 0) && 
+                        <SelectInputType onInputTypeSelect={setSelectedInputTypes}/>}
+                
+                        <button id='searchButton' onClick={performSearch}>Search</button>
+                    </div>
+                )}
+            </div>
                 
             {showResults && (
-                <>
-                    <h2 style={{marginTop: '4rem', marginBottom: '0'}}>Results</h2>
-                    <div className="sortBy">
-                        Sort By:
-                        <select value={sortOrder} onChange={handleSortingChange} className="dropdownSorting">
-                            <option value="">Select</option>
-                            <option value="newest">From Newest</option>
-                            <option value="oldest">From Oldest</option>
-                        </select>
+                <div className="searchBarResults">
+                    <div className="resultsOptions">
+                        <h2>Results</h2>
+                        <div className="sortBy">
+                            Sort By:
+                            <select value={sortOrder} onChange={handleSortingChange} className="dropdownSorting">
+                                <option value="">Select</option>
+                                <option value="newest">From Newest</option>
+                                <option value="oldest">From Oldest</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        {(searchKeywords.length > 0) && <ProjectGroup keywords={searchKeywords}/>}
+                        <EntryGroup keywords={searchKeywords} projects={searchProjects} tags={searchTags} inputType={searchInputTypes} sortOrder={sortOrder}/>
                     </div>
 
-                    {(searchKeywords.length > 0) && <ProjectGroup keywords={searchKeywords}/>}
-                    <EntryGroup keywords={searchKeywords} projects={searchProjects} tags={searchTags} inputType={searchInputTypes} sortOrder={sortOrder}/>
-                    </>
+                </div>
                 
             )}
 
