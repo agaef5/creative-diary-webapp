@@ -85,8 +85,6 @@ export function SearchBar(props){
                         </select>
                     </div>
 
-                    {/*  */}
-
                     {(searchKeywords.length > 0) && <ProjectGroup keywords={searchKeywords}/>}
                     <EntryGroup keywords={searchKeywords} projects={searchProjects} tags={searchTags} inputType={searchInputTypes} sortOrder={sortOrder}/>
                     </>

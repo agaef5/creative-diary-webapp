@@ -60,7 +60,7 @@ export default function Dashboard() {
             <Outlet />
             <div>
               <Streak/>
-              <div className="A Letter To Myself"></div>
+              <div className="LetterToMyself"> A Letter To Myself</div>
             </div>
           </div>
         </section>

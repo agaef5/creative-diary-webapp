@@ -173,10 +173,10 @@ export function AddProject({open, onClose}){
         <> 
         <div className="overlay" onClick={onClose}>
         {/* stopPropagation function prevents affecting onClose function from 'overlay' div to its children div's, so pop-up itself */}
-        <div className="popUp" onClick={(e => {e.stopPropagation();})}>
+        <div className="moduleContainer" onClick={(e => {e.stopPropagation();})}>
                 <button onClick={onClose}>x</button>
                 <h2>Add a Project</h2>
-                <div>
+                <div className="flex-col">
                     <label>Project Name<span>*</span></label>
                     <input type="text" value={name} onChange={(e => setName(e.target.value))} placeholder="e.g. Photography Funsies" required/>
 

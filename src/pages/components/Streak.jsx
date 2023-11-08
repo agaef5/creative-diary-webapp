@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { UserAuth } from '../../authentication/context/AuthContext';
 import { GetEntries } from './EntryGroup';
+import "../../styles/streak.css"
 
 export function Streak() {
     const { user } = UserAuth();
@@ -35,21 +36,25 @@ export function Streak() {
       setLastSevenDays(weekDays.reverse());
     }, [entries]);
   
-    return (
-      <div>
-        <p>Consecutive days with entries: {consecutiveDays}</p>
+    return ( 
+      <div className='streakContainer'>
+        <p className='MyStreak'>My Streak</p>
+        <div className='streakCircle'>
+            <div className='progress' style={{ transform: `rotate(${((consecutiveDays / 7) * 360)}deg)` }}></div>
+            <p className='streakDays'>{consecutiveDays}{consecutiveDays === 0 ? null : '🔥'}</p>
+        </div>
+        
         <div>
-          Last seven days:
-          <ul>
+          <div className='allDaysInStreak'>
             {lastSevenDays.map((day, index) => (
-              <li
+              <div className='dayInStreak'
                 key={index}
-                style={{ color: day.hasEntry ? 'green' : 'black' }}
+                style={{ backgroundColor: day.hasEntry ? 'var(--accCol)' : 'var(--textInput)' }}
               >
-                {`${day.day} - ${day.hasEntry ? 'Entry added' : 'No entry'}`}
-              </li>
+                {day.day.charAt(0)}
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     );

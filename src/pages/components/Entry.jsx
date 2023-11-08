@@ -4,8 +4,9 @@ import { UserAuth } from "../../authentication/context/AuthContext";
 import { GetProjects } from "./Projects";
 import { GetTags } from "./Tags";
 import { database } from "../../../firebase-config";
-import { ref, update } from "firebase/database";
+import { ref, remove, update } from "firebase/database";
 import "../../styles/entry.css"
+import { Modal } from "./DeleteConfirmation";
 
 
 export function EntryCard({entry}){
@@ -17,6 +18,8 @@ export function EntryCard({entry}){
     const [tagNames, setTagNames] = useState([]);
     const [openMoreOptions, setOpenMoreOptions] = useState(false);
     const [openEntryDisplay, setOpenEntryDisplay] = useState(false);
+    const [openDeleteModal, setOpenDeleteModal] = useState(false);
+
     const moreContainerRef = useRef(null);
 
     useEffect(() => {
@@ -63,6 +66,11 @@ export function EntryCard({entry}){
         if (project) {
             navigate(`/projects/${project.name}/${project.id}`);
         }
+    }
+
+    function handleDelete(){
+        const entryRef = ref(database, `entries/${user.uid}/${entry.id}`);
+        remove(entryRef)
     }
 
     function pinEntry() {
@@ -142,10 +150,11 @@ export function EntryCard({entry}){
                                             <hr className="horizontal"></hr>
                                             <div><Link to={`/${entry.id}`}>Edit entry</Link></div>
                                             <hr className="horizontal"></hr>
-                                            <div>Delete entry</div>
+                                            <div onClick={() => setOpenDeleteModal(true)}>Delete entry</div>
                                     </div>
                                 )}
                         </div>
+                <Modal show={openDeleteModal} onClose={() => setOpenDeleteModal(false)} onConfirm={handleDelete} />
                 <EntryDisplay open={openEntryDisplay} onCloseDisplay={() => setOpenEntryDisplay(false)} entry={entry} projectNames={projectNames} tagNames={tagNames} />
               </div>
             );

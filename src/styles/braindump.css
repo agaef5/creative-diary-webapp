@@ -69,13 +69,11 @@
   align-items: center;
   gap: 8px;
   border-radius: 3px;
-  background: var(--accent-green, #7bbb96);
+  background: var(--accCol);
   margin-top: 32px;
   right: 32px;
-
-  /* light paper shadow */
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: 6px 6px 16px 0px var(--shadow),
+    -6px -6px 16px 0px var(--shadow);
   color: #fff;
   font-family: SF Pro Display;
   font-size: 20px;

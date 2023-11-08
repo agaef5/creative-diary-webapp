@@ -5,8 +5,6 @@ import { ref, onValue } from "firebase/database";
 import { EntryCard } from "./Entry";
 import "../../styles/entry.css"
 
-
-
 export function GetEntries(userId) {
   const [entries, setEntries] = useState([]);
 
@@ -55,7 +53,6 @@ function filterEntries(entries, filters) {
     })
   );
 
-  console.log(definedFilters);
   return entries.filter((entry) => {
     const matchedPinned = definedFilters.pinned !== undefined ? entry.pinned === definedFilters.pinned : true;
     const matchedKeywords = definedFilters.keywords

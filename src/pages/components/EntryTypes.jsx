@@ -5,7 +5,6 @@ import { database } from "../../../firebase-config";
 import { UserAuth } from "../../authentication/context/AuthContext";
 import { AddProject, SelectProject } from "./Projects";
 import { AddTag, SelectTag } from "./Tags";
-import "../../styles/entryTypes.css";
 import "../../styles/braindump.css";
 
 // function to get time and display it below title
@@ -128,14 +127,9 @@ export function SaveEntry({ open, onClose, ...props }) {
   return (
     <>
       <div className="overlay" onClick={onClose}>
-        <div
-          className="popUp"
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
-        >
+        <div className="moduleContainer flex-col" onClick={(e) => {e.stopPropagation();}}>
           <button onClick={onClose}>x</button>
-          <div>
+          <div className="flex-col">
             <h2>Add Tags</h2>
             <SelectTag onTagSelect={setSelectedTags} />
             <AddTag />

@@ -1,6 +1,7 @@
 @import url("../index.css");
 
 .sidebar {
+  z-index: 10;
   width: 0;
   height: 100vh;
   background-color: var(--lightElem);
