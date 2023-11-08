@@ -156,11 +156,12 @@
     background-color: var(--lightElem);
     padding: 0.5rem 1rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 0.125rem;
   }
 
   .horizontal{
     width: 100%;
-    border: .5px var(--textInput2) solid;
+    border: 0.001rem var(--textInput2) solid;
     border-radius: 2px;
   }
 

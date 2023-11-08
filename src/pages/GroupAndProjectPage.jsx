@@ -4,6 +4,7 @@ import { GetProjects, ProjectGroup } from "./components/Projects";
 import { SearchBar } from "./components/SearchBar";
 import { SideBar } from "./components/SideBar";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function GroupPage() {
     const {inputType} = useParams();
@@ -12,7 +13,13 @@ export function GroupPage() {
         <SideBar/>
         
         <SearchBar inputType={inputType}/>
-        <h2>library/{inputType}</h2>
+        <div className="projectInfo">
+            <h2>
+            <Link to='/library'>
+                <span className="grey">Library/</span>
+            </Link>{inputType}
+            </h2>
+        </div>
         <EntryGroup inputType={inputType}/>
         </>
     )
@@ -24,7 +31,13 @@ export function ProjectsGroupPage(){
         <SideBar/>
         
         <SearchBar/> 
-        <h2>library/Projects</h2>
+        <div className="projectInfo">
+            <h2>
+            <Link to='/library'>
+                <span className="grey">Library/</span>
+            </Link>Projects
+            </h2>
+        </div>
         <ProjectGroup/>
         </>
     )
@@ -48,9 +61,15 @@ export function ProjectPage(){
             <SideBar/>
             <SearchBar project={projectID}/>
             {/* <SearchBar project={projectID}/> */}
-            <h2>library/projects/{projectName}</h2>
-            {project.goal && (<p>{project.goal}</p>)}
+            <div className="projectInfo">
+            <h2>
+                <Link to='/projects'>
+                    <span className="grey">Library/Projects/</span>
+                </Link>{projectName}
+            </h2>
+            {project.goal && (<p id='goal'>{project.goal}</p>)}
             {project.description && (<p>{project.description}</p>)}
+            </div>
 
             <EntryGroup projects={projectID}/>
         </>
@@ -66,7 +85,13 @@ export function TagsPage() {
         <SideBar/>
 
         <SearchBar tag={tagID}/>
-        <h2>library/{tagName}</h2>
+        <div className="projectInfo">
+            <h2>
+                <Link to='/library'>
+                    <span className="grey">Library/Tags/</span>
+                </Link>{tagName}
+            </h2>
+        </div>
         <EntryGroup tags={tagID}/>
         </>
     )

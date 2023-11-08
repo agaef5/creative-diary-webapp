@@ -34,41 +34,40 @@ export default function Library(){
                 </div>
 
                 <div>
-                    <h2>BrainDump</h2>
-                    <div style={{ marginBottom:'4rem'}}>
-                        <div className='seeAll'><a className="seeAllText" onClick={() => handleClick("BrainDump")}>see all</a></div>
+                    <span className="seeAll">
+                        <h2>BrainDump</h2>
+                        <a className="seeAllText" onClick={() => handleClick("BrainDump")}>see all</a>
+                    </span>
                         <LastThreeEntries inputType={"BrainDump"}/>
-                    </div>
                 </div>
 
                 <div>
+                    <span className="seeAll">
                     <h2>Projects</h2>
-                    <div style={{marginBottom:'4rem'}}>
-                        <div className='seeAll'><a className="seeAllText" onClick={() => handleProjectClick()}>see all</a></div>
-                        <div style={{display:'flex'}}>
+                        <a className="seeAllText" onClick={() => handleProjectClick()}>see all</a>
+                    </span>
                             <ProjectGroup lastThree/>
                             {/* <button onClick={() => setOpenModal(true)}>+</button> */}
-                        </div>
                         {/* <AddProject open={openModal} onClose={() => setOpenModal(false)}/> */}
-                    </div>
+
                 </div>
                 
                 <div>
-                    <h2>Daily Challenge</h2>
-                    <div style={{marginBottom:'4rem'}}>                
-                    <div className='seeAll'><a className="seeAllText" onClick={() => handleClick("DailyChallenge")}>see all</a></div>
+                    <span className="seeAll">
+                    <h2>Daily Challenge</h2>              
+                    <a className="seeAllText" onClick={() => handleClick("DailyChallenge")}>see all</a>
+                    </span>
 
                     <LastThreeEntries inputType={"DailyChallenge"}/>
-                    </div>
                 </div>
 
                 <div>
-                    <h2>Creativity Booster</h2>
-                    <div style={{mmarginBottom:'4rem'}}>   
-                    <div className='seeAll'><a className="seeAllText" onClick={() => handleClick("CreativityBooster")} >see all</a></div>
+                    <span className="seeAll">
+                        <h2>Creativity Booster</h2>
+                    <a className="seeAllText" onClick={() => handleClick("CreativityBooster")}>see all</a>
+                    </span>
 
                     <LastThreeEntries inputType={"CreativityBooster"}/>
-                    </div>
                 </div>
             </section>
         </>
