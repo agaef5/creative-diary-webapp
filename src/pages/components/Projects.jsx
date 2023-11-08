@@ -65,6 +65,10 @@ export function GetProjects(userId) {
                         style={{
                             backgroundColor: internalSelectedProjects.includes(project.id) ? 'var(--background)' : 'var(--textInputLight)',
                             color: internalSelectedProjects.includes(project.id) ? 'var(--accCol)' : 'var(--lightElem)',
+                            margin: '0.5rem',
+                            padding: '0.5rem 1rem',
+                            border: 'none',
+                            borderRadius: '0.125rem',
                         }}
                     >
                         {project.name}
