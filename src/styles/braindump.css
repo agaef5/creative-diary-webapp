@@ -50,12 +50,15 @@
   font-weight: 400;
   border-style: none;
   width: 55rem;
-  height: 25rem;
+  height: 25rem; /* You can adjust the height as needed */
   background-color: var(--lightElem);
   line-height: 1;
+  resize: none; /* Prevent the textarea from being resized by the user */
+  padding: 0.5rem; /* Add some padding for better appearance */
 }
 
 .inputStyleBD::placeholder {
+  text-align: left; /* Align placeholder text to the left */
   line-height: 1; /* Set line-height for the placeholder */
   vertical-align: top; /* Align placeholder text at the top */
 }
