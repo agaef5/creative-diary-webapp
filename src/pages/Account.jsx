@@ -181,7 +181,7 @@ export function Settings({ setTheme, setAccColor }) {
       </h2>
       <h3>Mail Notifications</h3>
       {/* (if notifications == true ? <p>I want to receive mail notifications</p> : <p>I don't want to receive mail notifications</p>) */}
-
+      <p>I don't want to receive mail notifications</p>
       <h3>Customization</h3>
       <p>Themes</p>
       <div className="lightdark">
