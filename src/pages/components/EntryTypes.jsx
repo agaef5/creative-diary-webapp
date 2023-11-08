@@ -165,13 +165,13 @@ export function ChooseInputType() {
         <div>
           <div className="options">
             <Link to="/dashboard/BrainDump">
-              <div className="featureCard">
+              <div className="featureCardBD">
                 <img
                   className="featureImg"
                   src={imgBrainDump}
                   alt="Brain Dump Character"
                 />
-                <p style={{ color: "#3AA768" }}>Brain Dump</p>
+                <p>Brain Dump</p>
               </div>
             </Link>
 
@@ -190,18 +190,18 @@ export function ChooseInputType() {
                   src={imgDailyChallenge}
                   alt="Daily Challenge Character"
                 />
-                <p style={{ color: "#EB4A4A" }}>Daily Challenge</p>
+                <p>Daily Challenge</p>
               </div>
             </Link>
 
             <Link to="/dashboard/CreativityBooster">
-              <div className="featureCard">
+              <div className="featureCardCB">
                 <img
                   className="featureImgCB"
                   src={imgCreativityBooster}
                   alt="Creativity Booster Character"
                 />
-                <p style={{ color: "#56ADBA" }}>Creativity Booster</p>
+                <p>Creativity Booster</p>
               </div>
             </Link>
           </div>

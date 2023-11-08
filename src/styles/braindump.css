@@ -126,7 +126,7 @@
   padding: 137px 168px 136px 168px;
 }
 
-.featureCard {
+.featureCardBD {
   width: 12rem;
   height: 16rem;
   background-color: var(--lightElem);
@@ -140,11 +140,50 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #3aa768;
 }
 
-.featureCard > p {
+.featureCardBD > p {
   margin: 0;
 }
+
+.featureCardBD:hover {
+  background-color: var(--brainDump);
+}
+
+.featureCardBD:hover > p {
+  color: var(--lightElem);
+}
+
+.featureCardCB {
+  width: 12rem;
+  height: 16rem;
+  background-color: var(--lightElem);
+  border-radius: 10px;
+  border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
+
+  /* light paper shadow */
+  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
+    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #56adba;
+}
+
+.featureCardCB > p {
+  margin: 0;
+}
+
+.featureCardCB:hover {
+  background-color: var(--creativityBooster);
+}
+
+.featureCardCB:hover > p {
+  color: var(--lightElem);
+}
+
 .featureImg {
   width: 9.6rem;
   height: 12rem;
@@ -171,10 +210,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #eb4a4a;
 }
 
 .featureCardDC > p {
   margin: 0;
+}
+
+.featureCardDC:hover {
+  background-color: var(--dailyChallenge);
+  color: var(--lightElem);
 }
 
 .DailyChallengeTimer {
@@ -194,4 +239,17 @@
 .featureImgCB {
   width: auto;
   height: 12rem;
+}
+
+.featureCardBD:hover .featureImg,
+.featureCardDC:hover .featureImg,
+.featureCardCB:hover .featureImgCB {
+  clip-path: inset(10% 10% 40% 10%);
+  transition: clip-path 0.3s ease-in-out;
+}
+
+.featureCardBD,
+.featureCardDC,
+.featureCardCB {
+  overflow: hidden;
 }
