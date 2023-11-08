@@ -1,3 +1,5 @@
+@import url("../index.css");
+
 .react-calendar {
     width: 50rem;
     max-width: 100%;
@@ -121,34 +123,34 @@
   
   .react-calendar__tile:enabled:hover,
   .react-calendar__tile:enabled:focus {
-    background-color: #7BBB9695;
+    background-color: var(--accColLight);
   }
   
   .react-calendar__tile--now {
-    background: #7BBB9620;
+    background: var(--accColLight);
   }
   
   .react-calendar__tile--now:enabled:hover,
   .react-calendar__tile--now:enabled:focus {
-    background: #7BBB9695;
+    background: var(--accColLight);
   }
   
   .react-calendar__tile--hasActive {
-    background: #7BBB9695;
+    background: var(--accColLight);
   }
   
   .react-calendar__tile--hasActive:enabled:hover,
   .react-calendar__tile--hasActive:enabled:focus {
-    background: #7BBB9695;
+    background: var(--accColLight);
   }
   
   .react-calendar__tile--active {
-    background: #7BBB9695;
+    background: var(--accCol);
   }
   
   .react-calendar__tile--active:enabled:hover,
   .react-calendar__tile--active:enabled:focus {
-    background: #7BBB9695;
+    background: var(--accCol);
   }
   
   .react-calendar--selectRange .react-calendar__tile--hover {
@@ -207,8 +209,8 @@
   }
 
   .calendarChoiceActive {
-    background-color: #7BBB9620;
-    box-shadow: 4px 0px 0px #7BBB96 inset;
+    background-color: var(--accColLight);
+    box-shadow: 4px 0px 0px (var(--accCol)) inset;
   }
 
   .calendarChoice:hover {

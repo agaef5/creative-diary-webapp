@@ -32,7 +32,7 @@ export default function CalendarPage() {
 
     const currentDayAndDate = (date) => {
         const options = { weekday: 'long' };
-        const day = String(date.getDate()).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2);
         const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(date);
         const year = date.getFullYear();
         const formattedDate =

@@ -14,16 +14,16 @@ export default function Dashboard() {
   const currentDayAndDate = () => {
     var today = new Date();
     var options = { weekday: "long" };
-    var day = String(today.getDate()).padStart(2, "0");
-    var month = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    var day = String(today.getDate()).padStart(2);
+    var month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(today);
     var year = today.getFullYear();
     var formattedDate =
       new Intl.DateTimeFormat("en-GB", options).format(today) +
       ", " +
       day +
-      "/" +
+      " " +
       month +
-      "/" +
+      " " +
       year;
     return formattedDate;
   };
