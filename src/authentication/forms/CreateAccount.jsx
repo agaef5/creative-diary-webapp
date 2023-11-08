@@ -16,8 +16,8 @@ export default function CreateAccount(){
         set(ref(database, 'users/' + userID), {
             username: username,
             email: email,
-            theme: light,
-            color: green
+            theme: 'light',
+            color: 'green'
         });
       }
 
@@ -46,7 +46,8 @@ export default function CreateAccount(){
                     type='text' 
                     value={username} 
                     onChange={(e => setUsername(e.target.value))}
-                    placeholder="Jane Doe"/>
+                    placeholder="Jane Doe"
+                    required/>
 
                 <label >E-mail:</label>
                 <input 

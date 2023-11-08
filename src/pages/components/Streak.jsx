@@ -37,7 +37,7 @@ export function Streak() {
     }, [entries]);
   
     return ( 
-      <div className='streakContainer'>
+      <div className='streakContainer shadow'>
         <p className='MyStreak'>My Streak</p>
         <div className='streakCircle'>
             <div className='progress' style={{ transform: `rotate(${((consecutiveDays / 7) * 360)}deg)` }}></div>

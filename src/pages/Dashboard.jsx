@@ -7,6 +7,7 @@ import { currentDate } from "./components/EntryTypes";
 import { useState } from "react";
 import "../styles/dropdown.css";
 import "../styles/entry.css";
+import "../styles/letterToMyself.css";
 import { Streak } from "./components/Streak";
 import imgLetterbox from "../styles/images/letterbox.png";
 
@@ -14,16 +15,16 @@ export default function Dashboard() {
   const currentDayAndDate = () => {
     var today = new Date();
     var options = { weekday: "long" };
-    var day = String(today.getDate()).padStart(2, "0");
-    var month = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    var day = String(today.getDate()).padStart(2);
+    var month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(today);
     var year = today.getFullYear();
     var formattedDate =
       new Intl.DateTimeFormat("en-GB", options).format(today) +
       ", " +
       day +
-      "/" +
+      " " +
       month +
-      "/" +
+      " " +
       year;
     return formattedDate;
   };
@@ -44,11 +45,11 @@ export default function Dashboard() {
       <SideBar />
       <div className="flex-col">
         <div className="date">
-          <p>{currentDayAndDate()}</p>
+          <p className="dashboardDate">{currentDayAndDate()}</p>
         </div>
         <section>
           <select
-            className="dropdown"
+            className="dropdown shadow"
             value={selectedOption}
             onChange={changeDisplay}
           >
@@ -61,7 +62,7 @@ export default function Dashboard() {
             <Outlet />
             <div>
               <Streak />
-              <div className="LetterToMyself">
+              <div className="LetterToMyself shadow">
                 {" "}
                 <p className="titleLetter">A Letter To Myself</p>
                 <img
@@ -78,7 +79,7 @@ export default function Dashboard() {
         </section>
 
         <section>
-          <h2>Today's work:</h2>
+          <h2 style={{marginTop: '2rem'}}>Today's Work:</h2>
           <EntryGroup date={currentDate()} />
         </section>
       </div>

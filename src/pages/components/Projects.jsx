@@ -133,9 +133,9 @@ export function ProjectCard({project}){
     }
     return(
         <div key={project.id} className="projectCard" onClick={() => handleProjectClick(project)}>
-            <div className="firstCardBg">
-                <div className="secondCardBg">
-                    <div className="projectCardContent">
+            <div className="firstCardBg shadow">
+                <div className="secondCardBg shadow">
+                    <div className="projectCardContent shadow">
                         <p className="projectCardTime">{project.timeperiod}</p>
                         <h2 className="projectCardTitle">{project.name}</h2>
                     </div>

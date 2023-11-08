@@ -8,8 +8,8 @@ import { AddTag, SelectTag } from "./Tags";
 import "../../styles/braindump.css";
 import imgBrainDump from "../../styles/images/braindump1.png";
 import imgDailyChallenge from "../../styles/images/dailychallengeguy1.png";
+import imgCreativityBooster from "../../styles/images/creativityboosterguy1.png"
 import imgHourglass from "../../styles/images/hourglass.png";
-import imgCreativityBooster from "../../styles/images/creativityboosterguy1.png";
 
 // function to get time and display it below title
 // it is global, so can be used in all functions below
@@ -132,7 +132,7 @@ export function SaveEntry({ open, onClose, ...props }) {
     <>
       <div className="overlay" onClick={onClose}>
         <div
-          className="moduleContainer flex-col"
+          className="moduleContainer shadow flex-col"
           onClick={(e) => {
             e.stopPropagation();
           }}
@@ -158,14 +158,14 @@ export function SaveEntry({ open, onClose, ...props }) {
 
 export function ChooseInputType() {
   return (
-    <section className="pickInput">
+    <section className="pickInput shadow">
       <div className="pickFeature">
         <h2 className="headerInputType">Where Will Your Pen Take You Today?</h2>
         <p className="subheaderInputType">Pick Your Entry Of Choice</p>
         <div>
           <div className="options">
             <Link to="/dashboard/BrainDump">
-              <div className="featureCardBD">
+              <div className="featureCardBD shadow">
                 <img
                   className="featureImg"
                   src={imgBrainDump}
@@ -176,7 +176,7 @@ export function ChooseInputType() {
             </Link>
 
             <Link to="/dashboard/DailyChallenge">
-              <div className="featureCardDC">
+              <div className="featureCardDC shadow">
                 <div className="DailyChallengeTimer">
                   <img
                     className="featureImgHourglass"
@@ -195,7 +195,7 @@ export function ChooseInputType() {
             </Link>
 
             <Link to="/dashboard/CreativityBooster">
-              <div className="featureCardCB">
+              <div className="featureCardCB shadow">
                 <img
                   className="featureImgCB"
                   src={imgCreativityBooster}
@@ -217,7 +217,7 @@ export function BrainDump() {
   const [openSave, setOpenSave] = useState(false);
 
   return (
-    <div className="inputSpaceBD">
+    <div className="inputSpaceBD shadow">
       <div className="flex-col">
         <div className="flex-row">
           <input
@@ -234,9 +234,9 @@ export function BrainDump() {
         <p className="dateStleBD">{currentDate()}</p>
       </div>
       <div>
-        <input
+        <div id='dashedLine'/>
+        <textarea
           className="inputStyleBD"
-          type="text"
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
           placeholder="What is it you're thinking of..."
