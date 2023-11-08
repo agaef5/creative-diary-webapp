@@ -41,19 +41,26 @@
   justify-content: flex-start;
 }
 
-.light-dark button {
+.lightdark {
   display: inline-flex;
-  height: 4rem;
-  width: 4rem;
+}
+
+.lightdark button {
+  height: 6.25rem;
+  width: 6.25rem;
   border-radius: 0.1875rem;
 }
 
-#light {
-  --background: #f4f4f4;
+.lightdark .lightcolor {
+  background-color: #f4f4f4;
 }
 
-#dark {
-  --background: #343434;
+.lighttext {
+  color: #343434;
+}
+
+.lightdark .darkcolor {
+  background-color: #343434;
 }
 
 .colors {
@@ -69,12 +76,11 @@
 }
 
 .colors button:hover {
-  box-shadow: inset white 0px 0px 40px -12px; 
+  box-shadow: inset white 0px 0px 40px -12px;
   box-shadow: 80%;
 }
 
 .colors button:active {
-
 }
 
 #green {
@@ -103,4 +109,19 @@
 
 #pink {
   --accCol: #f896ad;
+}
+
+.accountPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 80vw;
+}
+
+.AccountContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 4rem;
 }

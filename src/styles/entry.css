@@ -32,6 +32,8 @@
       -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
 
     background-color: var(--lightElem);
+
+    cursor: pointer;
   }
 
   .entryPinned {
@@ -141,6 +143,7 @@
     width: 2.75rem;
     height: 2.5rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
   }
 
   .moreOptions{
