@@ -44,7 +44,7 @@ export default function Dashboard() {
       <SideBar />
       <div className="flex-col">
         <div className="date">
-          <p>{currentDayAndDate()}</p>
+          <p className="dashboardDate">{currentDayAndDate()}</p>
         </div>
         <section>
           <select
