@@ -9,12 +9,19 @@
 .entryGroupColumn {
   /* rem musi byc tutaj bo inaczej ucina cienie i scrollbar zaslania entryGroup */
   padding: 1rem 1rem 1rem 0;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
   height: 70vh;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.emptyStateContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .entryCard {
