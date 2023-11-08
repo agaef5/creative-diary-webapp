@@ -205,3 +205,9 @@
   width: 61rem;
   height: 90vh;
 }
+
+.flex-row-untitled {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

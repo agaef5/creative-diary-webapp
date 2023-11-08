@@ -34,11 +34,6 @@ export default function Library(){
                 </div>
 
                 <div>
-                    <h2>BrainDump</h2>
-                    <div style={{ marginBottom:'4rem'}}>
-                        <div className='seeAll'><a className="seeAllText" onClick={() => handleClick("BrainDump")}>see all</a></div>
-                        <LastThreeEntries inputType={"BrainDump"} />
-                    </div>
                     <span className="seeAll">
                         <h2>BrainDump</h2>
                         <a className="seeAllText" onClick={() => handleClick("BrainDump")}>see all</a>
