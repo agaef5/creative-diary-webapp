@@ -234,9 +234,9 @@ export function BrainDump() {
         <p className="dateStleBD">{currentDate()}</p>
       </div>
       <div>
-        <input
+        <div id='dashedLine'/>
+        <textarea
           className="inputStyleBD"
-          type="text"
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
           placeholder="What is it you're thinking of..."

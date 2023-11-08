@@ -78,7 +78,7 @@ export default function Dashboard() {
         </section>
 
         <section>
-          <h2>Today's work:</h2>
+          <h2 style={{marginTop: '2rem'}}>Today's Work:</h2>
           <EntryGroup date={currentDate()} />
         </section>
       </div>

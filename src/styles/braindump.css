@@ -36,30 +36,32 @@
   color: var(--textInput2);
   /* SF Pro Regular */
   font-family: SF Pro Display;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin: 0.5rem 0;
+  padding-left: 0.125rem;
+
 }
 
 .inputStyleBD {
   color: var(--text);
   font-family: SF Pro Display;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   border-style: none;
-  width: 55rem;
+  width: 56.5rem;
   height: 25rem; /* You can adjust the height as needed */
   background-color: var(--lightElem);
   line-height: 1;
   resize: none; /* Prevent the textarea from being resized by the user */
-  padding: 0.5rem; /* Add some padding for better appearance */
+  padding: 0.5rem 0.25rem; /* Add some padding for better appearance */
 }
 
 .inputStyleBD::placeholder {
   text-align: left; /* Align placeholder text to the left */
-  line-height: 1; /* Set line-height for the placeholder */
   vertical-align: top; /* Align placeholder text at the top */
 }
 
@@ -74,6 +76,7 @@
   border-radius: 3px;
   background: var(--accCol);
   margin-top: 32px;
+  margin-left: 1.5rem;
   right: 32px;
   box-shadow: 6px 6px 16px 0px var(--shadow), -6px -6px 16px 0px var(--shadow);
   color: #fff;
@@ -296,4 +299,11 @@
   font-style: italic;
   font-weight: 300;
   margin: 1rem 0;
+}
+
+#dashedLine {
+  background-color: var(--background);
+  width: auto;
+  height: 0.125rem;
+  margin: 0.5rem 0;
 }
