@@ -4,6 +4,7 @@ import { AddProject, ProjectGroup } from "./components/Projects";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { SearchBar } from "./components/SearchBar";
+import '../styles/library.css';
 
 export default function Library(){
     const navigate = useNavigate('');
@@ -29,36 +30,45 @@ export default function Library(){
             <section className="allgroups">
                 <div>
                     <h2>Pinned</h2>
-                    <EntryGroup pinned={true}/>
+                    <div style={{marginTop:'1rem', marginBottom:'4rem'}}><EntryGroup pinned={true}/></div>
                 </div>
 
-
                 <div>
-                    <h2>Brain Dump</h2>
-                    <a onClick={() => handleClick("BrainDump")}>see all</a>
-                    <LastThreeEntries inputType={"BrainDump"}/>
+                    <h2>BrainDump</h2>
+                    <div style={{ marginBottom:'4rem'}}>
+                        <div className='seeAll'><a className="seeAllText" onClick={() => handleClick("BrainDump")}>see all</a></div>
+                        <LastThreeEntries inputType={"BrainDump"}/>
+                    </div>
                 </div>
 
                 <div>
                     <h2>Projects</h2>
-                    <a onClick={() => handleProjectClick()}>see all</a>
-                    <ProjectGroup lastThree/>
-                    <button onClick={() => setOpenModal(true)}>+</button>
-                    <AddProject open={openModal} onClose={() => setOpenModal(false)}/>
+                    <div style={{marginBottom:'4rem'}}>
+                        <div className='seeAll'><a className="seeAllText" onClick={() => handleProjectClick()}>see all</a></div>
+                        <div style={{display:'flex'}}>
+                            <ProjectGroup lastThree/>
+                            {/* <button onClick={() => setOpenModal(true)}>+</button> */}
+                        </div>
+                        {/* <AddProject open={openModal} onClose={() => setOpenModal(false)}/> */}
+                    </div>
                 </div>
                 
                 <div>
                     <h2>Daily Challenge</h2>
-                    <a onClick={() => handleClick("DailyChallenge")}>see all</a>
+                    <div style={{marginBottom:'4rem'}}>                
+                    <div className='seeAll'><a className="seeAllText" onClick={() => handleClick("DailyChallenge")}>see all</a></div>
 
                     <LastThreeEntries inputType={"DailyChallenge"}/>
+                    </div>
                 </div>
 
                 <div>
                     <h2>Creativity Booster</h2>
-                    <a onClick={() => handleClick("CreativityBooster")} >see all</a>
+                    <div style={{mmarginBottom:'4rem'}}>   
+                    <div className='seeAll'><a className="seeAllText" onClick={() => handleClick("CreativityBooster")} >see all</a></div>
 
                     <LastThreeEntries inputType={"CreativityBooster"}/>
+                    </div>
                 </div>
             </section>
         </>

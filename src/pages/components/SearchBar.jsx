@@ -54,9 +54,10 @@ export function SearchBar(props){
     return(
         <div>
             <input type="text"
-                    placeholder="Search..."
+                    placeholder="Search The Library..."
                     onClick={()=> (setSearch(true))}
-                    onChange={(e) => setKeywords(e.target.value)}/>
+                    onChange={(e) => setKeywords(e.target.value)}
+                    className="searchInput"/>
 
              {search && (
                 <>
@@ -76,9 +77,10 @@ export function SearchBar(props){
                 
             {showResults && (
                 <>
-                    <div>
-                        Sorting:
-                        <select value={sortOrder} onChange={handleSortingChange}>
+                    <h2 style={{marginTop: '4rem', marginBottom: '0'}}>Results</h2>
+                    <div className="sortBy">
+                        Sort By:
+                        <select value={sortOrder} onChange={handleSortingChange} className="dropdownSorting">
                             <option value="">Select</option>
                             <option value="newest">From Newest</option>
                             <option value="oldest">From Oldest</option>
@@ -91,7 +93,6 @@ export function SearchBar(props){
                 
             )}
 
-            <hr></hr>
         </div>
     )
 }
@@ -118,13 +119,19 @@ export function SelectInputType({ onInputTypeSelect, selectedInputTypes }) {
                 <button
                     key={inputType}
                     onClick={() => handleInputTypeSelect(inputType)}
-                    style={{
-                        backgroundColor: internalSelectedInputTypes.includes(inputType) ? 'green' : 'gray',
+                    style={{                      
+                        backgroundColor: internalSelectedInputTypes.includes(inputType) ? 'var(--accCol)' : 'var(--textInputLight)',
+                        color: 'var(--lightElem)',
+                        margin: '5px',
+                        padding: '0.5rem 1rem',
+                        border: 'none',
+                        borderRadius: '3px',
                     }}
                 >
                     {inputType}
                 </button>
             ))}
+            <p></p>
         </div>
     );
 }

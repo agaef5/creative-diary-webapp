@@ -63,8 +63,8 @@ export function GetProjects(userId) {
                         key={project.id}
                         onClick={() => handleProjectSelect(project.id)}
                         style={{
-                            backgroundColor: internalSelectedProjects.includes(project.id) ? 'var(--accCol)' : 'var(--lightElem)',
-                            color: internalSelectedProjects.includes(project.id) ? 'var(--lightElem)' : 'var(--accCol)',
+                            backgroundColor: internalSelectedProjects.includes(project.id) ? 'var(--background)' : 'var(--textInputLight)',
+                            color: internalSelectedProjects.includes(project.id) ? 'var(--accCol)' : 'var(--lightElem)',
                         }}
                     >
                         {project.name}

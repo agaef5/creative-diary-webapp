@@ -6,6 +6,10 @@ import { UserAuth } from "../../authentication/context/AuthContext";
 import { AddProject, SelectProject } from "./Projects";
 import { AddTag, SelectTag } from "./Tags";
 import "../../styles/braindump.css";
+import imgBrainDump from "../../styles/images/braindump1.png";
+import imgDailyChallenge from "../../styles/images/dailychallengeguy1.png";
+import imgHourglass from "../../styles/images/hourglass.png";
+import imgCreativityBooster from "../../styles/images/creativityboosterguy1.png";
 
 // function to get time and display it below title
 // it is global, so can be used in all functions below
@@ -127,7 +131,12 @@ export function SaveEntry({ open, onClose, ...props }) {
   return (
     <>
       <div className="overlay" onClick={onClose}>
-        <div className="moduleContainer flex-col" onClick={(e) => {e.stopPropagation();}}>
+        <div
+          className="moduleContainer flex-col"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           <button onClick={onClose}>x</button>
           <div className="flex-col">
             <h2>Add Tags</h2>
@@ -149,34 +158,53 @@ export function SaveEntry({ open, onClose, ...props }) {
 
 export function ChooseInputType() {
   return (
-    <section>
-      <h2>Where Will Your Pen Take You Today?</h2>
-      <p>Pick Your Entry Of Choice</p>
-      <div>
+    <section className="pickInput">
+      <div className="pickFeature">
+        <h2 className="headerInputType">Where Will Your Pen Take You Today?</h2>
+        <p className="subheaderInputType">Pick Your Entry Of Choice</p>
         <div>
-          <Link to="/dashboard/BrainDump">
-            <div>
-              <img></img>
-              <p>Brain Dump</p>
-            </div>
-          </Link>
-
-          <Link to="/dashboard/DailyChallenge">
-            <div>
-              <div className="DailyChallengeTimer">
-                <DailyChallengeTimer />
+          <div className="options">
+            <Link to="/dashboard/BrainDump">
+              <div className="featureCardBD">
+                <img
+                  className="featureImg"
+                  src={imgBrainDump}
+                  alt="Brain Dump Character"
+                />
+                <p>Brain Dump</p>
               </div>
-              <img></img>
-              <p>Daily Challenge</p>
-            </div>
-          </Link>
+            </Link>
 
-          <Link to="/dashboard/CreativityBooster">
-            <div>
-              <img></img>
-              <p>Creativity Booster</p>
-            </div>
-          </Link>
+            <Link to="/dashboard/DailyChallenge">
+              <div className="featureCardDC">
+                <div className="DailyChallengeTimer">
+                  <img
+                    className="featureImgHourglass"
+                    src={imgHourglass}
+                    alt="Time Left"
+                  />
+                  <DailyChallengeTimer />
+                </div>
+                <img
+                  className="featureImg"
+                  src={imgDailyChallenge}
+                  alt="Daily Challenge Character"
+                />
+                <p>Daily Challenge</p>
+              </div>
+            </Link>
+
+            <Link to="/dashboard/CreativityBooster">
+              <div className="featureCardCB">
+                <img
+                  className="featureImgCB"
+                  src={imgCreativityBooster}
+                  alt="Creativity Booster Character"
+                />
+                <p>Creativity Booster</p>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
@@ -353,7 +381,6 @@ export function CreativityBooster() {
     }
   }, []);
 
-
   useEffect(() => {
     fetchTodayPromptID("CreativityBooster", userID, setGeneratedID); // !!!!!!!!!
   }, []);
@@ -390,8 +417,7 @@ export function CreativityBooster() {
         {showPrompt === false && (
           <div>
             <div onClick={showCreativityBooster}>
-              <img></img>
-              <p>img1</p>
+              <img src="./styles/images/default"></img>
             </div>
 
             <div onClick={showCreativityBooster}>
