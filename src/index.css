@@ -45,24 +45,31 @@
 
 .green {
   --accCol: #7bbb96;
+  --accColLight: rgba(123,187,150,0.5); 
 }
 .red {
   --accCol: #ff5f5f;
+  --accColLight: rgba(255, 95, 95, 0.5); 
 }
 .purple {
   --accCol: #9287d7;
+  --accColLight: rgba(146, 135, 215, 0.5); 
 }
 .yellow {
   --accCol: #fdc83a;
+  --accColLight: rgba(253, 200, 58, 0.5); 
 }
 .orange {
   --accCol: #ffa552;
+  --accColLight: rgba(255, 165, 82, 0.5); 
 }
 .blue {
   --accCol: #87cdd7;
+  --accColLight: rgba(135, 205, 215, 0.5); 
 }
 .pink {
   --accCol: #f896ad;
+  --accColLight: rgba(248, 150, 173, 0.5); 
 }
 
 body {
@@ -82,7 +89,7 @@ a {
   align-items: center;
   max-width: 100vw;
   min-height: calc(100vh - 8rem);
-  padding: 8rem 4rem;
+  padding: 4rem 4rem;
 }
 
 .flex-col {

@@ -47,7 +47,7 @@ export default function Account() {
           <div>
             <h3>Manage Your Account</h3>
 
-            <button
+            <button className="flex-row"
               id="settings"
               onClick={() => handleAccountSection("settings")}
             >
@@ -68,7 +68,7 @@ export default function Account() {
                 </svg>
               </div>
             </button>
-            <button
+            <button className="flex-row"
               id="sub"
               onClick={() => handleAccountSection("subscription")}
             >
@@ -89,7 +89,7 @@ export default function Account() {
                 </svg>
               </div>
             </button>
-            <button
+            <button className="flex-row"
               id="security"
               onClick={() => handleAccountSection("security")}
             >
@@ -219,7 +219,7 @@ export function Settings({ setTheme, setAccColor }) {
           }}
         ></button>
         <button
-          id="oragne"
+          id="orange"
           onClick={() => {
             setAccentColor("orange");
           }}
