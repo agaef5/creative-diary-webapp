@@ -1,8 +1,8 @@
 import { EntryGroup } from "./components/EntryGroup";
 import { SideBar } from "./components/SideBar";
-import { AddProject, ProjectGroup } from "./components/Projects";
+import { ProjectGroup } from "./components/Projects";
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { SearchBar } from "./components/SearchBar";
 import '../styles/library.css';
 

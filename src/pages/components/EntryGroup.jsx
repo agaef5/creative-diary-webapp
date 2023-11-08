@@ -174,13 +174,13 @@ export function EntryGroup(props) {
       ) : (
         <div className="emptyStateContainer">
             <img
-              className="emptyStateGuy"
-              src={imgEmptyState}
-              alt="No Results Found"
-            />
-            <p style={{ fontSize: "20px", fontStyle: "italic", fontWeight: 300 }}>
-              No entries to display
-            </p>
+                className="emptyStateGuy"
+                src={imgEmptyState}
+                alt="No Results Found"
+              />
+              <p style={{ fontSize: "20px", fontStyle: "italic", fontWeight: 300 }}>
+                No entries to display
+              </p> 
         </div>
       )}
     </div>

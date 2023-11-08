@@ -14,9 +14,6 @@
   border-radius: 3px;
   background-color: var(--lightElem);
   border-style: none;
-  /* light paper shadow */
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;

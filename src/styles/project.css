@@ -10,7 +10,6 @@
     width: 25rem;
     height: 16rem;
     border-radius: 0.3125rem;
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
 }
 
 .secondCardBg{
@@ -19,7 +18,6 @@
     width: 25rem;
     height: 16rem;
     border-radius: 0.3125rem;
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
 }
 
 .projectCardContent{
@@ -31,7 +29,6 @@
     width: 25rem;
     height: 16rem;
     border-radius: 0.3125rem;
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
 }
 
 .projectGroup {

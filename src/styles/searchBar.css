@@ -6,9 +6,10 @@
     padding: 1rem 1.5rem;
     border-radius: 0.25rem;
     border-style: none;
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
     margin-bottom: 1rem;
     font-size: 1.25rem;
+    background-color: var(--lightElem);
+    color: var(--text);
 }
 
 .dropdownSorting {
@@ -28,8 +29,8 @@
     background-color: var(--lightElem);
     border-style: none;
     /* light paper shadow */
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-      -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+    box-shadow: 6px 6px 16px 0px var(--shadowCol),
+      -6px -6px 16px 0px var(--shadowCol);
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -51,7 +52,6 @@
     margin-top: -1.25rem;
     border-radius: 0 0 0.25rem 0.25rem;
     padding: 1rem;
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),-6px -6px 16px 0px rgba(255, 255, 255, 0.5);
 }
  
 .searchBarContainer{

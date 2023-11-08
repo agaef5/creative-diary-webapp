@@ -90,7 +90,7 @@ export function EntryCard({entry}){
       }
     
     return(
-              <div className="entryCard" key={entry.id}  >
+              <div className="entryCard shadow" key={entry.id}  >
                 {entry.pinned ? <div className="entryPinned"></div> : <div className="entryUnpinned"></div>}
                 <div className="entryCardContent" onClick={() => setOpenEntryDisplay(true)}>
                     
@@ -132,7 +132,7 @@ export function EntryCard({entry}){
                     </div>
                 </div>
                 <div className="moreContainer" >
-                            <div className="moreButton" onClick={(e) => {e.stopPropagation(), setOpenMoreOptions(prevState => !prevState)}}>
+                            <div className="moreButton shadow" onClick={(e) => {e.stopPropagation(), setOpenMoreOptions(prevState => !prevState)}}>
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_174_27716" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
                                             <rect width="30" height="30" fill="#D9D9D9"/>
@@ -143,7 +143,7 @@ export function EntryCard({entry}){
                                 </svg>
                             </div>
                                 {openMoreOptions === true && (
-                                    <div className="moreOptions" ref={moreContainerRef} onClick={(e) => e.stopPropagation()}>
+                                    <div className="moreOptions shadow" ref={moreContainerRef} onClick={(e) => e.stopPropagation()}>
                                             <div onClick={(e) => { e.stopPropagation(); pinEntry(entry, user); }}>
                                             {entry.pinned ? 'Unpin entry' : 'Pin entry'}
                                             </div>
