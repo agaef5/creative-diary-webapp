@@ -197,6 +197,23 @@
     text-decoration: none;
   }
 
+  .calendarPage{
+    height: calc(100vh - 8rem);
+  }
+
+  .calendarAndEntry{
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    /* display: 'flex', justifyContent: 'flex-start', gap:'4rem', marginTop: '1rem'}} */
+  }
+
+  .calendarEntryGroupContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .calendarChoice {
     background-color: var(--lightElem);
     color: var(--text);
