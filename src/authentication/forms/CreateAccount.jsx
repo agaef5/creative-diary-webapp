@@ -38,36 +38,46 @@ export default function CreateAccount(){
     }
 
     return(
-        <section>
-            <h1>Create Account</h1>
-            <form onSubmit={SignUp}>
-                <label >Name:</label>
-                <input 
-                    type='text' 
-                    value={username} 
-                    onChange={(e => setUsername(e.target.value))}
-                    placeholder="Jane Doe"
-                    required/>
+        <section className="formContainer">
+            <div className="welcomeForm">
+                <p>Create Account</p>
+                <div className="formInputs">
+                    <input className="shadow"
+                        type='text' 
+                        value={username} 
+                        onChange={(e => setUsername(e.target.value))}
+                        placeholder="Name"
+                        required/>
 
-                <label >E-mail:</label>
-                <input 
-                    type='email' 
-                    value={email} 
-                    onChange={(e => setEmail(e.target.value))}
-                    placeholder="your@email.com"/>
 
-                <label >Password: </label>
-                <input 
-                type='password' 
-                value={password}
-                onChange={(e => setPassword(e.target.value))}
-                placeholder="Your password"/>
+                    <input className="shadow"
+                        type='email' 
+                        value={email} 
+                        onChange={(e => setEmail(e.target.value))}
+                        placeholder="E-mail"/>
 
-                <button type="submit">Create Account</button>
-            </form>
+                    <input className="shadow"
+                        type='password' 
+                        value={password}
+                        onChange={(e => setPassword(e.target.value))}
+                        placeholder="Password"/>
 
-            <p>Already Have An Account?</p>
-            <Link to="/logIn"><p>Sign Up Now</p></Link>
+                    <div>
+                        <input type="checkbox" id="privacyPolicy"/>
+                        <label for="privacyPolicy">I Read And Accept The <span>Privacy Policy</span></label>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+            <div>
+                <button onClick={SignUp}>Create Account</button>
+                <div>
+                    <p>Already Have An Account?</p>
+                    <Link to="/logIn"><p>Sign Up Now</p></Link>
+                </div>
+            </div>
         </section>
     )
 
