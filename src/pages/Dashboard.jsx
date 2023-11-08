@@ -8,6 +8,7 @@ import { useState } from "react";
 import "../styles/dropdown.css";
 import "../styles/entry.css";
 import { Streak } from "./components/Streak";
+import imgLetterbox from "../styles/images/letterbox.png";
 
 export default function Dashboard() {
   const currentDayAndDate = () => {
@@ -60,7 +61,18 @@ export default function Dashboard() {
             <Outlet />
             <div>
               <Streak />
-              <div className="LetterToMyself"> A Letter To Myself</div>
+              <div className="LetterToMyself">
+                {" "}
+                <p className="titleLetter">A Letter To Myself</p>
+                <img
+                  className="letterImg"
+                  src={imgLetterbox}
+                  alt="A Letter To Myself"
+                />
+                <p className="subtitleLetter">
+                  Start Writing a Letter to Yourself by Clicking This Box{" "}
+                </p>
+              </div>
             </div>
           </div>
         </section>
