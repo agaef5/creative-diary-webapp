@@ -96,12 +96,10 @@ function filterEntries(entries, filters) {
 }
 
 
-
 export function EntryGroup(props){
   const { user } = UserAuth();
   const entries = GetEntries(user.uid);
 
-  console.log(props);
   const { pinned, keywords, date, inputType, tags, projects, sortOrder, isColumn } = props; // Destructure the props
 
 
