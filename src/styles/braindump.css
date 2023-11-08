@@ -1,7 +1,7 @@
 .titleStylesBD {
-  width: 55rem;
+  width: 57rem;
   font-size: 2rem;
-  color: var(--textInput2);
+  color: var(--text);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -10,7 +10,7 @@
 }
 
 .promptStylesBD {
-  width: 55rem;
+  width: 50rem;
   font-size: 2rem;
   color: var(--text);
   font-style: normal;
@@ -21,14 +21,14 @@
 }
 
 .inputSpaceBD {
-  width: 61rem;
-  height: 40.3rem;
+  width: 57rem;
+  height: 40rem;
   background-color: var(--lightElem);
   border-radius: 10px;
   /* light paper shadow */
   box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
     -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
 }
 
 .dateStleBD {
@@ -39,11 +39,10 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding-top: 0rem;
 }
 
 .inputStyleBD {
-  color: var(--textInput);
+  color: var(--text);
   font-family: SF Pro Display;
   font-size: 24px;
   font-style: normal;
@@ -126,7 +125,7 @@
   padding: 137px 168px 136px 168px;
 }
 
-.featureCard {
+.featureCardBD {
   width: 12rem;
   height: 16rem;
   background-color: var(--lightElem);
@@ -140,11 +139,50 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #3aa768;
 }
 
-.featureCard > p {
+.featureCardBD > p {
   margin: 0;
 }
+
+.featureCardBD:hover {
+  background-color: var(--brainDump);
+}
+
+.featureCardBD:hover > p {
+  color: var(--lightElem);
+}
+
+.featureCardCB {
+  width: 12rem;
+  height: 16rem;
+  background-color: var(--lightElem);
+  border-radius: 10px;
+  border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
+
+  /* light paper shadow */
+  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
+    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #56adba;
+}
+
+.featureCardCB > p {
+  margin: 0;
+}
+
+.featureCardCB:hover {
+  background-color: var(--creativityBooster);
+}
+
+.featureCardCB:hover > p {
+  color: var(--lightElem);
+}
+
 .featureImg {
   width: 9.6rem;
   height: 12rem;
@@ -171,10 +209,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #eb4a4a;
 }
 
 .featureCardDC > p {
   margin: 0;
+}
+
+.featureCardDC:hover {
+  background-color: var(--dailyChallenge);
+  color: var(--lightElem);
 }
 
 .DailyChallengeTimer {
@@ -194,4 +238,59 @@
 .featureImgCB {
   width: auto;
   height: 12rem;
+}
+
+.featureCardBD:hover .featureImg,
+.featureCardDC:hover .featureImg,
+.featureCardCB:hover .featureImgCB {
+  clip-path: inset(10% 10% 40% 10%);
+  transition: clip-path 0.3s ease-in-out;
+}
+
+.featureCardBD,
+.featureCardDC,
+.featureCardCB {
+  overflow: hidden;
+}
+
+
+.choosePicture{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.choosePicture img{
+  width: 12.5rem;
+  height: 19.32694rem;
+}
+
+.choosePictureContainer{
+  height: 40.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.choosePictureContent{
+  height: 40.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.choosePictureText h2{
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.choosePictureText p{
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 300;
+  margin: 1rem 0;
 }
