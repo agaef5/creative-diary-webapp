@@ -6,6 +6,9 @@ import { UserAuth } from "../../authentication/context/AuthContext";
 import { AddProject, SelectProject } from "./Projects";
 import { AddTag, SelectTag } from "./Tags";
 import "../../styles/braindump.css";
+import LightBulb from  "../../styles/images/lightbulb.png"
+import LightBulbOn from  "../../styles/images/lightbulbOn.png"
+
 
 // function to get time and display it below title
 // it is global, so can be used in all functions below
@@ -117,7 +120,6 @@ export function SaveEntry({ open, onClose, ...props }) {
         true
       );
     }
-
     // confirmation
     alert("Entry saved!");
     navigate("/dashboard/ChooseEntryType");
@@ -345,6 +347,9 @@ export function CreativityBooster() {
   const [openSave, setOpenSave] = useState(false);
   const [generatedID, setGeneratedID] = useState("");
   const [showPrompt, setShowPrompt] = useState(false);
+  const [imageSource1, setImageSource1] = useState(LightBulb);
+  const [imageSource2, setImageSource2] = useState(LightBulb);
+  const [imageSource3, setImageSource3] = useState(LightBulb);
   const { user } = UserAuth();
   const userID = user.uid;
 
@@ -359,7 +364,7 @@ export function CreativityBooster() {
   }, []);
 
   useEffect(() => {
-    fetchTodayPromptID("CreativityBooster", userID, setGeneratedID); // !!!!!!!!!
+    fetchTodayPromptID("CreativityBooster", userID, setGeneratedID);
   }, []);
 
   useEffect(() => {
@@ -382,6 +387,23 @@ export function CreativityBooster() {
     }
   }
 
+
+  const handleLightBulbOn = (imageNumber) => {
+    if (imageNumber === 1) {
+      setImageSource1(LightBulbOn);
+      setImageSource2(LightBulb);
+      setImageSource3(LightBulb);
+    } else if (imageNumber === 2) {
+      setImageSource1(LightBulb);
+      setImageSource2(LightBulbOn);
+      setImageSource3(LightBulb);
+    } else if (imageNumber === 3) {
+      setImageSource1(LightBulb);
+      setImageSource2(LightBulb);
+      setImageSource3(LightBulbOn);
+    }
+  };
+  
   function showCreativityBooster() {
     const today = new Date().toDateString();
     localStorage.setItem("hasInteracted", today);
@@ -389,28 +411,36 @@ export function CreativityBooster() {
   }
 
   return (
-    <div>
+    <div className="inputSpaceBD">
       <div>
         {showPrompt === false && (
-          <div>
-            <div onClick={showCreativityBooster}>
-              <img src="./styles/images/default"></img>
+          <div className="choosePictureContainer">
+            <div className="choosePictureContent">
+                <div className="choosePictureText">
+                  <h2>Choose Your Creativity Booster</h2>
+                  <p>Pick Your Variant Of Choice</p>
+                  </div>
+                  <div className="choosePicture">
+                    <div onMouseDown={() => handleLightBulbOn(1)} onClick={showCreativityBooster}>
+                      <img src={imageSource1} />
+                    </div>
+
+                    <div onMouseDown={() => handleLightBulbOn(2)} onClick={showCreativityBooster}>
+                      <img src={imageSource2} />
+                    </div>
+
+                    <div onMouseDown={() => handleLightBulbOn(3)} onClick={showCreativityBooster}>
+                      <img src={imageSource3} />
+                    </div>
+                  </div>
             </div>
 
-            <div onClick={showCreativityBooster}>
-              <img></img>
-              <p>img2</p>
-            </div>
-
-            <div onClick={showCreativityBooster}>
-              <img></img>
-              <p>Bimg3</p>
-            </div>
           </div>
+          
         )}
 
         {showPrompt === true && (
-          <div className="inputSpaceBD">
+          <div>
             <div className="flexboxing">
               <div>
                 <h2 className="promptStylesBD">{prompt}</h2>

@@ -91,3 +91,44 @@
   display: flex;
   flex-direction: column;
 }
+
+.choosePicture{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.choosePicture img{
+  width: 12.5rem;
+  height: 19.32694rem;
+}
+
+.choosePictureContainer{
+  height: 40.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.choosePictureContent{
+  height: 40.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.choosePictureText h2{
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.choosePictureText p{
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 300;
+  margin: 1rem 0;
+}
