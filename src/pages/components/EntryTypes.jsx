@@ -9,7 +9,6 @@ import "../../styles/braindump.css";
 import imgBrainDump from "../../styles/images/braindump1.png";
 import imgDailyChallenge from "../../styles/images/dailychallengeguy1.png";
 import imgHourglass from "../../styles/images/hourglass.png";
-import imgCreativityBooster from "../../styles/images/creativityboosterguy1.png";
 
 // function to get time and display it below title
 // it is global, so can be used in all functions below
