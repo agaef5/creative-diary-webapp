@@ -42,7 +42,9 @@ export default function Dashboard() {
     <>
       <SideBar />
       <div className="flex-col">
-        <p>{currentDayAndDate()}</p>
+        <div className="date">
+          <p>{currentDayAndDate()}</p>
+        </div>
         <section>
           <select
             className="dropdown"
@@ -57,7 +59,7 @@ export default function Dashboard() {
           <div className="flex-row">
             <Outlet />
             <div>
-              <Streak/>
+              <Streak />
               <div className="LetterToMyself"> A Letter To Myself</div>
             </div>
           </div>
@@ -65,7 +67,7 @@ export default function Dashboard() {
 
         <section>
           <h2>Today's work:</h2>
-          <EntryGroup date={currentDate()}/>
+          <EntryGroup date={currentDate()} />
         </section>
       </div>
     </>

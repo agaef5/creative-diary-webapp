@@ -26,6 +26,7 @@
   background-size: 0.65rem auto;
   margin-bottom: 1rem;
 }
-/*.BrainDumpDot {
-  background: url("./images/Ellipse\ 10.svg");
-}*/
+
+.date {
+  margin: auto;
+}
