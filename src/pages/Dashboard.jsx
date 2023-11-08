@@ -49,9 +49,7 @@ export default function Dashboard() {
             value={selectedOption}
             onChange={changeDisplay}
           >
-            <option value="BrainDump">
-              <span className="BrainDumpDot"></span>Brain Dump
-            </option>
+            <option value="BrainDump">Brain Dump</option>
             <option value="DailyChallenge">Daily Challenge</option>
             <option value="CreativityBooster">Creativity Booster</option>
           </select>
@@ -67,7 +65,7 @@ export default function Dashboard() {
 
         <section>
           <h2>Today's work:</h2>
-          <EntryGroup date={currentDate()} />
+          <EntryGroup date={currentDate()}/>
         </section>
       </div>
     </>
