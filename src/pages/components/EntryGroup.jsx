@@ -111,12 +111,12 @@ export function EntryGroup(props){
     if (pinned || keywords || date || inputType || tags || projects) {
         filtered = filterEntries(entries, { keywords: keywords, date: date, inputType: inputType, tags: tags, projects: projects, pinned: pinned});
     }
-    if (sortOrder === 'newest') {
-        // Sorting logic for newest
-        filtered.sort((a, b) => b.timestamp - a.timestamp);
-    } else if (sortOrder === 'oldest') {
-        // Sorting logic for oldest
-        filtered.sort((a, b) => a.timestamp - b.timestamp);
+    if (sortOrder === 'oldest') {
+      // Sorting logic for oldest
+      filtered.sort((a, b) => a.timestamp - b.timestamp);
+    } else {
+      // Default sorting logic for newest
+      filtered.sort((a, b) => b.timestamp - a.timestamp);
     }
     setFilteredEntries(filtered);
 }, [entries, pinned, keywords, date, inputType, tags, projects, sortOrder]);
