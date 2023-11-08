@@ -1,5 +1,5 @@
 .titleStylesBD {
-  width: 57rem;
+  width: 51rem;
   font-size: 2rem;
   color: var(--text);
   font-style: normal;
@@ -7,10 +7,11 @@
   line-height: normal;
   border-style: none;
   background-color: var(--lightElem);
+  margin-top: 1.5rem;
 }
 
 .promptStylesBD {
-  width: 50rem;
+  width: 51rem;
   font-size: 2rem;
   color: var(--text);
   font-style: normal;
@@ -253,20 +254,19 @@
   overflow: hidden;
 }
 
-
-.choosePicture{
+.choosePicture {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   gap: 1rem;
 }
 
-.choosePicture img{
+.choosePicture img {
   width: 12.5rem;
   height: 19.32694rem;
 }
 
-.choosePictureContainer{
+.choosePictureContainer {
   height: 40.3rem;
   display: flex;
   flex-direction: column;
@@ -274,7 +274,7 @@
   justify-content: center;
 }
 
-.choosePictureContent{
+.choosePictureContent {
   height: 40.3rem;
   display: flex;
   flex-direction: column;
@@ -282,13 +282,13 @@
   align-items: flex-start;
 }
 
-.choosePictureText h2{
+.choosePictureText h2 {
   font-size: 2rem;
   font-weight: 500;
   margin: 0;
 }
 
-.choosePictureText p{
+.choosePictureText p {
   font-size: 1.25rem;
   font-style: italic;
   font-weight: 300;
