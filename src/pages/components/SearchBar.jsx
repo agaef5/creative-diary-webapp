@@ -52,7 +52,7 @@ export function SearchBar(props){
       console.log(searchKeywords);
 
     return(
-        <div>
+        <div className="searchBarContainer">
             <input type="text"
                     placeholder="Search The Library..."
                     onClick={()=> (setSearch(true))}
