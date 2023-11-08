@@ -72,8 +72,7 @@
   background: var(--accCol);
   margin-top: 32px;
   right: 32px;
-  box-shadow: 6px 6px 16px 0px var(--shadow),
-    -6px -6px 16px 0px var(--shadow);
+  box-shadow: 6px 6px 16px 0px var(--shadow), -6px -6px 16px 0px var(--shadow);
   color: #fff;
   font-family: SF Pro Display;
   font-size: 20px;
@@ -90,4 +89,109 @@
 .flexboxing2 {
   display: flex;
   flex-direction: column;
+}
+.pickInput {
+  width: 61rem;
+  height: 40rem;
+  background-color: var(--lightElem);
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
+
+  /* light paper shadow */
+  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
+    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+}
+.headerInputType {
+  color: var(--light-theme-text, #1b1c25);
+  font-family: SF Pro Display;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.subheaderInputType {
+  color: var(--light-theme-text, #1b1c25);
+  font-family: SF Pro Display;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.pickFeature {
+  padding: 137px 168px 136px 168px;
+}
+
+.featureCard {
+  width: 12rem;
+  height: 16rem;
+  background-color: var(--lightElem);
+  border-radius: 10px;
+  border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
+
+  /* light paper shadow */
+  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
+    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureCard > p {
+  margin: 0;
+}
+.featureImg {
+  width: 9.6rem;
+  height: 12rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.featureCardDC {
+  position: relative;
+  width: 12rem;
+  height: 16rem;
+  background-color: var(--lightElem);
+  border-radius: 10px;
+  border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
+
+  /* light paper shadow */
+  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
+    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureCardDC > p {
+  margin: 0;
+}
+
+.DailyChallengeTimer {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.featureImgHourglass {
+  height: 1rem;
+  width: auto;
+}
+
+.featureImgCB {
+  width: auto;
+  height: 12rem;
 }
