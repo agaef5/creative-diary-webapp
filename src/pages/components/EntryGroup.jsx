@@ -109,6 +109,7 @@ export function EntryGroup(props){
     if (pinned || keywords || date || inputType || tags || projects) {
         filtered = filterEntries(entries, { keywords: keywords, date: date, inputType: inputType, tags: tags, projects: projects, pinned: pinned});
     }
+
     if (sortOrder === 'oldest') {
       // Sorting logic for oldest
       filtered.sort((a, b) => a.timestamp - b.timestamp);
@@ -122,8 +123,8 @@ export function EntryGroup(props){
   const [filteredEntries, setFilteredEntries] = useState(entries);
   
     // Add a condition to display only the last three entries if the prop lastThree is true
-    const renderedEntries = props.lastThree ? filteredEntries.slice(-3) : filteredEntries;// State for storing the filtered entries
-
+    const renderedEntries = props.lastThree ? filteredEntries.slice(-3) : filteredEntries;
+    //className change for CalendarPage
     const entryGroupClassName = `entryGroup${isColumn ? 'Column' : ''}`;
 
   return (

@@ -37,7 +37,7 @@ export default function Library(){
                     <h2>BrainDump</h2>
                     <div style={{ marginBottom:'4rem'}}>
                         <div className='seeAll'><a className="seeAllText" onClick={() => handleClick("BrainDump")}>see all</a></div>
-                        <LastThreeEntries inputType={"BrainDump"}/>
+                        <LastThreeEntries inputType={"BrainDump"} />
                     </div>
                 </div>
 
