@@ -53,8 +53,7 @@ export function SelectTag({ onTagSelect, selectedTags }) {
                         key={tag.id}
                         onClick={() => handleTagSelect(tag.id)}
                         style={{
-                            backgroundColor: internalSelectedTags.includes(tag.id) ? 'var(--lightElem)'  : 'var(--accCol)',
-                            color: internalSelectedTags.includes(tag.id) ? 'var(--accCol)' :  'var(--lightElem)',
+                            backgroundColor: internalSelectedTags.includes(tag.id) ? 'var(--accCol)'  : 'var(--textInputLight)',
                         }}
                     >
                         #{tag.name}

@@ -82,8 +82,8 @@ a{
   flex-direction: column;
   align-items: center;
   max-width: 100vw;
-  min-height: calc(100vh - 3rem);
-  padding: 3rem 4rem;
+  min-height: calc(100vh - 8rem);
+  padding: 8rem 4rem;
 }
 
 .flex-col {
