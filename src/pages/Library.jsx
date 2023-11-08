@@ -20,7 +20,6 @@ export default function Library(){
     return(
         <>
         <SideBar/>
-            <h1>Library</h1>
 
             <div className="searchBar">
                 <SearchBar/>

@@ -49,7 +49,7 @@ export function SearchBar(props){
         setSortOrder(event.target.value);
       }
 
-      console.log(searchTags);
+      console.log(searchKeywords);
 
     return(
         <div>
@@ -73,7 +73,7 @@ export function SearchBar(props){
 
           
             <br/>
-
+                
             {showResults && (
                 <>
                     <div>
@@ -87,7 +87,7 @@ export function SearchBar(props){
 
                     {/*  */}
 
-                    {(searchKeywords > 0) && <ProjectGroup keywords={searchKeywords}/>}
+                    {(searchKeywords.length > 0) && <ProjectGroup keywords={searchKeywords}/>}
                     <EntryGroup keywords={searchKeywords} projects={searchProjects} tags={searchTags} inputType={searchInputTypes} sortOrder={sortOrder}/>
                     </>
                 
@@ -115,17 +115,13 @@ export function SelectInputType({ onInputTypeSelect, selectedInputTypes }) {
     
     return (
         <div>
+            <p></p>
             {inputTypes.map((inputType) => (
                 <button
                     key={inputType}
                     onClick={() => handleInputTypeSelect(inputType)}
                     style={{
                         backgroundColor: internalSelectedInputTypes.includes(inputType) ? 'green' : 'gray',
-                        color: 'white',
-                        margin: '5px',
-                        padding: '10px',
-                        border: 'none',
-                        borderRadius: '5px',
                     }}
                 >
                     {inputType}

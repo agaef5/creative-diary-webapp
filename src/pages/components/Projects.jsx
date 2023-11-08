@@ -78,6 +78,7 @@ export function GetProjects(userId) {
 
 
 function filterProjects(projects, keywords) {
+
     if (!keywords) {
       return projects; // Return all projects if no keyword is provided
     }
@@ -88,20 +89,22 @@ function filterProjects(projects, keywords) {
   }
 
 
-export function ProjectGroup(keywords, lastThree){
+export function ProjectGroup(props){
+    const {keywords, lastThree} = props;
     const { user } = UserAuth();
     const projects = GetProjects(user.uid);
   
     useEffect(()=> {
         let filtered = projects;
-        if (keywords.lenght > 0){
+        if (keywords && keywords.length > 0){
             filtered = filterProjects(projects, keywords);
         }
         setFilteredProjects(filtered);
     }, [keywords, projects]);
 
+
     const [filteredProjects, setFilteredProjects] = useState(projects);
-    const renderedProjects = lastThree ? filteredProjects.slice(-3) : filteredProjects;
+    const renderedProjects = (lastThree===true) ? filteredProjects.slice(-3) : filteredProjects;
 
     return (
       <div className="projectGroup">

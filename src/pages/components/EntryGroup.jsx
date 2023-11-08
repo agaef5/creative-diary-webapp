@@ -43,46 +43,19 @@ export function GetEntries(userId) {
 }
 
 
-// function filterEntries(entries, filters) {
-//   const { pinned, keywords, date, inputType, tags, projects } = filters;
-//   if (!pinned && !keywords && !date && !inputType && !tags && !projects) {
-//     return entries; // Return all entries if no filters are provided
-//   }
-//   return entries.filter((entry) => {
-//     if (pinned && entry.pinned && entry.pinned === true){
-//       return true;
-//     }
-//     // Filter by keywords (searching for the same words in title and text)
-//     if (
-//       keywords &&
-//       (entry.title && entry.title.includes(keywords)) ||
-//       (entry.text && entry.text.includes(keywords))
-//     ) {
-//       return true;
-//     }
-//     // Filter by date (timestamp)
-//     if (date && new Date(entry.timestamp).toLocaleDateString('en-GB') === date) {
-//       return true;
-//     }
-//     // Filter by inputType
-//     if (inputType && entry.inputType === inputType) {
-//       return true;
-//     }
-//     if (tags && entry.tags && entry.tags.includes(tags)) {
-//       return true;
-//     }
-//     if (projects && entry.projects && entry.projects.includes(projects)) {
-//       return true;
-//     }
-//     return false;
-//   });
-// }
-
-
 function filterEntries(entries, filters) {
-  // Remove undefined filters
-  const definedFilters = Object.fromEntries(Object.entries(filters).filter(([_, value]) => value !== undefined));
+  // Remove undefined filters (undefined values or empty arrays/keywords)
+  const definedFilters = Object.fromEntries(
+    Object.entries(filters).filter(([_, value]) => {
+      return (
+        value !== undefined &&
+        !(Array.isArray(value) && value.length === 0) &&
+        !(typeof value === 'string' && value.trim() === '')
+      );
+    })
+  );
 
+  console.log(definedFilters);
   return entries.filter((entry) => {
     const matchedPinned = definedFilters.pinned !== undefined ? entry.pinned === definedFilters.pinned : true;
     const matchedKeywords = definedFilters.keywords
@@ -131,6 +104,7 @@ export function EntryGroup(props){
   const { user } = UserAuth();
   const entries = GetEntries(user.uid);
 
+  console.log(props);
   const { pinned, keywords, date, inputType, tags, projects, sortOrder, isColumn } = props; // Destructure the props
 
 
