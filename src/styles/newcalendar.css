@@ -24,19 +24,13 @@
     background: var(--lightElem);
     padding: 1rem;
     border-radius: 0.125rem;
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
+    box-shadow: 6px 6px 16px 0px var(--shadowCol),
+    -6px -6px 16px 0px var(--shadowCol);
   }
   .react-calendar--doubleView .react-calendar__viewContainer > * {
     width: 50%;
     margin: 0.5em;
   }
-  
-  /* .react-calendar,
-  .react-calendar *,
-  .react-calendar *:before,
-  .react-calendar *:after {
-  
-  } */
   
   .react-calendar button {
     margin: 0;
@@ -68,7 +62,8 @@
   }
   
   .react-calendar__navigation button:enabled:focus {
-    box-shadow: inset 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
+    box-shadow: inset 6px 6px 16px 0px var(--shadowCol),
+    -6px -6px 16px 0px var(--shadowCol);
   }
   
   .react-calendar__month-view__weekdays {
@@ -170,7 +165,8 @@
   button.react-calendar__navigation__arrow.react-calendar__navigation__prev-button {
     border-style: none;
     border-radius: 0.125rem;
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
+    box-shadow: 6px 6px 16px 0px var(--shadowCol),
+    -6px -6px 16px 0px var(--shadowCol);
     font-size: 24px;
   }
   
@@ -183,7 +179,8 @@
   button.react-calendar__navigation__arrow.react-calendar__navigation__next-button {
     border-style: none;
     border-radius: 0.125rem;
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
+    box-shadow: 6px 6px 16px 0px var(--shadowCol),
+    -6px -6px 16px 0px var(--shadowCol);
     font-size: 24px;
   }
   
@@ -198,6 +195,23 @@
 
   abbr {
     text-decoration: none;
+  }
+
+  .calendarPage{
+    height: calc(100vh - 8rem);
+  }
+
+  .calendarAndEntry{
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    /* display: 'flex', justifyContent: 'flex-start', gap:'4rem', marginTop: '1rem'}} */
+  }
+
+  .calendarEntryGroupContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .calendarChoice {

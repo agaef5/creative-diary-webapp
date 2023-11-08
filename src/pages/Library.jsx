@@ -1,8 +1,8 @@
-import { EntryGroup, LastThreeEntries } from "./components/EntryGroup";
+import { EntryGroup } from "./components/EntryGroup";
 import { SideBar } from "./components/SideBar";
-import { AddProject, ProjectGroup } from "./components/Projects";
+import { ProjectGroup } from "./components/Projects";
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { SearchBar } from "./components/SearchBar";
 import '../styles/library.css';
 
@@ -28,20 +28,20 @@ export default function Library(){
             </div>
 
             <section className="allgroups">
-                <div>
+                <div className="groupContainer">
                     <h2>Pinned</h2>
                     <div style={{marginTop:'1rem', marginBottom:'4rem'}}><EntryGroup pinned={true}/></div>
                 </div>
 
-                <div>
+                <div className="groupContainer">
                     <span className="seeAll">
                         <h2>BrainDump</h2>
                         <a className="seeAllText" onClick={() => handleClick("BrainDump")}>see all</a>
                     </span>
-                        <LastThreeEntries inputType={"BrainDump"}/>
+                        <EntryGroup inputType={"BrainDump"} lastThree/>
                 </div>
 
-                <div>
+                <div className="groupContainer">
                     <span className="seeAll">
                     <h2>Projects</h2>
                         <a className="seeAllText" onClick={() => handleProjectClick()}>see all</a>
@@ -52,22 +52,24 @@ export default function Library(){
 
                 </div>
                 
-                <div>
+                <div className="groupContainer">
                     <span className="seeAll">
                     <h2>Daily Challenge</h2>              
                     <a className="seeAllText" onClick={() => handleClick("DailyChallenge")}>see all</a>
                     </span>
 
-                    <LastThreeEntries inputType={"DailyChallenge"}/>
+                    <EntryGroup inputType={"DailyChallenge"} lastThree/>
+
                 </div>
 
-                <div>
+                <div className="groupContainer">
                     <span className="seeAll">
                         <h2>Creativity Booster</h2>
                     <a className="seeAllText" onClick={() => handleClick("CreativityBooster")}>see all</a>
                     </span>
 
-                    <LastThreeEntries inputType={"CreativityBooster"}/>
+                    <EntryGroup inputType={"CreativityBooster"} lastThree/>
+
                 </div>
             </section>
         </>

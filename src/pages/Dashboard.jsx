@@ -7,6 +7,7 @@ import { currentDate } from "./components/EntryTypes";
 import { useState } from "react";
 import "../styles/dropdown.css";
 import "../styles/entry.css";
+import "../styles/letterToMyself.css";
 import { Streak } from "./components/Streak";
 import imgLetterbox from "../styles/images/letterbox.png";
 
@@ -48,7 +49,7 @@ export default function Dashboard() {
         </div>
         <section>
           <select
-            className="dropdown"
+            className="dropdown shadow"
             value={selectedOption}
             onChange={changeDisplay}
           >
@@ -61,7 +62,7 @@ export default function Dashboard() {
             <Outlet />
             <div>
               <Streak />
-              <div className="LetterToMyself">
+              <div className="LetterToMyself shadow">
                 {" "}
                 <p className="titleLetter">A Letter To Myself</p>
                 <img

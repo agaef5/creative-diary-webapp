@@ -22,9 +22,7 @@
   --text: #1b1c25;
   --background: #f4f4f4;
   --lightElem: #fdfdfd;
-  --shadowOne: 6px 6px 16px 0px rgba(255, 255, 255, 0.2);
-  --shadowTwo: -6px -6px 16px 0px rgba(255, 255, 255, 0.2);
-
+  --shadowCol:rgba(209, 205, 199, 0.50);
   color: var(--text);
   background-color: var(--background);
 }
@@ -37,10 +35,15 @@
   --text: #f0eeef;
   --background: #343434;
   --lightElem: #3f3f3f;
-  --shadow: rgba(0, 0, 0, 0.2);
+  --shadowCol: rgba(0, 0, 0, 0.15);
 
   color: var(--text);
   background-color: var(--background);
+}
+
+.shadow{
+  box-shadow: 6px 6px 16px 0px var(--shadowCol),
+  -6px -6px 16px 0px var(--shadowCol);
 }
 
 .green {
@@ -116,8 +119,8 @@ button {
   width: fit-content;
   border-style: none;
   border-radius: 0.125rem;
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: 6px 6px 16px 0px var(--shadowCol),
+  -6px -6px 16px 0px var(--shadowCol);
 }
 
 /* module style */
@@ -147,7 +150,6 @@ button {
   background-color: var(--lightElem);
   padding: 2rem 4rem;
 }
-
 
 .LetterToMyself {
   display: flex;

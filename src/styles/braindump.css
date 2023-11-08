@@ -26,9 +26,6 @@
   height: 40rem;
   background-color: var(--lightElem);
   border-radius: 10px;
-  /* light paper shadow */
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
   padding: 0rem 2rem;
 }
 
@@ -106,9 +103,6 @@
   border-radius: 10px;
   border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
 
-  /* light paper shadow */
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
 }
 .headerInputType {
   color: var(--light-theme-text, #1b1c25);
@@ -139,9 +133,6 @@
   border-radius: 10px;
   border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
 
-  /* light paper shadow */
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -168,9 +159,6 @@
   border-radius: 10px;
   border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
 
-  /* light paper shadow */
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,9 +197,6 @@
   border-radius: 10px;
   border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
 
-  /* light paper shadow */
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;

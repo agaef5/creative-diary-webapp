@@ -4,6 +4,7 @@ import { SideBar } from "./components/SideBar";
 import Calendar from "react-calendar";
 import { UserAuth } from '../authentication/context/AuthContext';
 import '../styles/newcalendar.css';
+import '../index.css';
 
 export default function CalendarPage() {
     const {user} = UserAuth();
@@ -47,9 +48,9 @@ export default function CalendarPage() {
     };
 
     return (
-        <div>
+        <div className='calendarPage'>
             <SideBar/>
-        
+
             <button className={`calendarChoice ${activeButton === "BrainDump" ? 'calendarChoiceActive' : ''}`} 
                     onClick={() => handleClick("BrainDump")}><span className='rowDot'> 
                     <div style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: 'var(--brainDump'}}></div>
@@ -69,7 +70,7 @@ export default function CalendarPage() {
             </button>
 
             
-            <div style={{display: 'flex', justifyContent: 'flex-start', gap:'4rem', marginTop: '1rem'}}>
+            <div className='calendarAndEntry'>
                 <div>
                     <Calendar style= {{ width: '51.875rem'}}
                         value={chosenDate}
@@ -81,7 +82,7 @@ export default function CalendarPage() {
                         }
                     />
                 </div>
-                <div>
+                <div className='calendarEntryGroupContainer'>
                     <p style={{ fontWeight: '500', fontSize: '1.5rem', marginBottom: '2rem', marginTop: 0}}>{currentDayAndDate(chosenDate)}</p>
                     <div className='entryGroupCalendar'>
                         <EntryGroup isColumn={true} date={chosenDate?.toLocaleDateString('en-GB')} inputType={inputType}/>

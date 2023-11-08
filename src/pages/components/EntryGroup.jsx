@@ -111,6 +111,7 @@ function filterEntries(entries, filters) {
 }
 
 export function EntryGroup(props) {
+  console.log(props);
   const { user } = UserAuth();
   const entries = GetEntries(user.uid);
 
@@ -123,6 +124,7 @@ export function EntryGroup(props) {
     projects,
     sortOrder,
     isColumn,
+    lastThree
   } = props; // Destructure the props
 
   useEffect(() => {
@@ -145,39 +147,43 @@ export function EntryGroup(props) {
       // Default sorting logic for newest
       filtered.sort((a, b) => b.timestamp - a.timestamp);
     }
-    setFilteredEntries(filtered);
+    
+    const processedEntries = processEntries(filtered, lastThree);
+    setFilteredEntries(processedEntries);
   }, [entries, pinned, keywords, date, inputType, tags, projects, sortOrder]);
 
   const [filteredEntries, setFilteredEntries] = useState(entries);
-  
-    // Add a condition to display only the last three entries if the prop lastThree is true
-    const renderedEntries = props.lastThree ? filteredEntries.slice(-3) : filteredEntries;
+
+  function processEntries(filteredEntries, lastThree) {
+    if (lastThree) {
+      return filteredEntries.slice(0, 3);
+    } else {
+      // Return the original array as it is
+      return filteredEntries;
+    }
+  }
     //className change for CalendarPage
     const entryGroupClassName = `entryGroup${isColumn ? 'Column' : ''}`;
 
   return (
     <div className={entryGroupClassName}>
-      {renderedEntries.length > 0 ? (
-        renderedEntries.map((entry) => (
+      {filteredEntries.length > 0 ? (
+        filteredEntries.map((entry) => (
           <EntryCard key={entry.id} entry={entry} />
         ))
       ) : (
         <div className="emptyStateContainer">
-          <img
-            className="emptyStateGuy"
-            src={imgEmptyState}
-            alt="No Results Found"
-          />
-
-          <p style={{ fontSize: "20px", fontStyle: "italic", fontWeight: 300 }}>
-            No entries to display
-          </p>
+            <img
+                className="emptyStateGuy"
+                src={imgEmptyState}
+                alt="No Results Found"
+              />
+              <p style={{ fontSize: "20px", fontStyle: "italic", fontWeight: 300 }}>
+                No entries to display
+              </p> 
         </div>
       )}
     </div>
   );
 }
 
-export function LastThreeEntries(props) {
-  return <EntryGroup {...props} lastThree />;
-}

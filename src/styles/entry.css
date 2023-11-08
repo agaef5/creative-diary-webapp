@@ -8,13 +8,26 @@
 
 .entryGroupColumn {
   /* rem musi byc tutaj bo inaczej ucina cienie i scrollbar zaslania entryGroup */
-  padding: 1rem 1rem 1rem 0;
-  display: grid;
-  grid-template-columns: 1fr;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
   height: 70vh;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.emptyStateContainer{
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyStateContainer p{
+  padding-left: 1.5rem;
 }
 
 .entryCard {
@@ -22,14 +35,10 @@
   height: 17.75rem;
 
   border-radius: 0.3125rem;
-  border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
   background: var(--lightElem, #fdfdfd);
 
   display: grid;
   grid-template-columns: 2% 80% 18%;
-
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
 
   background-color: var(--lightElem);
 
@@ -146,55 +155,26 @@
   cursor: pointer;
 }
 
-  .moreOptions{
-    z-index: 1;
-    position: absolute;
-    right: -50%;
-    width: 7rem; 
-    display: flex;
-    flex-direction: column;
-    background-color: var(--lightElem);
-    padding: 0.5rem 1rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 0.125rem;
-  }
-
-  .horizontal{
-    width: 100%;
-    border: 0.001rem var(--textInput2) solid;
-    border-radius: 2px;
-  }
-
-  .entryDisplay{
-      z-index: 10;
-      border-radius: 0.3125rem;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: var(--lightElem);
-      width: 61rem;
-      height: 90vh;
-  }
-.moreOptions {
+.moreOptions{
   z-index: 1;
   position: absolute;
   right: -50%;
-  width: 7rem;
+  width: 7rem; 
   display: flex;
   flex-direction: column;
   background-color: var(--lightElem);
   padding: 0.5rem 1rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.125rem;
 }
 
-.horizontal {
+.horizontal{
   width: 100%;
-  border: 0.5px var(--textInput2) solid;
+  border: 0.001rem var(--textInput2) solid;
   border-radius: 2px;
 }
 
-.entryDisplay {
+.entryDisplay{
   z-index: 10;
   border-radius: 0.3125rem;
   position: absolute;
@@ -205,6 +185,7 @@
   width: 61rem;
   height: 90vh;
 }
+
 
 .flex-row-untitled {
   display: flex;

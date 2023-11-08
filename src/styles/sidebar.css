@@ -23,7 +23,8 @@
 }
 
 .closeBtn:focus {
-  box-shadow: inset 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
+  box-shadow: 6px 6px 16px 0px var(--shadowCol),
+  -6px -6px 16px 0px var(--shadowCol);
 }
 
 .burgerMenuIcon {
@@ -38,7 +39,8 @@
 }
 
 .burgerMenuIcon:focus {
-  box-shadow: inset 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
+  box-shadow: 6px 6px 16px 0px var(--shadowCol),
+  -6px -6px 16px 0px var(--shadowCol);
 }
 
 .closeBtn {
@@ -52,7 +54,7 @@
 .pageClick {
   display: flex;
   flex-direction: row;
-  color: var(--light-theme-text, #1b1c25);
+  color: var(--text);
   text-align: center;
   font-family: SF Pro Display;
   font-size: 24px;
