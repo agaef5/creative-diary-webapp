@@ -64,7 +64,7 @@ export function EntryEdit() {
       tags: selectedTags,
     });
     alert("Entry updated!");
-    navigate("/dashboard"); // Adjust the route as needed
+    navigate("/dashboard/BrainDump"); // Adjust the route as needed
   };
 
   return (
