@@ -127,7 +127,12 @@ export function SaveEntry({ open, onClose, ...props }) {
   return (
     <>
       <div className="overlay" onClick={onClose}>
-        <div className="moduleContainer flex-col" onClick={(e) => {e.stopPropagation();}}>
+        <div
+          className="moduleContainer flex-col"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           <button onClick={onClose}>x</button>
           <div className="flex-col">
             <h2>Add Tags</h2>
@@ -353,7 +358,6 @@ export function CreativityBooster() {
     }
   }, []);
 
-
   useEffect(() => {
     fetchTodayPromptID("CreativityBooster", userID, setGeneratedID); // !!!!!!!!!
   }, []);
@@ -390,8 +394,7 @@ export function CreativityBooster() {
         {showPrompt === false && (
           <div>
             <div onClick={showCreativityBooster}>
-              <img></img>
-              <p>img1</p>
+              <img src="./styles/images/default"></img>
             </div>
 
             <div onClick={showCreativityBooster}>
