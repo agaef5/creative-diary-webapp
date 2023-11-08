@@ -60,16 +60,16 @@ export function SearchBar(props){
                     className="searchInput"/>
 
              {search && (
-                <>
+                <div className="choiceField">
                 {(!project || project.length === 0) && <SelectProject onProjectSelect={setSelectedProjects}/>}
 
                 {(!tag || tag.length === 0) &&  <SelectTag onTagSelect={setSelectedTags}/>}
 
                 {(!inputType || inputType.length === 0) && <SelectInputType onInputTypeSelect={setSelectedInputTypes}/>}
                
-
-                <button onClick={performSearch}>Search</button>
-                </>
+<br></br>
+                <button id='searchButton' onClick={performSearch}>Search</button>
+                </div>
              )}       
 
           
@@ -113,19 +113,19 @@ export function SelectInputType({ onInputTypeSelect, selectedInputTypes }) {
     };
     
     return (
-        <div>
-            <p></p>
+        <div className="flex-row">
+            <p>Input Types:</p>
             {inputTypes.map((inputType) => (
                 <button
                     key={inputType}
                     onClick={() => handleInputTypeSelect(inputType)}
                     style={{                      
                         backgroundColor: internalSelectedInputTypes.includes(inputType) ? 'var(--accCol)' : 'var(--textInputLight)',
-                        color: 'var(--lightElem)',
-                        margin: '5px',
+                        color: internalSelectedInputTypes.includes(inputType) ? 'var(--text)' : 'var(--lightElem)',
+                        margin: '0.5rem',
                         padding: '0.5rem 1rem',
                         border: 'none',
-                        borderRadius: '3px',
+                        borderRadius: '0.125rem',
                     }}
                 >
                     {inputType}

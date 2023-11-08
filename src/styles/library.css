@@ -64,3 +64,18 @@
     background-position: right 0.7rem top 50%;
     background-size: 0.65rem auto;
   }
+
+  #searchButton {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.125rem;
+  }
+
+.choiceField {
+    background-color: var(--lightElem);
+    margin-top: -1.25rem;
+    border-radius: 0 0 0.25rem 0.25rem;
+    padding: 1rem;
+    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),-6px -6px 16px 0px rgba(255, 255, 255, 0.5);
+}
