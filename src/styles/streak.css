@@ -42,10 +42,11 @@
 }
 
 .streakDays {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-45%, -120%);
+  color: var(--text);
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   font-size: 3rem;
   font-weight: 510;
 }
