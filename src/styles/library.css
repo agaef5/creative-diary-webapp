@@ -11,18 +11,6 @@
     text-decoration: underline var(--accCol);
 }
 
-.searchInput {
-    width: 66.125rem;
-    height: 2rem;
-    padding: 1rem 1.5rem;
-    border-radius: 0.25rem;
-    border-style: none;
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.50), -6px -6px 16px 0px rgba(255, 255, 255, 0.50);
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-}
-
-
 .allgroups {
     margin-top: 4rem;
 }
@@ -37,45 +25,3 @@
     font-size: 16px;
 }
 
-.dropdownSorting {
-    color: var(--text);
-    font-family: SF Pro Display;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    display: flex;
-    width: 200px;
-    height: 35px;
-    padding: 0.5rem 1rem;
-    justify-content: space-between;
-    align-items: left;
-    border-radius: 3px;
-    background-color: var(--lightElem);
-    border-style: none;
-    /* light paper shadow */
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-      -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: var(--lightElem) url("./images/chevron.down.svg") no-repeat right
-      center;
-    background-position: right 0.7rem top 50%;
-    background-size: 0.65rem auto;
-  }
-
-  #searchButton {
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 0.125rem;
-  }
-
-.choiceField {
-    background-color: var(--lightElem);
-    margin-top: -1.25rem;
-    border-radius: 0 0 0.25rem 0.25rem;
-    padding: 1rem;
-    box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),-6px -6px 16px 0px rgba(255, 255, 255, 0.5);
-}
