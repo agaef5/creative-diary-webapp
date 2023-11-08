@@ -124,19 +124,20 @@ export function Settings({setTheme, setAccColor}){
 
             <h3>Customization</h3>
             <p>Themes</p>
-            <div>
-                <button onClick={setLightTheme}>Light</button>
-                <button onClick={setDarkTheme}>Dark</button>
+            <div className="light-dark">
+                <button id='light' onClick={setLightTheme}>Light</button>
+                <button id='dark' onClick={setDarkTheme}>Dark</button>
             </div>
             <p>Accent Colour</p>
-                <button onClick={()=>{setAccentColor("green")}}>Green</button>
-                <button onClick={()=>{setAccentColor("red")}}>Red</button>
-                <button onClick={()=>{setAccentColor("purple")}}>Purple</button>
-                <button onClick={()=>{setAccentColor("yellow")}}>Yellow</button>
-                <button onClick={()=>{setAccentColor("orange")}}>Orange</button>
-                <button onClick={()=>{setAccentColor("blue")}}>Blue</button>
-                <button onClick={()=>{setAccentColor("pink")}}>Pink</button>
-
+            <div className="colors">
+                <button id='green' onClick={()=>{setAccentColor("green")}}></button>
+                <button id='red' onClick={()=>{setAccentColor("red")}}></button>
+                <button id='purple' onClick={()=>{setAccentColor("purple")}}></button>
+                <button id='yellow' onClick={()=>{setAccentColor("yellow")}}></button>
+                <button id='oragne' onClick={()=>{setAccentColor("orange")}}></button>
+                <button id='blue' onClick={()=>{setAccentColor("blue")}}></button>
+                <button id='pink' onClick={()=>{setAccentColor("pink")}}></button>
+            </div>
             <p>Custom Toolbar</p>
             <p>Custom Week Display</p>
             <p>Custom Date Format</p>

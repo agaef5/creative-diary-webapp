@@ -1,25 +1,27 @@
 @import url("../index.css");
 
 #logout {
-display: flex;
-padding: 0.5rem 1rem;
-justify-content: center;
-align-items: center;
-border-radius: 3px;
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
 }
 
-#settings, #sub, #security {
-display: flex;
-width: 31rem;
-height: 3rem;
-border-radius: 3px;
-background: var(--light-theme-light-elements);
-color: var(--light-theme-light-elements);
-padding: 0.875rem 1rem;
-margin: 1rem 0rem;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+#settings,
+#sub,
+#security {
+  display: flex;
+  width: 31rem;
+  height: 3rem;
+  border-radius: 3px;
+  background: var(--light-theme-light-elements);
+  color: var(--light-theme-light-elements);
+  padding: 0.875rem 1rem;
+  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #arrow {
@@ -28,14 +30,77 @@ justify-content: space-between;
   font-size: 24px;
   font-family: var(--font-sf-pro);
   text-align: center;
- 
 }
 
-#CreativeFieldsTitle { 
+#CreativeFieldsTitle {
   position: relative;
   font-weight: 500;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-start;
+}
+
+.light-dark button {
+  display: inline-flex;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 0.1875rem;
+}
+
+#light {
+  --background: #f4f4f4;
+}
+
+#dark {
+  --background: #343434;
+}
+
+.colors {
+  display: inline-flex;
+  border-radius: 0.1875rem;
+}
+
+.colors button {
+  display: inline-flex;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 0.1875rem;
+}
+
+.colors button:hover {
+  box-shadow: inset white 0px 0px 40px -12px; 
+  box-shadow: 80%;
+}
+
+.colors button:active {
+
+}
+
+#green {
+  --accCol: #7bbb96;
+}
+
+#red {
+  --accCol: #ff5f5f;
+}
+
+#purple {
+  --accCol: #9287d7;
+}
+
+#yellow {
+  --accCol: #fdc83a;
+}
+
+#orange {
+  --accCol: #ffa552;
+}
+
+#blue {
+  --accCol: #87cdd7;
+}
+
+#pink {
+  --accCol: #f896ad;
 }
