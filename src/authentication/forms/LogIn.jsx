@@ -43,11 +43,11 @@ export default function LogIn(){
                     required/>
                 </div>
             </div>
-            <div>
+            <div className="ButtonOrChange" style={{gap: "1rem"}}>
                 <button onClick={SignIn}>Log In</button>
-                <div>
+                <div className="ButtonOrChange" >
                     <p>Dont't Have An Account Yet?</p>
-                    <Link to="/createAccount"><p>Sign Up Now</p></Link>
+                    <Link to="/createAccount"><a>Sign Up Now</a></Link>
                 </div>
             </div>
         </section>

@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import '../styles/welcomePage.css'
+import '../index.css'
 import logo from "../styles/images/logo.png"
 import welcome from "../styles/images/welcome.png"
 

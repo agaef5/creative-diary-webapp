@@ -40,7 +40,7 @@ export default function CreateAccount(){
     return(
         <section className="formContainer">
             <div className="welcomeForm">
-                <p>Create Account</p>
+                <p>Sign Up</p>
                 <div className="formInputs">
                     <input className="shadow"
                         type='text' 
@@ -62,20 +62,17 @@ export default function CreateAccount(){
                         onChange={(e => setPassword(e.target.value))}
                         placeholder="Password"/>
 
-                    <div>
+                    <div className="checkBox">
                         <input type="checkbox" id="privacyPolicy"/>
                         <label for="privacyPolicy">I Read And Accept The <span>Privacy Policy</span></label>
                     </div>
-                    
-                    
-                    
                 </div>
             </div>
-            <div>
-                <button onClick={SignUp}>Create Account</button>
-                <div>
+            <div className="ButtonOrChange" style={{gap: "1rem"}}>
+                <button onClick={SignUp}>Sign Up</button>
+                <div className="ButtonOrChange">
                     <p>Already Have An Account?</p>
-                    <Link to="/logIn"><p>Sign Up Now</p></Link>
+                    <Link to="/logIn"><a>Sign Up Now</a></Link>
                 </div>
             </div>
         </section>
