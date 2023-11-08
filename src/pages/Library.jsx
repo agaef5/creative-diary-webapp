@@ -1,4 +1,4 @@
-import { EntryGroup, LastThreeEntries } from "./components/EntryGroup";
+import { EntryGroup } from "./components/EntryGroup";
 import { SideBar } from "./components/SideBar";
 import { AddProject, ProjectGroup } from "./components/Projects";
 import { useState } from "react";
@@ -38,7 +38,7 @@ export default function Library(){
                         <h2>BrainDump</h2>
                         <a className="seeAllText" onClick={() => handleClick("BrainDump")}>see all</a>
                     </span>
-                        <LastThreeEntries inputType={"BrainDump"}/>
+                        <EntryGroup inputType={"BrainDump"} lastThree/>
                 </div>
 
                 <div>
@@ -58,7 +58,8 @@ export default function Library(){
                     <a className="seeAllText" onClick={() => handleClick("DailyChallenge")}>see all</a>
                     </span>
 
-                    <LastThreeEntries inputType={"DailyChallenge"}/>
+                    <EntryGroup inputType={"DailyChallenge"} lastThree/>
+
                 </div>
 
                 <div>
@@ -67,7 +68,8 @@ export default function Library(){
                     <a className="seeAllText" onClick={() => handleClick("CreativityBooster")}>see all</a>
                     </span>
 
-                    <LastThreeEntries inputType={"CreativityBooster"}/>
+                    <EntryGroup inputType={"CreativityBooster"} lastThree/>
+
                 </div>
             </section>
         </>
