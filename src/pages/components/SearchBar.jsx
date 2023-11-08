@@ -119,9 +119,13 @@ export function SelectInputType({ onInputTypeSelect, selectedInputTypes }) {
                 <button
                     key={inputType}
                     onClick={() => handleInputTypeSelect(inputType)}
-                    style={{
+                    style={{                      
                         backgroundColor: internalSelectedInputTypes.includes(inputType) ? 'var(--accCol)' : 'var(--textInputLight)',
-                        color: internalSelectedInputTypes.includes(inputType) ? 'var(--text)' : 'var(--lightElem)',                        
+                        color: 'var(--lightElem)',
+                        margin: '5px',
+                        padding: '0.5rem 1rem',
+                        border: 'none',
+                        borderRadius: '3px',
                     }}
                 >
                     {inputType}
