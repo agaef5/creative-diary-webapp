@@ -252,22 +252,26 @@ export function Subscription() {
       <h2>
         Account<span>/Subscription</span>
       </h2>
-
       <h3>Current Plans</h3>
       <fieldset>
         <div>
           <input type="radio" id="premium" value="premium" />
           <label>Premium</label>
+          <p>Renew The Streak</p>
+          <p>Generate New Prompt</p>
+          <p>More Creativity Boosters</p>
+          <p>SoMe Integration</p>
         </div>
         <div>
           <input type="radio" id="standard" value="standard" />
           <label>Standard</label>
         </div>
       </fieldset>
-
       <h3>Payment Method</h3>
-      <button>Manage Your Plan</button>
-      <button>Cancel Your Plan</button>
+      <div class="plan">
+        <button>Manage Your Plan</button>
+        <button>Cancel Your Plan</button>
+      </div>
     </>
   );
 }
