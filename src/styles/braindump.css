@@ -292,3 +292,8 @@
   height: 0.125rem;
   margin: 0.5rem 0;
 }
+
+.dashboardDate {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
