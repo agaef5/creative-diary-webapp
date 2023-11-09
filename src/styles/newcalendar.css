@@ -197,9 +197,6 @@
     text-decoration: none;
   }
 
-  .calendarPage{
-    height: calc(100vh - 8rem);
-  }
 
   .calendarAndEntry{
     width: 80vw;

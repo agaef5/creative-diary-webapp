@@ -151,7 +151,6 @@ button {
   padding: 2rem 4rem;
 }
 
-
 .LetterToMyself {
   display: flex;
   flex-direction: column;
@@ -188,6 +187,8 @@ button {
   width: 9rem;
   height: auto;
 }
+
+
 
 h3 {
   padding: 0;
