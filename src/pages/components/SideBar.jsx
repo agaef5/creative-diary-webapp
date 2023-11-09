@@ -127,7 +127,7 @@ export function SideBar() {
                     />
                   </svg>
                 </button>
-                <p>{(userName && userName.username !== '') ? userName.username : "Account" }</p>
+                <p>{(userName && userName.username && userName.username !== '') ? userName.username : "Account" }</p>
               </div>
             </NavLink>
           </div>

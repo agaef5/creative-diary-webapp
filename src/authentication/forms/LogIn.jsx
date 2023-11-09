@@ -24,30 +24,32 @@ export default function LogIn(){
 
 
     return(
-        <section>
-            <h1>Log In</h1>
-            <form onSubmit={SignIn}>
-                <label >E-mail:</label>
-                <input 
-                    type='email' 
-                    value={email} 
-                    onChange={(e => setEmail(e.target.value))}
-                    placeholder="your@email.com"/>
+        <section className="formContainer">
+            <div className="welcomeForm">
+                <p>Log In</p>
+                <div className="formInputs">
+                    <input className="shadow"
+                        type='email' 
+                        value={email} 
+                        onChange={(e => setEmail(e.target.value))}
+                        placeholder="E-mail"
+                        required/>
 
-                <label >Password: </label>
-                <input 
-                type='password' 
-                value={password}
-                onChange={(e => setPassword(e.target.value))}
-                placeholder="Your password"/>
-
-                <button type="submit">Log In</button>
-            </form>
-
-            <p>Dont't Have An Account Yet?</p>
-            <Link to="/createAccount"><p>Sign Up Now</p></Link>
-
-
+                    <input className="shadow"
+                    type='password' 
+                    value={password}
+                    onChange={(e => setPassword(e.target.value))}
+                    placeholder="Password"
+                    required/>
+                </div>
+            </div>
+            <div className="ButtonOrChange" style={{gap: "1rem"}}>
+                <button onClick={SignIn}>Log In</button>
+                <div className="ButtonOrChange" >
+                    <p>Dont't Have An Account Yet?</p>
+                    <Link to="/createAccount"><a>Sign Up Now</a></Link>
+                </div>
+            </div>
         </section>
     )
 
