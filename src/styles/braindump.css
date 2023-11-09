@@ -11,7 +11,7 @@
 }
 
 .promptStylesBD {
-  width: 51rem;
+  width: 50rem;
   font-size: 2rem;
   color: var(--text);
   font-style: normal;
@@ -19,6 +19,8 @@
   line-height: normal;
   border-style: none;
   background-color: var(--lightElem);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .inputSpaceBD {
@@ -26,9 +28,6 @@
   height: 40rem;
   background-color: var(--lightElem);
   border-radius: 10px;
-  /* light paper shadow */
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
   padding: 0rem 2rem;
 }
 
@@ -36,35 +35,36 @@
   color: var(--textInput2);
   /* SF Pro Regular */
   font-family: SF Pro Display;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin: 0.5rem 0;
+  padding-left: 0.125rem;
+
 }
 
 .inputStyleBD {
   color: var(--text);
   font-family: SF Pro Display;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   border-style: none;
-  width: 55rem;
+  width: 56.5rem;
   height: 25rem; /* You can adjust the height as needed */
   background-color: var(--lightElem);
   line-height: 1;
   resize: none; /* Prevent the textarea from being resized by the user */
-  padding: 0.5rem; /* Add some padding for better appearance */
+  padding: 0.5rem 0.25rem; /* Add some padding for better appearance */
 }
 
 .inputStyleBD::placeholder {
   text-align: left; /* Align placeholder text to the left */
-  line-height: 1; /* Set line-height for the placeholder */
   vertical-align: top; /* Align placeholder text at the top */
 }
 
 .saveBtn {
-  width: 64px;
   height: 40px;
   display: flex;
   padding: 8px 16px;
@@ -74,6 +74,7 @@
   border-radius: 3px;
   background: var(--accCol);
   margin-top: 32px;
+  margin-left: 1.5rem;
   right: 32px;
   box-shadow: 6px 6px 16px 0px var(--shadow), -6px -6px 16px 0px var(--shadow);
   color: #fff;
@@ -87,6 +88,7 @@
 .flexboxing {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .flexboxing2 {
@@ -103,9 +105,6 @@
   border-radius: 10px;
   border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
 
-  /* light paper shadow */
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
 }
 .headerInputType {
   color: var(--light-theme-text, #1b1c25);
@@ -136,9 +135,6 @@
   border-radius: 10px;
   border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
 
-  /* light paper shadow */
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,9 +161,6 @@
   border-radius: 10px;
   border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
 
-  /* light paper shadow */
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,9 +199,6 @@
   border-radius: 10px;
   border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
 
-  /* light paper shadow */
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -296,4 +286,24 @@
   font-style: italic;
   font-weight: 300;
   margin: 1rem 0;
+}
+
+#dashedLine {
+  background-color: var(--background);
+  width: auto;
+  height: 0.125rem;
+  margin: 0.5rem 0;
+}
+
+.dashboardDate {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.plusButton {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--background);
+  color: var(--accCol);
+  padding: 0.25rem 0.625rem;
 }

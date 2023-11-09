@@ -88,11 +88,11 @@ export function AddTag(){
 
     return(
         <> 
-        <div>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)}
+        <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
+            <input className='searchInputSmall' type="text" value={name} onChange={(e) => setName(e.target.value)}
                     placeholder="Add a tag..."/>
 
-            <button onClick={handleSaveTag}>+</button>
+            <button className='plusButton' onClick={handleSaveTag}>+</button>
                 
         </div>
         </>

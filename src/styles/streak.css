@@ -7,10 +7,8 @@
   align-items: center;
   background-color: var(--lightElem);
   width: 19rem;
-  height: 20.5rem;
+  height: 21rem;
   border-radius: 0.625rem;
-  box-shadow: 6px 6px 16px 0px rgba(209, 205, 199, 0.5),
-    -6px -6px 16px 0px rgba(255, 255, 255, 0.5);
   margin: 1rem;
 }
 
@@ -44,10 +42,11 @@
 }
 
 .streakDays {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-45%, -120%);
+  color: var(--text);
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   font-size: 3rem;
   font-weight: 510;
 }

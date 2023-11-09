@@ -55,14 +55,14 @@ export function SearchBar(props){
     return(
         <div className="searchBarContainer">
             <div className="searchBar">
-                <input className="searchInput"
+                <input className="searchInput shadow"
                         type="text"
                         placeholder="Search The Library..."
                         onClick={()=> (setSearch(true))}
                         onChange={(e) => setKeywords(e.target.value)}/>
 
                 {search && (
-                    <div className="choiceField">
+                    <div className="choiceField shadow">
                         {(!project || project.length === 0) && 
                         <SelectProject onProjectSelect={setSelectedProjects}/>}
 

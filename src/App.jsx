@@ -13,6 +13,7 @@ import CreateAccount from './authentication/forms/CreateAccount'
 import { useState, useEffect } from 'react'
 import { onValue, ref } from 'firebase/database'
 import { database } from '../firebase-config'
+import { ErrorPage } from './pages/ErrorPage'
 
 
 
@@ -79,6 +80,7 @@ function App() {
                   <Route path="security" element={<ProtectedRoute><SecurityPrivacy/></ProtectedRoute>}/>
               </Route>
               <Route path=":entryID" element={<ProtectedRoute><EntryEdit/></ProtectedRoute>}/>
+              <Route path='*' element={<ErrorPage />}/>
             </Routes>
         </div>
     
