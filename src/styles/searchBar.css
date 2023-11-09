@@ -12,6 +12,18 @@
     color: var(--text);
 }
 
+.searchInputSmall {
+  padding: 0.5rem 1rem;
+  border-radius: 0.125rem;
+  border-style: none;
+  margin-bottom: 0.5rem;
+  background-color: var(--lightElem);
+  color: var(--text);
+  box-shadow: var(--shadowCol);
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .dropdownSorting {
     color: var(--text);
     font-family: SF Pro Display;

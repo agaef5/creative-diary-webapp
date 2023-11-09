@@ -176,19 +176,88 @@
 
 .entryDisplay{
   z-index: 10;
-  border-radius: 0.3125rem;
+  border-radius: 0.3125rem 0.3125rem 0 0;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--lightElem);
-  width: 61rem;
-  height: 90vh;
+  width: 57rem;
+  height: 86vh;
+  padding: 2rem;
 }
-
 
 .flex-row-untitled {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.textareaSmall {
+color: var(--text);
+font-family: SF Pro Display;
+font-style: normal;
+font-weight: 400;
+border-style: none;
+height: 5rem; /* You can adjust the height as needed */
+background-color: var(--lightElem);
+line-height: 1;
+}
+
+.editRowDisplay {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#inputTypeDisplay {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--accCol);
+}
+
+/* editing/updating entries */
+.titleButtonRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.editTitle {
+  width: 50rem;
+  height: 2rem;
+  padding: 0;
+  border-radius: 0.25rem;
+  border-style: none;
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: var(--lightElem);
+  color: var(--textLighter);
+  box-shadow: var(--shadowCol);
+}
+
+.updateButton {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.editContent {
+  color: var(--textLighter);
+  font-family: SF Pro Display;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  border-style: none;
+  width: 56.5rem;
+  height: 30rem; /* You can adjust the height as needed */
+  margin-bottom: 2rem;
+  background-color: var(--lightElem);
+  line-height: 1;
+  resize: none; /* Prevent the textarea from being resized by the user */
+  padding: 0.5rem 0.25rem; /* Add some padding for better appearance */
 }
