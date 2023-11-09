@@ -183,12 +183,25 @@ export function EntryDisplay({open, onCloseDisplay, entry, projectNames, tagName
         navigate(`/${entry.id}`)
     }
 
+    function inputTypeToColor(inputType) {
+        switch (inputType) {
+          case 'BrainDump':
+            return 'var(--brainDump)';
+          case 'DailyChallenge':
+            return 'var(--dailyChallenge)';
+          case 'CreativityBooster':
+            return 'var(--creativityBooster)';
+          default:
+            return 'black'; // Default color if inputType doesn't match any of the specified values
+        }
+      }
+
     return(
         <div className="overlay" onClick={onCloseDisplay}>
             <div key={entry.id} className="entryDisplay" onClick={(e => {e.stopPropagation();})}>
                 {/* <button onClick={onCloseDisplay}>x</button> */}
                     <div className="editRowDisplay">
-                     <h3 id="inputTypeDisplay">{entry.inputType}</h3>
+                    <h3 id="inputTypeDisplay"><span style={{ backgroundColor: inputTypeToColor(entry.inputType), height: ".8rem", width: ".8rem", borderRadius: "50%", display: "block"}}></span>{entry.inputType}</h3>
                         <button className='deleteButton' onClick={handleEditClick}>Edit</button>
                     </div>
                     <p className="titleStylesBD" style={{margin: '1rem 0'}}>{entry.title}</p>
@@ -220,16 +233,6 @@ export function EntryDisplay({open, onCloseDisplay, entry, projectNames, tagName
                 </div>
                 <div id='dashedLine'/>
 
-
-                {/* embed for spootify, musze wykombinowac modal do dodawania linkow do piosenek */}
-                {/* <iframe
-                style={{ borderRadius: "12px", width: "100%", height: "152px"}}
-                src="https://open.spotify.com/embed/track/3fpVWegR6YOS1Yk5HSMYIq?utm_source=generator&theme=0"
-                frameBorder="0"
-                allowFullScreen
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                ></iframe> */}
 
                 <p style={{marginLeft: '0.25rem'}}>{entry.text}</p>
             </div>
