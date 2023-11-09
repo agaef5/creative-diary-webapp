@@ -78,7 +78,7 @@ export default function CalendarPage() {
                         tileContent={({ date }) =>
                             markedDates.find(
                                 markedDate => new Date(markedDate).toDateString() === date.toDateString()
-                            ) ? <div style={{ backgroundColor: inputType === 'BrainDump' ? '#3AA768' : (inputType === 'DailyChallenge' ? '#EB4A4A' : '#56ADBA'), width: 6, height: 6, borderRadius: '50%', marginLeft: '2.75rem', marginBottom: '-0.875rem', marginTop: '0.5rem'}}></div> : null
+                            ) ? <div style={{ backgroundColor: inputType === 'BrainDump' ? '#3AA768' : (inputType === 'DailyChallenge' ? '#EB4A4A' : '#56ADBA'), width: 6, height: 6, borderRadius: '50%', marginLeft: '2.32rem', marginBottom: '-0.875rem', marginTop: '0.5rem'}}></div> : null
                         }
                     />
                 </div>

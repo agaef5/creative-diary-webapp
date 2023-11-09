@@ -48,3 +48,12 @@
     font-size: 1.75rem;  
     font-weight: 700;
 }
+
+.addProject {
+    background-color: var(--background);
+    color: var(--accCol);
+    font-size: 4rem;
+    padding: 0 1.25rem;
+    font-weight: 500;
+    margin-top: 4rem;
+}

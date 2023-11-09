@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { UserAuth } from "../authentication/context/AuthContext";
 import { EntryGroup } from "./components/EntryGroup";
-import { GetProjects, ProjectGroup } from "./components/Projects";
+import { AddProject, GetProjects, ProjectGroup } from "./components/Projects";
 import { SearchBar } from "./components/SearchBar";
 import { SideBar } from "./components/SideBar";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export function GroupPage() {
@@ -26,6 +27,17 @@ export function GroupPage() {
 }
 
 export function ProjectsGroupPage(){
+    const navigate = useNavigate('');
+    const [openModal, setOpenModal] = useState(false);
+
+    function handleClick(inputType){
+        navigate(`/group/${inputType}`)
+    }
+
+    function handleProjectClick(inputType){
+        navigate(`/projects`)
+    }
+
     return (
         <>
         <SideBar/>
@@ -39,6 +51,8 @@ export function ProjectsGroupPage(){
             </h2>
         </div>
         <ProjectGroup/>
+        <button onClick={() => setOpenModal(true)} className="addProject">+</button>
+        <AddProject open={openModal} onClose={() => setOpenModal(false)}/> 
         </>
     )
 }

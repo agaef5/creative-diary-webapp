@@ -179,6 +179,9 @@ export function AddProject({open, onClose}){
         {/* stopPropagation function prevents affecting onClose function from 'overlay' div to its children div's, so pop-up itself */}
         <div className="moduleContainer flex-col" style={{backgroundColor: 'var(--background)'}} onClick={(e => {e.stopPropagation();})}>
         <div style={{alignItems: 'flex-start', marginBottom: '1rem'}}>
+            <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+        <button className='deleteButton' style={{backgroundColor: 'var(--accColLight)'}} onClick={onClose}>Cancel</button>
+        </div>
                 <h2>Add a Project</h2>
                 <div className="flex-col">
                     <label>Project Name<span>*</span></label>
@@ -191,10 +194,7 @@ export function AddProject({open, onClose}){
                     <textarea value={description} className='searchInputSmall textareaSmall' onChange={(e => setDescription(e.target.value))} placeholder="e.g. In this project I would like to.."/>
             </div>
             </div>
-                    <div style={{display: 'flex', flexDirection: 'row', marginTop: '0.5rem', marginLeft: '-0.25rem'}}>
                     <button className='deleteButton' onClick={SaveProject}>Save</button>
-                    <button className='deleteButton' style={{backgroundColor: 'var(--accColLight)'}} onClick={onClose}>Cancel</button>
-                </div>
             </div>
         </div>
     

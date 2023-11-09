@@ -48,6 +48,7 @@ export function Streak() {
               "--CircularProgress-size": "200px",
               "--CircularProgress-trackThickness": "16px",
               "--CircularProgress-progressThickness": "16px",
+              "--CircularProgress-progressColor": 'var(--accCol)',
               }} 
             variant="plain"  color="warning" determinate value={progress}>
             <p className='streakDays'>{consecutiveDays}{consecutiveDays === 0 ? null : '🔥'}</p>

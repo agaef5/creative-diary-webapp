@@ -197,3 +197,15 @@ h3 {
 .deleteButton {
   padding: 0.5rem 1rem;
 }
+
+.cancelLine {
+  background-color: var(--lightElem);
+  box-shadow: none;
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+button.cancelLine {
+  background-color: n;
+}
