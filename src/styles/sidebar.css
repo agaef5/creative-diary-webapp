@@ -23,7 +23,7 @@
 }
 
 .closeBtn:focus {
-  box-shadow: 6px 6px 16px 0px var(--shadowCol),
+  box-shadow: inset 6px 6px 16px 0px var(--shadowCol),
   -6px -6px 16px 0px var(--shadowCol);
 }
 
@@ -51,6 +51,7 @@
   margin-right: 32px;
   margin-top: 32px;
 }
+
 .pageClick {
   display: flex;
   flex-direction: row;

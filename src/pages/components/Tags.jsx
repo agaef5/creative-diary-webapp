@@ -88,7 +88,7 @@ export function AddTag(){
 
     return(
         <> 
-        <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
+        <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row', marginLeft: '2.75rem'}}>
             <input className='searchInputSmall' type="text" value={name} onChange={(e) => setName(e.target.value)}
                     placeholder="Add a tag..."/>
 
