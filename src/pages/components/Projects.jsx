@@ -179,7 +179,7 @@ export function AddProject({open, onClose}){
         {/* stopPropagation function prevents affecting onClose function from 'overlay' div to its children div's, so pop-up itself */}
         <div className="moduleContainer flex-col" style={{backgroundColor: 'var(--background)'}} onClick={(e => {e.stopPropagation();})}>
         <div style={{alignItems: 'flex-start', marginBottom: '1rem'}}>
-                <button className='closeBtn' style={{width: 'auto', height: ' 2.25rem', backgroundColor: 'var(--background)'}} onClick={onClose}>
+        <button className='closeBtn' style={{width: 'auto', height: ' 2.25rem', backgroundColor: 'var(--background)'}} onClick={onClose}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
@@ -204,12 +204,11 @@ export function AddProject({open, onClose}){
                 <br></br>
                 <label>Project Description</label>
                 <textarea value={description} className='searchInputSmall textareaSmall' onChange={(e => setDescription(e.target.value))} placeholder="e.g. In this project I would like to.."/>
-            </div>
+        </div>
         </div>
         <button className='deleteButton' onClick={SaveProject}>Save</button>
         </div>
         </div>
-    
         </>
     )
 }

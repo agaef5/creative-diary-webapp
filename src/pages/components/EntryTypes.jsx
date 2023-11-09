@@ -140,6 +140,20 @@ export function SaveEntry({ open, onClose, ...props }) {
             e.stopPropagation();
           }}
         >
+          <button className='closeBtn' style={{width: 'auto', height: ' 2.25rem', backgroundColor: 'var(--background)'}} onClick={onClose}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 25 25"
+            fill="none"
+                    >
+                    <path
+                        d="M1.92308 25.0273L0 23.1043L10.5769 12.5273L0 1.95042L1.92308 0.0273438L12.5 10.6043L23.0769 0.0273438L25 1.95042L14.4231 12.5273L25 23.1043L23.0769 25.0273L12.5 14.4504L1.92308 25.0273Z"
+                        fill="var(--text)"
+                    />
+          </svg>
+          </button>
           <div style={{alignItems: "flex-start", marginBottom: "1rem"}}>
           <div className="flex-col">
             <h2>Add Tags</h2>
@@ -156,10 +170,8 @@ export function SaveEntry({ open, onClose, ...props }) {
 
             </div>
           </div>
-          <div style={{display: 'flex', flexDirection: 'row', marginTop: '0.5rem', marginLeft: '-0.25rem'}}>
           <button className='deleteButton' onClick={dbUpload}>Save</button>
-          <button className='deleteButton' style={{backgroundColor: 'var(--accColLight)'}} onClick={onClose}>Close</button>
-          </div>
+        
         </div>
       </div>
     </>
@@ -296,7 +308,7 @@ function generateUniquePromptID(inputType, userID, setGeneratedID) {
 }
 
 function generateNewID(inputType, userID, resolve, reject) {
-  const newGeneratedID = Math.floor(Math.random() * 41) + 1;
+  const newGeneratedID = Math.floor(Math.random() * 40) + 1;
   const userPromptsRef = ref(database, `users/${userID}/prompts/${inputType}/`);
 
   onValue(userPromptsRef, (snapshot) => {

@@ -47,7 +47,9 @@ export default function Account() {
       <SideBar />
       <div className="accountContainer">
         <div className="mainAccount">
-          <div className="shadow">
+
+          <div class="accountInfo">
+          <div className="profPic shadow">
             <svg
               width="120"
               height="120"
@@ -62,8 +64,6 @@ export default function Account() {
               />
             </svg>
           </div>
-
-          <div class="accountInfo">
             <h2>{userName.username}</h2>
             <p>{user.email}</p>
           </div>
@@ -346,10 +346,13 @@ export function Subscription() {
         <div>
           <input type="radio" id="premium" value="premium" />
           <label>Premium</label>
-          <p>Renew The Streak</p>
-          <p>Generate New Prompt</p>
-          <p>More Creativity Boosters</p>
-          <p>SoMe Integration</p>
+          <ul>
+            <li>Renew The Streak</li>
+            <li>Generate New Prompt</li>
+            <li>More Creativity Boosters</li>
+            <li>SoMe Integration</li>
+          </ul>
+          
         </div>
         <div>
           <input type="radio" id="standard" value="standard" />

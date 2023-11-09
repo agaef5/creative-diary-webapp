@@ -218,6 +218,14 @@ line-height: 1;
 }
 
 /* editing/updating entries */
+.entryEdit{
+  border-radius: 0.3125rem;
+  background-color: var(--lightElem);
+  width: 57rem;
+  padding: 2rem;
+  margin-bottom: -4rem;
+}
+
 .titleAndDate{
   display: flex;
   flex-direction: column;

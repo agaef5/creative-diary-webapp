@@ -69,7 +69,7 @@ export function EntryEdit() {
   };
 
   return (
-    <div className="entryEdit entryDisplay">
+    <div className="entryEdit">
       <div className="titleButtonRow">
         <div className="titleAndDate">
             <input autoFocus
