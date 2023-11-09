@@ -68,14 +68,19 @@ export function EntryEdit() {
   };
 
   return (
-    <div className="entryEdit">
-      <input
+    <div className="entryEdit entryDisplay">
+      <div className="titleButtonRow">
+      <input autoFocus
+      className="editTitle" 
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Title"
       />
-      <textarea
+      <button className="updateButton" onClick={handleEntryUpdate}>Update</button>
+      </div>
+      <div id="dashedLine"/>
+      <textarea className="editContent"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Enter your text here"
@@ -83,13 +88,11 @@ export function EntryEdit() {
 
     {!loading && (
             <div>
-            <p>Tags:</p>
             <SelectTag
                 onTagSelect={setSelectedTags}
                 selectedTags={selectedTags}
             />
 
-            <p>Projects:</p>
             <SelectProject
                 onProjectSelect={setSelectedProjects}
                 selectedProjects={selectedProjects}
@@ -97,7 +100,6 @@ export function EntryEdit() {
             </div>
         )}
 
-      <button onClick={handleEntryUpdate}>Update Entry</button>
     </div>
   );
 }

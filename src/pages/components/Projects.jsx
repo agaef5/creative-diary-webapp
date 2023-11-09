@@ -177,20 +177,23 @@ export function AddProject({open, onClose}){
         <> 
         <div className="overlay" onClick={onClose}>
         {/* stopPropagation function prevents affecting onClose function from 'overlay' div to its children div's, so pop-up itself */}
-        <div className="moduleContainer" onClick={(e => {e.stopPropagation();})}>
-                <button onClick={onClose}>x</button>
+        <div className="moduleContainer flex-col" style={{backgroundColor: 'var(--background)'}} onClick={(e => {e.stopPropagation();})}>
+        <div style={{alignItems: 'flex-start', marginBottom: '1rem'}}>
                 <h2>Add a Project</h2>
                 <div className="flex-col">
                     <label>Project Name<span>*</span></label>
-                    <input type="text" value={name} onChange={(e => setName(e.target.value))} placeholder="e.g. Photography Funsies" required/>
-
+                    <input type="text" value={name} className='searchInputSmall' style={{width: '20rem'}} onChange={(e => setName(e.target.value))} placeholder="e.g. Photography Funsies" required/>
+<br></br>
                     <label>Project Goal</label>
-                    <input type="text" value={goal} onChange={(e => setGoal(e.target.value))} placeholder="e.g. Creating a Portfolio"/>
-
+                    <input type="text" value={goal} className='searchInputSmall' onChange={(e => setGoal(e.target.value))} placeholder="e.g. Creating a Portfolio"/>
+<br></br>
                     <label>Project Description</label>
-                    <input type="text" value={description} onChange={(e => setDescription(e.target.value))} placeholder="In this project I would like to.."/>
-
-                    <button onClick={SaveProject}>Save</button>
+                    <textarea value={description} className='searchInputSmall textareaSmall' onChange={(e => setDescription(e.target.value))} placeholder="e.g. In this project I would like to.."/>
+            </div>
+            </div>
+                    <div style={{display: 'flex', flexDirection: 'row', marginTop: '0.5rem', marginLeft: '-0.25rem'}}>
+                    <button className='deleteButton' onClick={SaveProject}>Save</button>
+                    <button className='deleteButton' style={{backgroundColor: 'var(--accColLight)'}} onClick={onClose}>Cancel</button>
                 </div>
             </div>
         </div>

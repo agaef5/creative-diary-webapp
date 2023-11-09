@@ -186,12 +186,39 @@ export function EntryDisplay({open, onCloseDisplay, entry, projectNames, tagName
     return(
         <div className="overlay" onClick={onCloseDisplay}>
             <div key={entry.id} className="entryDisplay" onClick={(e => {e.stopPropagation();})}>
-                <button onClick={onCloseDisplay}>x</button>
-                <button onClick={handleEditClick}>Edit</button>
+                {/* <button onClick={onCloseDisplay}>x</button> */}
+                    <div className="editRowDisplay">
+                     <h3 id="inputTypeDisplay">{entry.inputType}</h3>
+                        <button className='deleteButton' onClick={handleEditClick}>Edit</button>
+                    </div>
+                    <p className="titleStylesBD" style={{margin: '1rem 0'}}>{entry.title}</p>
+                    <p className="dateStleBD">{new Date(entry.timestamp).toLocaleDateString('en-GB')}</p>
 
-                <h3>{entry.inputType}</h3>
-                <p>{entry.title}</p>
-                <p>{new Date(entry.timestamp).toLocaleDateString('en-GB')}</p>
+                {/* Render projects as buttons */}
+                <div style={{display: 'flex', flexDirection: 'row', margin: "1rem 0"}}>
+                {entry.projects &&(
+                <div>
+                    {projectNames.map((project, index) => (
+                    <button style={{color: 'var(--accCol)', backgroundColor: 'var(--background)'}}key={index} onClick={() => handleProjectClick(project)}>
+                        {project.name} {/* Render the 'name' property of the project */}
+                    </button>
+                    ))}
+                </div>
+                )}
+            
+
+                {/* Render tags as buttons */}
+                {entry.tags && (
+                <div>
+                    {tagNames.map((tag, index) => (
+                    <button key={index} onClick={() => handleTagClick(tag)}>
+                        {tag.name}
+                    </button>
+                    ))}
+                </div>
+                )}
+                </div>
+                <div id='dashedLine'/>
 
 
                 {/* embed for spootify, musze wykombinowac modal do dodawania linkow do piosenek */}
@@ -204,29 +231,7 @@ export function EntryDisplay({open, onCloseDisplay, entry, projectNames, tagName
                 loading="lazy"
                 ></iframe> */}
 
-                <p>{entry.text}</p>
-
-                {/* Render tags as buttons */}
-                {entry.tags && (
-                <div>
-                    {tagNames.map((tag, index) => (
-                    <button key={index} onClick={() => handleTagClick(tag)}>
-                        {tag.name}
-                    </button>
-                    ))}
-                </div>
-                )}
-
-                {/* Render projects as buttons */}
-                {entry.projects &&(
-                <div>
-                    {projectNames.map((project, index) => (
-                    <button key={index} onClick={() => handleProjectClick(project)}>
-                        {project.name} {/* Render the 'name' property of the project */}
-                    </button>
-                    ))}
-                </div>
-                )}
+                <p style={{marginLeft: '0.25rem'}}>{entry.text}</p>
             </div>
         </div>
     )

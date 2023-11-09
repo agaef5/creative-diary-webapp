@@ -134,24 +134,32 @@ export function SaveEntry({ open, onClose, ...props }) {
     <>
       <div className="overlay" onClick={onClose}>
         <div
+          style={{backgroundColor: 'var(--background'}}
           className="moduleContainer shadow flex-col"
           onClick={(e) => {
             e.stopPropagation();
           }}
         >
-          <button onClick={onClose}>x</button>
+          <div style={{alignItems: "flex-start", marginBottom: "1rem"}}>
           <div className="flex-col">
             <h2>Add Tags</h2>
             <SelectTag onTagSelect={setSelectedTags} />
             <AddTag />
           </div>
-          <div>
+          <div className="flex-col">
             <h2>Assign to a Project</h2>
+            <div className="flex-row">
             <AddProject open={openModal} onClose={() => setOpenModal(false)} />
             <SelectProject onProjectSelect={setSelectedProjects} />
-            <button onClick={() => setOpenModal(true)}>+</button>
+            <button className='plusButton' onClick={() => setOpenModal(true)}>+</button>
+            </div>
+
+            </div>
           </div>
-          <button onClick={dbUpload}>Save</button>
+          <div style={{display: 'flex', flexDirection: 'row', marginTop: '0.5rem', marginLeft: '-0.25rem'}}>
+          <button className='deleteButton' onClick={dbUpload}>Save</button>
+          <button className='deleteButton' style={{backgroundColor: 'var(--accColLight)'}} onClick={onClose}>Close</button>
+          </div>
         </div>
       </div>
     </>
@@ -221,7 +229,7 @@ export function BrainDump() {
   return (
     <div className="inputSpaceBD shadow">
       <div className="flex-col">
-        <div className="flex-row">
+        <div className="flexboxing">
           <input
             className="titleStylesBD"
             type="text"
@@ -331,7 +339,7 @@ export function DailyChallenge() {
 
   return (
     <>
-      <div className="inputSpaceBD">
+      <div className="inputSpaceBD shadow">
         <div className="flexboxing">
           <div>
             <h2 className="promptStylesBD">{prompt}</h2>
@@ -342,9 +350,9 @@ export function DailyChallenge() {
           </button>
         </div>
         <div>
-          <input
+        <div id='dashedLine'/>
+          <textarea
             className="inputStyleBD"
-            type="text"
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
             placeholder="What is it you're thinking of..."
@@ -459,7 +467,7 @@ export function CreativityBooster() {
         )}
 
         {showPrompt === true && (
-          <div>
+          <div className="inputSpaceBD shadow">
             <div className="flexboxing">
               <div>
                 <h2 className="promptStylesBD">{prompt}</h2>
@@ -470,9 +478,9 @@ export function CreativityBooster() {
               </button>
             </div>
             <div>
-              <input
+              <div id="dashedLine"/>
+              <textarea
                 className="inputStyleBD"
-                type="text"
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
                 placeholder="Show your creation here..."

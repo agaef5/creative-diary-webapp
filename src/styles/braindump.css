@@ -11,7 +11,7 @@
 }
 
 .promptStylesBD {
-  width: 51rem;
+  width: 50rem;
   font-size: 2rem;
   color: var(--text);
   font-style: normal;
@@ -19,6 +19,8 @@
   line-height: normal;
   border-style: none;
   background-color: var(--lightElem);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .inputSpaceBD {
@@ -63,7 +65,6 @@
 }
 
 .saveBtn {
-  width: 64px;
   height: 40px;
   display: flex;
   padding: 8px 16px;
@@ -87,6 +88,7 @@
 .flexboxing {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .flexboxing2 {
@@ -296,4 +298,12 @@
 .dashboardDate {
   font-size: 1.25rem;
   font-weight: 500;
+}
+
+.plusButton {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--background);
+  color: var(--accCol);
+  padding: 0.25rem 0.625rem;
 }
