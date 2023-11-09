@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { UserAuth } from '../../authentication/context/AuthContext';
 import { GetEntries } from './EntryGroup';
 import "../../styles/streak.css"
+import { CircularProgress } from '@mui/material';
 
 export function Streak() {
     const { user } = UserAuth();
@@ -35,6 +36,7 @@ export function Streak() {
       setConsecutiveDays(maxStreak);
       setLastSevenDays(weekDays.reverse());
     }, [entries]);
+    const progress  = (consecutiveDays / 7) * 100;
   
     return ( 
       <div className='streakContainer shadow'>
