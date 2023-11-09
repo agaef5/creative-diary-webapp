@@ -438,7 +438,7 @@ export function CreativityBooster() {
   }
 
   return (
-    <div className="inputSpaceBD">
+    <div className="inputSpaceBD shadow   ">
       <div>
         {showPrompt === false && (
           <div className="choosePictureContainer">
@@ -467,7 +467,7 @@ export function CreativityBooster() {
         )}
 
         {showPrompt === true && (
-          <div className="inputSpaceBD shadow">
+          <div>
             <div className="flexboxing">
               <div>
                 <h2 className="promptStylesBD">{prompt}</h2>
