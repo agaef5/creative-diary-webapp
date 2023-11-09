@@ -149,21 +149,31 @@ fieldset {
   gap: 0.5rem;
 }
 
-.avatarImage {
-  border-radius: 50%;
-}
-
 .FieldsOptions {
   display: flex;
   flex-direction: column;
   height: 6.25rem;
+  width: 6.25rem;
   padding: 1.25rem 0.75rem;
   justify-content: center;
   align-items: center;
   gap: 0.8125rem;
-  background-color: #f0eeef;
+  background-color: var(--lightElem);
+  border-radius: 10px;
+  border-style: none;
 }
 
-.FieldsOptions svg {
+.FieldsRow {
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.FieldsOptions p {
+  color: #343434;
+}
+
+.FieldsOptions > p {
+  margin: 0;
 }
