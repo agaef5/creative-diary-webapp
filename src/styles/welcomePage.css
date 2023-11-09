@@ -76,6 +76,7 @@
     font-size: 1.25rem;
     font-weight: 400;
     background-color: var(--textLighter);
+    color: var(--text);
     width: 7rem;
     height: 2.75rem;
     padding: 0.5rem 1.125rem;
