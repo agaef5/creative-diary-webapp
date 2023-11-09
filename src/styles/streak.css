@@ -60,7 +60,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--lightElem);
+  color: var(--text);
   background-color: var(--accCol);
   width: 2.1875rem;
   height: 2.1875rem;

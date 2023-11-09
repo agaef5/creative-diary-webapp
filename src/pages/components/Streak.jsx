@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react';
 import { UserAuth } from '../../authentication/context/AuthContext';
 import { GetEntries } from './EntryGroup';
 import "../../styles/streak.css"
-import { CircularProgress } from '@mui/material';
+import "../../index.css"
+import { CircularProgress } from '@mui/joy';
+
 
 export function Streak() {
     const { user } = UserAuth();
@@ -36,7 +38,8 @@ export function Streak() {
       setConsecutiveDays(maxStreak);
       setLastSevenDays(weekDays.reverse());
     }, [entries]);
-    const progress  = (consecutiveDays / 7) * 100;
+
+    const progress = (consecutiveDays / 7) * 100; 
   
     return ( 
       <div className='streakContainer shadow'>
@@ -45,11 +48,11 @@ export function Streak() {
               "--CircularProgress-size": "200px",
               "--CircularProgress-trackThickness": "16px",
               "--CircularProgress-progressThickness": "16px",
-              "--CircularProgress-progressColor": 'var(--accCol)',
+              "--CircularProgress-progressColor": 'var(--accCol)'
               }} 
-            variant="plain"  color="warning" determinate value={progress}>
+            variant="plain"  color="var(--text)" determinate value={progress}>
             <p className='streakDays'>{consecutiveDays}{consecutiveDays === 0 ? null : '🔥'}</p>
-            </CircularProgress>
+        </CircularProgress>
         
         <div>
           <div className='allDaysInStreak'>

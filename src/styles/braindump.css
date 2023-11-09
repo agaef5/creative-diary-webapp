@@ -103,11 +103,11 @@
   align-items: center;
   flex-shrink: 0;
   border-radius: 10px;
-  border: 1px solid var(--light-theme-paper-border, rgba(255, 255, 255, 0.2));
+  
 
 }
 .headerInputType {
-  color: var(--light-theme-text, #1b1c25);
+  color: var(--text);
   font-family: SF Pro Display;
   font-size: 32px;
   font-style: normal;
@@ -116,7 +116,7 @@
 }
 
 .subheaderInputType {
-  color: var(--light-theme-text, #1b1c25);
+  color: var(--text);
   font-family: SF Pro Display;
   font-size: 20px;
   font-style: italic;
