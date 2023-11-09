@@ -218,12 +218,19 @@ line-height: 1;
 }
 
 /* editing/updating entries */
+.titleAndDate{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-bottom: .5rem;
+}
+
 .titleButtonRow {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
   gap: 1rem;
 }
 
@@ -244,6 +251,8 @@ line-height: 1;
 .updateButton {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
+  margin-bottom: 1rem;
+
 }
 
 .editContent {

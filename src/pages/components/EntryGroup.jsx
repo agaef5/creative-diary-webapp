@@ -111,7 +111,6 @@ function filterEntries(entries, filters) {
 }
 
 export function EntryGroup(props) {
-  console.log(props);
   const { user } = UserAuth();
   const entries = GetEntries(user.uid);
 

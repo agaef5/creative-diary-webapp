@@ -295,6 +295,14 @@
   margin: 0.5rem 0;
 }
 
+.nondashedLine{
+  background-color: var(--background);
+  width: auto;
+  height: 0.1rem;
+  margin: 0.5rem 0;
+}
+
+
 .dashboardDate {
   font-size: 1.25rem;
   font-weight: 500;

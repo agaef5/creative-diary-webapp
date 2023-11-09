@@ -23,7 +23,6 @@ export function GetUser(userId) {
       fetchData();
     }, [userId]);
   
-    console.log(userId);
     return user;
   }
 

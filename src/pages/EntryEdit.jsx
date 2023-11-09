@@ -26,7 +26,6 @@ export function GetOneEntry(userID, entryID) {
       });
     }, [userID, entryID]);
   
-    
     return entry;
   }
 
@@ -42,11 +41,13 @@ export function EntryEdit() {
 
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
+  const [date, setDate] = useState('');
   const [selectedProjects, setSelectedProjects] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
 
   useEffect(() => {
     if (entry) {
+      setDate(entry.timestamp);
       setTitle(entry.title);
       setText(entry.text);
       setSelectedProjects(entry.projects || []);
@@ -70,22 +71,21 @@ export function EntryEdit() {
   return (
     <div className="entryEdit entryDisplay">
       <div className="titleButtonRow">
-      <input autoFocus
-      className="editTitle" 
-        type="text"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder="Title"
-      />
+        <div className="titleAndDate">
+            <input autoFocus
+            className="editTitle" 
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="Title"
+          />
+          <p className="dateStleBD">{new Date(date).toLocaleDateString('en-GB')}</p>
+        </div>
+      
       <button className="updateButton" onClick={handleEntryUpdate}>Update</button>
       </div>
-      <div id="dashedLine"/>
-      <textarea className="editContent"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Enter your text here"
-      />
-
+      <div className="nondashedLine"/>
+      
     {!loading && (
             <div>
             <SelectTag
@@ -99,6 +99,15 @@ export function EntryEdit() {
             />
             </div>
         )}
+
+<div id="dashedLine"/>
+
+      <textarea className="editContent"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Enter your text here"
+      />
+
 
     </div>
   );
