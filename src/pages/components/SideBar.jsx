@@ -4,6 +4,8 @@ import "../../styles/sidebar.css";
 import { UserAuth } from "../../authentication/context/AuthContext";
 import { GetUser } from "./functions/functions";
 
+// functions and overall html structure - Aga
+// icons and styles - Julia
 export function SideBar() {
   const [openSideMenu, setOpenSideMenu] = useState(false);
   const { user } = UserAuth();

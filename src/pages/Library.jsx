@@ -6,6 +6,7 @@ import { useNavigate} from "react-router-dom";
 import { SearchBar } from "./components/SearchBar";
 import '../styles/library.css';
 
+// coded by Aga
 export default function Library(){
     const navigate = useNavigate('');
     const [openModal, setOpenModal] = useState(false);
@@ -14,7 +15,7 @@ export default function Library(){
         navigate(`/group/${inputType}`)
     }
 
-    function handleProjectClick(inputType){
+    function handleProjectClick(){
         navigate(`/projects`)
     }
 
@@ -47,8 +48,7 @@ export default function Library(){
                         <a className="seeAllText" onClick={() => handleProjectClick()}>see all</a>
                     </span>
                             <ProjectGroup lastThree/>
-                            {/* <button onClick={() => setOpenModal(true)}>+</button> */}
-                        {/* <AddProject open={openModal} onClose={() => setOpenModal(false)}/> */}
+
 
                 </div>
                 

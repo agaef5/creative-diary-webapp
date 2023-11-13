@@ -14,9 +14,9 @@ import { useState, useEffect } from 'react'
 import { onValue, ref } from 'firebase/database'
 import { database } from '../firebase-config'
 
-
-
+// coded by Aga
 function App() {
+
   const ProtectedRoute = ({children}) => {
     const{user} = UserAuth();
     if(!user) {

@@ -1,3 +1,4 @@
+/* coded by Julia */
 .titleStylesBD {
   width: 51rem;
   font-size: 2rem;
@@ -52,16 +53,16 @@
   font-weight: 400;
   border-style: none;
   width: 56.5rem;
-  height: 25rem; /* You can adjust the height as needed */
+  height: 25rem; 
   background-color: var(--lightElem);
   line-height: 1;
-  resize: none; /* Prevent the textarea from being resized by the user */
-  padding: 0.5rem 0.25rem; /* Add some padding for better appearance */
+  resize: none; 
+  padding: 0.5rem 0.25rem; 
 }
 
 .inputStyleBD::placeholder {
-  text-align: left; /* Align placeholder text to the left */
-  vertical-align: top; /* Align placeholder text at the top */
+  text-align: left; 
+  vertical-align: top; 
 }
 
 .saveBtn {

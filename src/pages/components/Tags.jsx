@@ -3,6 +3,7 @@ import { UserAuth } from "../../authentication/context/AuthContext";
 import { database } from "../../../firebase-config";
 import { push, ref, set, onValue } from "firebase/database";
 
+// coded by Aga
 export function GetTags(userId){
     const [tags, setTags] = useState([]);
   
@@ -77,12 +78,9 @@ export function AddTag(){
     function handleSaveTag() {
         const newTag = push(ref(database, 'tags/' + userID));
 
-    //uploading BrainDump data to database
     set(newTag, {
         name: name,
     });
-
-    // confirmation
     alert("Tag saved!");
     };
 

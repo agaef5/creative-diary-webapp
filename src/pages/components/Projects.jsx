@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 import "../../styles/project.css";
 import "../../styles/entry.css";
 
-
+// coded by Aga
 export function GetProjects(userId) {
     const [projects, setProjects] = useState([]);
   

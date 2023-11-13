@@ -15,7 +15,7 @@ export function Streak() {
   
     useEffect(() => {
       let currentStreak = 0;
-      let maxStreak = 0;
+      // let maxStreak = 0;
       const today = new Date().setHours(0, 0, 0, 0);
       const weekDays = [];
   
@@ -29,13 +29,13 @@ export function Streak() {
   
         if (foundEntry) {
           currentStreak++;
-          maxStreak = Math.max(maxStreak, currentStreak);
+          // maxStreak = Math.max(maxStreak, currentStreak);
         } else {
           currentStreak = 0;
         }
       }
   
-      setConsecutiveDays(maxStreak);
+      setConsecutiveDays(currentStreak);
       setLastSevenDays(weekDays.reverse());
     }, [entries]);
 

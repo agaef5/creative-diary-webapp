@@ -4,7 +4,7 @@ import { SelectTag } from "./Tags";
 import { EntryGroup } from "./EntryGroup";
 import "../../styles/searchBar.css";
 
-
+// coded by Aga
 export function SearchBar(props){
 
     const {project, tag, inputType} = props;

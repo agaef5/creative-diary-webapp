@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { onValue, ref, update } from "firebase/database";
 import "../styles/account.css";
 
+// coded by Aga
 export default function Account() {
   const navigate = useNavigate();
   const [openSide, setOpenSide] = useState(false);
@@ -33,14 +34,6 @@ export default function Account() {
     setOpenSide(true);
   }
 
-  const [avatar, setAvatar] = useState(null);
-  const handleAvatarChange = (e) => {
-    const selectedAvatar = e.target.files[0];
-
-    if (selectedAvatar) {
-      setAvatar(URL.createObjectURL(selectedAvatar));
-    }
-  };
 
   return (
     <div class="accountPage">
@@ -68,6 +61,7 @@ export default function Account() {
             <p>{user.email}</p>
           </div>
 
+        {/* START - coded by Malgorzata */}
           <div class="creativeFieldsOptions">
             <p id="CreativeFieldsTitle">Creative Fields</p>
             <div class="FieldsRow">
@@ -135,6 +129,8 @@ export default function Account() {
               </button>
             </div>
           </div>
+        {/* END - coded by Malgorzata */}
+
           <div className="manageAccountContainer">
             <h3>Manage Your Account</h3>
 
@@ -334,8 +330,6 @@ export function Settings({ setTheme, setAccColor }) {
 }
 
 export function Subscription() {
-  const { user } = UserAuth();
-  const userName = GetUser(user.uid);
   return (
     <>
       <h2>
@@ -371,8 +365,6 @@ export function Subscription() {
 export function SecurityPrivacy() {
   const { user } = UserAuth();
   const userName = GetUser(user.uid);
-
-  console.log(userName);
 
   return (
     <>

@@ -1,5 +1,6 @@
 @import url("../index.css");
 
+/* coded by Zuzanna */
 .searchInput {
     width: 66.125rem;
     height: 2rem;
@@ -40,7 +41,6 @@
     border-radius: 3px;
     background-color: var(--lightElem);
     border-style: none;
-    /* light paper shadow */
     box-shadow: 6px 6px 16px 0px var(--shadowCol),
       -6px -6px 16px 0px var(--shadowCol);
     appearance: none;

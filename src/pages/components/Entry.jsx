@@ -8,7 +8,7 @@ import { ref, remove, update } from "firebase/database";
 import "../../styles/entry.css"
 import { Modal } from "./DeleteConfirmation";
 
-
+// coded by Aga
 export function EntryCard({entry}){
     const { user } = UserAuth();
     const projects = GetProjects(user.uid);
@@ -183,6 +183,7 @@ export function EntryDisplay({open, onCloseDisplay, entry, projectNames, tagName
         navigate(`/${entry.id}`)
     }
 
+    // START - coded by Zuzanna
     function inputTypeToColor(inputType) {
         switch (inputType) {
           case 'BrainDump':
@@ -195,6 +196,8 @@ export function EntryDisplay({open, onCloseDisplay, entry, projectNames, tagName
             return 'black'; // Default color if inputType doesn't match any of the specified values
         }
       }
+    // END - coded by Zuzanna
+    
 
     return(
         <div className="overlay" onClick={onCloseDisplay}>

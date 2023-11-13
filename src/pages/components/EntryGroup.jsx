@@ -6,6 +6,7 @@ import { EntryCard } from "./Entry";
 import "../../styles/entry.css";
 import imgEmptyState from "../../styles/images/emptystate.png";
 
+// coded by Aga
 export function GetEntries(userId) {
   const [entries, setEntries] = useState([]);
 

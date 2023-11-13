@@ -7,6 +7,7 @@ import { SelectProject } from "./components/Projects";
 import { SelectTag } from "./components/Tags";
 
 
+// coded by Aga
 export function GetOneEntry(userID, entryID) {
     const [entry, setEntry] = useState(null);
   
@@ -45,6 +46,7 @@ export function EntryEdit() {
   const [selectedProjects, setSelectedProjects] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
 
+  // change values in entries edited by user
   useEffect(() => {
     if (entry) {
       setDate(entry.timestamp);
@@ -52,7 +54,7 @@ export function EntryEdit() {
       setText(entry.text);
       setSelectedProjects(entry.projects || []);
       setSelectedTags(entry.tags || []);
-      setLoading(false); // Set loading to false once data has been fetched
+      setLoading(false);
     }
   }, [entry]);
 
@@ -65,7 +67,7 @@ export function EntryEdit() {
       tags: selectedTags,
     });
     alert("Entry updated!");
-    navigate("/dashboard/BrainDump"); // Adjust the route as needed
+    navigate("/dashboard/BrainDump");
   };
 
   return (
@@ -107,7 +109,6 @@ export function EntryEdit() {
         onChange={(e) => setText(e.target.value)}
         placeholder="Enter your text here"
       />
-
 
     </div>
   );

@@ -1,5 +1,5 @@
 @import url("../index.css");
-
+/* coded by Aga */
 .projectCard{
     margin: 2rem 1rem;
 }
@@ -49,6 +49,7 @@
     font-weight: 700;
 }
 
+/* coded by Zuzanna */
 .addProject {
     background-color: var(--background);
     color: var(--accCol);

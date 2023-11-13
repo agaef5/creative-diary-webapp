@@ -1,5 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/sf-pro-display");
 
+/* coded by Aga */
 :root {
   font-family: "SF Pro Display", sans-serif;
 
@@ -123,7 +124,7 @@ button {
   -6px -6px 16px 0px var(--shadowCol);
 }
 
-/* module style */
+/* modal style */
 .overlay {
   z-index: 10;
   display: block;
@@ -156,6 +157,7 @@ h3 {
   margin: 0;
 }
 
+/* code by Zuzanna */
 .deleteButton {
   padding: 0.5rem 1rem;
 }

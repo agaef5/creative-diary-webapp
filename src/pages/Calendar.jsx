@@ -50,7 +50,7 @@ export default function CalendarPage() {
     return (
         <div className='calendarPage'>
             <SideBar/>
-
+            {/*START - coded by Zuzanna */}
             <button className={`calendarChoice ${activeButton === "BrainDump" ? 'calendarChoiceActive' : ''}`} 
                     onClick={() => handleClick("BrainDump")}><span className='rowDot'> 
                     <div style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: 'var(--brainDump'}}></div>
@@ -68,6 +68,7 @@ export default function CalendarPage() {
                     <div style={{width: 10, height: 10, borderRadius: '50%', backgroundColor: 'var(--creativityBooster'}}></div>
                     Creativity Booster</span>
             </button>
+            {/*END -  coded by Zuzanna */}
 
             
             <div className='calendarAndEntry'>
@@ -78,6 +79,7 @@ export default function CalendarPage() {
                         tileContent={({ date }) =>
                             markedDates.find(
                                 markedDate => new Date(markedDate).toDateString() === date.toDateString()
+
                             ) ? <div style={{ backgroundColor: inputType === 'BrainDump' ? '#3AA768' : (inputType === 'DailyChallenge' ? '#EB4A4A' : '#56ADBA'), width: 6, height: 6, borderRadius: '50%', marginLeft: '2.32rem', marginBottom: '-0.875rem', marginTop: '0.5rem'}}></div> : null
                         }
                     />

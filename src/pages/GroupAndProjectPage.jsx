@@ -7,6 +7,8 @@ import { SideBar } from "./components/SideBar";
 import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+
+// coded by Aga
 export function GroupPage() {
     const {inputType} = useParams();
     return (
@@ -27,16 +29,7 @@ export function GroupPage() {
 }
 
 export function ProjectsGroupPage(){
-    const navigate = useNavigate('');
     const [openModal, setOpenModal] = useState(false);
-
-    function handleClick(inputType){
-        navigate(`/group/${inputType}`)
-    }
-
-    function handleProjectClick(inputType){
-        navigate(`/projects`)
-    }
 
     return (
         <>
@@ -69,12 +62,10 @@ export function ProjectPage(){
         return <div>Loading...</div>; // Add a loading indicator if the project is not found cuz it takes some time to load everything
       }
 
-
     return(
         <>
             <SideBar/>
             <SearchBar project={projectID}/>
-            {/* <SearchBar project={projectID}/> */}
             <div className="projectInfo">
             <h2>
                 <Link to='/projects'>

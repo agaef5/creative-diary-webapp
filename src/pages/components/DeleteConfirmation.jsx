@@ -6,6 +6,7 @@ export function Modal({ show, onClose, onConfirm }) {
     }
   
     return (
+      // coded by Zuzanna
       <div className="overlay">
         <div className="moduleContainer">
           <h3>Are You Sure?</h3>

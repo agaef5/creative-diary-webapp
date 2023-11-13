@@ -3,6 +3,7 @@ import { database } from "../../../../firebase-config";
 import { ref, onValue } from "firebase/database";
 import { UserAuth } from "../../../authentication/context/AuthContext";
 
+// coded by Aga
 export function GetUser(userId) {
     const [user, setUser] = useState([]);
   

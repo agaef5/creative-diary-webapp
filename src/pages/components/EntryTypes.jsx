@@ -14,11 +14,11 @@ import LightBulb from  "../../styles/images/lightbulb.png"
 import LightBulbOn from  "../../styles/images/lightbulbOn.png"
 
 
+// coded by Aga
+
 // function to get time and display it below title
-// it is global, so can be used in all functions below
 export const currentDate = () => {
   var today = new Date();
-  // var options = { weekday: 'long' };
   var day = String(today.getDate()).padStart(2, "0");
   var month = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
   var year = today.getFullYear();
@@ -59,6 +59,7 @@ const DailyChallengeTimer = () => {
   return <p>{timeLeft}h</p>;
 };
 
+
 export function SaveEntry({ open, onClose, ...props }) {
   if (!open) return null;
   const navigate = useNavigate();
@@ -74,7 +75,6 @@ export function SaveEntry({ open, onClose, ...props }) {
   function dbUpload() {
     const newEntry = push(ref(database, "entries/" + userID));
 
-    //uploading BrainDump data to database
     const entryData = {
       timestamp: serverTimestamp(),
       text: userInput,
@@ -124,10 +124,8 @@ export function SaveEntry({ open, onClose, ...props }) {
         true
       );
     }
-    // confirmation
     alert("Entry saved!");
     navigate("/dashboard/ChooseEntryType");
-    // navigate to ChooseInputType component
   }
 
   return (

@@ -11,6 +11,7 @@ import "../styles/letterToMyself.css";
 import { Streak } from "./components/Streak";
 import imgLetterbox from "../styles/images/letterbox.png";
 
+// coded by Aga
 export default function Dashboard() {
   const currentDayAndDate = () => {
     var today = new Date();
@@ -29,7 +30,6 @@ export default function Dashboard() {
     return formattedDate;
   };
 
-  // call function that will take user data from database
   const { user } = UserAuth();
   const userName = GetUser(user.uid);
   const [selectedOption, setSelectedOption] = useState("BrainDump");

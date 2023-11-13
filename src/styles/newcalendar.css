@@ -1,5 +1,6 @@
 @import url("../index.css");
 
+/* coded by Zuzanna */
 .react-calendar {
     width: 50rem;
     max-width: 100%;
@@ -203,7 +204,6 @@
     display: grid;
     grid-template-columns: 60% 40%;
     margin-top: 2rem;
-    /* display: 'flex', justifyContent: 'flex-start', gap:'4rem', marginTop: '1rem'}} */
   }
 
   .calendarEntryGroupContainer{
