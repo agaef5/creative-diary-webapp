@@ -41,6 +41,8 @@ export function GetEntries(userId) {
   return entries;
 }
 
+
+
 function filterEntries(entries, filters) {
   // Remove undefined filters (undefined values or empty arrays/keywords)
   const definedFilters = Object.fromEntries(
@@ -110,6 +112,8 @@ function filterEntries(entries, filters) {
     );
   });
 }
+
+
 
 export function EntryGroup(props) {
   const { user } = UserAuth();

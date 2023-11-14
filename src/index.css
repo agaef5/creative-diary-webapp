@@ -173,3 +173,8 @@ h3 {
 button.cancelLine {
   background-color: n;
 }
+
+.hidden-visibility{
+  opacity: 0  ;
+  position: absolute;  
+}

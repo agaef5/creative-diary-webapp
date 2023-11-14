@@ -90,36 +90,36 @@ export function EntryCard({entry}){
       }
     
     return(
-              <div className="entryCard shadow" key={entry.id}  >
+              <div className="entryCard shadow" key={entry.id} tabIndex={0} aria-label={entry.title}>
                 {entry.pinned ? <div className="entryPinned"></div> : <div className="entryUnpinned"></div>}
                 <div className="entryCardContent" onClick={() => setOpenEntryDisplay(true)}>
                     
                     <p className="inputType"><span className={`${entry.inputType}Dot`}></span>{entry.inputType}</p>
                     
                     <div className="entryMiddle">
-                        <p className="entryDate">{new Date(entry.timestamp).toLocaleDateString('en-GB')}</p>
-                        <p className="entryTitle">{entry.title && (entry.title.length > 15 ? `${entry.title.substring(0, 15)}...` : entry.title)}</p>
+                        <p aria-hidden="true" className="entryDate">{new Date(entry.timestamp).toLocaleDateString('en-GB')}</p>
+                        <h2 className="entryTitle">{entry.title && (entry.title.length > 15 ? `${entry.title.substring(0, 15)}...` : entry.title)}</h2>
                         <p className="entryText">{entry.text && (entry.text.length > 30 ? `${entry.text.substring(0, 30)}...` : entry.text)}</p>
                     </div>
 
-                    <div className="buttons-row">
+                    <div  className="buttons-row">
                         <div>
                             {/* Render projects as buttons */}
                             {entry.projects && (
                             <div onClick={(e) => { e.stopPropagation(); }}>
                                 {projectNames.slice(0, 2).map((project, index) => (
-                                <button className="projectButton" key={index} onClick={() => handleProjectClick(project)}>
+                                <button tabIndex={-1} className="projectButton" key={index} onClick={() => handleProjectClick(project)}>
                                     {project.name} {/* Render the 'name' property of the project */}
                                 </button>
                                 ))}
                             </div>
-                            )}
+                            )}  
 
                             {/* Render tags as buttons */}
                             {entry.tags && (
                             <div onClick={(e) => { e.stopPropagation(); }}>
                                 {tagNames.slice(0, 2).map((tag, index) => (
-                                <button className="tagButton" key={index} onClick={() => handleTagClick(tag)}>
+                                <button tabIndex={-1} className="tagButton" key={index} onClick={() => handleTagClick(tag)}>
                                     #{tag.name}
                                 </button>
                                 ))}

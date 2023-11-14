@@ -26,6 +26,7 @@ export const currentDate = () => {
   return formattedDate;
 };
 
+
 const DailyChallengeTimer = () => {
   const [timeLeft, setTimeLeft] = useState("");
 
@@ -146,6 +147,7 @@ export function SaveEntry({ open, onClose, ...props }) {
             viewBox="0 0 25 25"
             fill="none"
                     >
+                      <title>Close Icon</title>
                     <path
                         d="M1.92308 25.0273L0 23.1043L10.5769 12.5273L0 1.95042L1.92308 0.0273438L12.5 10.6043L23.0769 0.0273438L25 1.95042L14.4231 12.5273L25 23.1043L23.0769 25.0273L12.5 14.4504L1.92308 25.0273Z"
                         fill="var(--text)"
@@ -241,20 +243,23 @@ export function BrainDump() {
       <div className="flex-col">
         <div className="flexboxing">
           <input
+
             className="titleStylesBD"
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Untitled"
+            aria-label="Title of your Brain Dump"
           />
-          <button className="saveBtn" onClick={() => setOpenSave(true)}>
+          <button className="saveBtn" onClick={() => setOpenSave(true)}
+                  aria-label="Save Brain Dump">
             Save
           </button>
         </div>
         <p className="dateStleBD">{currentDate()}</p>
       </div>
       <div>
-        <div id='dashedLine'/>
+        <div id='dashedLine'aria-hidden="true"/>
         <textarea
           className="inputStyleBD"
            value={userInput}
@@ -352,7 +357,7 @@ export function DailyChallenge() {
       <div className="inputSpaceBD shadow">
         <div className="flexboxing">
           <div>
-            <h2 className="promptStylesBD">{prompt}</h2>
+            <h2 className="promptStylesBD" tabIndex={0}>{prompt}</h2>
             <p className="dateStleBD">{currentDate()}</p>
           </div>
           <button className="saveBtn" onClick={() => setOpenSave(true)}>
@@ -360,7 +365,7 @@ export function DailyChallenge() {
           </button>
         </div>
         <div>
-        <div id='dashedLine'/>
+        <div id='dashedLine'aria-hidden="true"/>
           <textarea
             className="inputStyleBD"
             value={userInput}
@@ -454,20 +459,23 @@ export function CreativityBooster() {
           <div className="choosePictureContainer">
             <div className="choosePictureContent">
                 <div className="choosePictureText">
-                  <h2>Choose Your Creativity Booster</h2>
+                  <h2 tabIndex={0}>Choose Your Creativity Booster</h2>
                   <p>Pick Your Variant Of Choice</p>
                   </div>
                   <div className="choosePicture">
-                    <div onMouseDown={() => handleLightBulbOn(1)} onClick={showCreativityBooster}>
-                      <img src={imageSource1} />
+                    <div onMouseDown={() => handleLightBulbOn(1)} onClick={showCreativityBooster}
+                          tabIndex={0} aria-label="First Option">
+                      <img src={imageSource1}/>
                     </div>
 
-                    <div onMouseDown={() => handleLightBulbOn(2)} onClick={showCreativityBooster}>
-                      <img src={imageSource2} />
+                    <div onMouseDown={() => handleLightBulbOn(2)} onClick={showCreativityBooster}
+                          tabIndex={0} aria-label="Second Option">
+                      <img src={imageSource2}/>
                     </div>
 
-                    <div onMouseDown={() => handleLightBulbOn(3)} onClick={showCreativityBooster}>
-                      <img src={imageSource3} />
+                    <div onMouseDown={() => handleLightBulbOn(3)} onClick={showCreativityBooster}
+                          tabIndex={0} aria-label="Third Option">
+                      <img src={imageSource3}/>
                     </div>
                   </div>
             </div>
@@ -480,7 +488,7 @@ export function CreativityBooster() {
           <div>
             <div className="flexboxing">
               <div>
-                <h2 className="promptStylesBD">{prompt}</h2>
+                <h2 className="promptStylesBD" tabIndex={0}>{prompt}</h2>
                 <p className="dateStleBD">{currentDate()}</p>
               </div>
               <button className="saveBtn" onClick={() => setOpenSave(true)}>
@@ -488,7 +496,7 @@ export function CreativityBooster() {
               </button>
             </div>
             <div>
-              <div id="dashedLine"/>
+              <div id="dashedLine"aria-hidden="true"/>
               <textarea
                 className="inputStyleBD"
                 value={userInput}
