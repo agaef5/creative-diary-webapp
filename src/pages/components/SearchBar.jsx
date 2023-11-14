@@ -54,7 +54,7 @@ export function SearchBar(props){
 
     return(
         <div className="searchBarContainer">
-            <div className="searchBar">
+            <div className="searchBar" aria-role="search">
                 <input className="searchInput shadow"
                         type="text"
                         placeholder="Search The Library..."
